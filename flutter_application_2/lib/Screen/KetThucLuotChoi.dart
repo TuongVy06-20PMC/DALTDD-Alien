@@ -46,7 +46,7 @@ class _KetThucLuotChoiState extends State<KetThucLuotChoi> {
               ),
               Container(
                 margin: EdgeInsets.only(
-                  top: 10,
+                  top: 60,
                 ),
                 child: Column(
                   children: [
@@ -78,7 +78,7 @@ class _KetThucLuotChoiState extends State<KetThucLuotChoi> {
                                             height: 60,
                                           ),
                                         ),
-                                       const Positioned(
+                                        const Positioned(
                                           child: Text(
                                             'LEVEL 01',
                                             textAlign: TextAlign.center,
@@ -94,7 +94,7 @@ class _KetThucLuotChoiState extends State<KetThucLuotChoi> {
                                   ],
                                 ),
                                 Padding(
-                                  padding:const EdgeInsets.only(top: 10),
+                                  padding: const EdgeInsets.only(top: 10),
                                   child: Row(
                                     mainAxisAlignment: MainAxisAlignment.center,
                                     children: [
@@ -111,39 +111,58 @@ class _KetThucLuotChoiState extends State<KetThucLuotChoi> {
                                 Column(
                                   mainAxisAlignment: MainAxisAlignment.start,
                                   crossAxisAlignment: CrossAxisAlignment.start,
-                                  children:const [
-                                    Padding(padding: EdgeInsets.only(bottom: 10, top: 20),
-                                    child: Text('Tổng số điểm: 700', style: TextStyle(
-                                      fontFamily: 'LinotteBold',
-                                      fontSize: 20,
-                                    ),),
+                                  children: const [
+                                    Padding(
+                                      padding:
+                                          EdgeInsets.only(bottom: 10, top: 20),
+                                      child: Text(
+                                        'Tổng số điểm: 700',
+                                        style: TextStyle(
+                                          fontFamily: 'LinotteBold',
+                                          fontSize: 20,
+                                        ),
+                                      ),
                                     ),
-                                     Padding(padding: EdgeInsets.only(bottom: 10),
-                                    child: Text('Số câu đúng: 7/10', style: TextStyle(
-                                      fontFamily: 'LinotteBold',
-                                      fontSize: 20,
-                                    ),),
+                                    Padding(
+                                      padding: EdgeInsets.only(bottom: 10),
+                                      child: Text(
+                                        'Số câu đúng: 7/10',
+                                        style: TextStyle(
+                                          fontFamily: 'LinotteBold',
+                                          fontSize: 20,
+                                        ),
+                                      ),
                                     ),
-                                     Padding(padding: EdgeInsets.only(bottom: 10),
-                                    child: Text('Số câu sai: 3/10', style: TextStyle(
-                                      fontFamily: 'LinotteBold',
-                                      fontSize: 20,
-                                    ),),
+                                    Padding(
+                                      padding: EdgeInsets.only(bottom: 10),
+                                      child: Text(
+                                        'Số câu sai: 3/10',
+                                        style: TextStyle(
+                                          fontFamily: 'LinotteBold',
+                                          fontSize: 20,
+                                        ),
+                                      ),
                                     ),
-                                     Padding(padding: EdgeInsets.only(bottom: 10),
-                                    child: Text('Số điểm hiện có: 1700', style: TextStyle(
-                                      fontFamily: 'LinotteBold',
-                                      fontSize: 20,
-                                    ),),
+                                    Padding(
+                                      padding: EdgeInsets.only(bottom: 10),
+                                      child: Text(
+                                        'Số điểm hiện có: 1700',
+                                        style: TextStyle(
+                                          fontFamily: 'LinotteBold',
+                                          fontSize: 20,
+                                        ),
+                                      ),
                                     ),
-                                     Padding(padding: EdgeInsets.only(bottom: 10),
-                                    child: Text('Kinh nghiệm tích lũy: 200', style: TextStyle(
-                                      fontFamily: 'LinotteBold',
-                                      fontSize: 20,
-                                    ),),
+                                    Padding(
+                                      padding: EdgeInsets.only(bottom: 10),
+                                      child: Text(
+                                        'Kinh nghiệm tích lũy: 200',
+                                        style: TextStyle(
+                                          fontFamily: 'LinotteBold',
+                                          fontSize: 20,
+                                        ),
+                                      ),
                                     ),
-                                    
-                                    
                                   ],
                                 )
                               ],
@@ -151,187 +170,17 @@ class _KetThucLuotChoiState extends State<KetThucLuotChoi> {
                       ],
                     ),
                     Container(
-                        margin: EdgeInsets.only(top: 30),
+                        margin: EdgeInsets.only(top: 100),
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             Padding(
                               padding: EdgeInsets.only(right: 10),
                               child: ElevatedButton(
-                                  style: ElevatedButton.styleFrom(
-                                    backgroundColor: HexColor('FFEE52'),
-                                    minimumSize: Size(70, 60),
-                                    side: const BorderSide(
-                                        width: 2, color: Colors.black),
-                                  ),
-                                  child: Padding(
-                                      padding: EdgeInsets.all(0),
-                                      child: Row(
-                                        children: [
-                                          const Padding(
-                                            padding: EdgeInsets.all(2),
-                                            child: Text(
-                                              'Chơi lại',
-                                              textAlign: TextAlign.center,
-                                              style: TextStyle(
-                                                fontSize: 22,
-                                                fontFamily: 'FSAriston',
-                                                color: Colors.black,
-                                              ),
-                                            ),
-                                          ),
-                                          Image.asset(
-                                            'assets/arrow.png',
-                                            height: 25,
-                                            width: 25,
-                                          ),
-                                        ],
-                                      )),
-                                  onPressed: () => showDialog<String>(
-                                      context: context,
-                                      builder: (BuildContext context) =>
-                                          AlertDialog(
-                                            backgroundColor: HexColor('FFFDA2'),
-                                            title: Text(
-                                              'Lưu ý',
-                                              style: TextStyle(
-                                                  color: HexColor('F90716'),
-                                                  fontSize: 35,
-                                                  fontFamily: 'FSAriston'),
-                                            ),
-                                            content: const Text(
-                                              'Khi bạn chơi lại hệ thống sẽ không tính điểm hoặc thưởng',
-                                              textAlign: TextAlign.center,
-                                              style: TextStyle(
-                                                  fontFamily: 'FSAriston',
-                                                  fontSize: 22),
-                                            ),
-                                            actions: <Widget>[
-                                              Stack(
-                                                children: [
-                                                  Row(
-                                                    mainAxisAlignment:
-                                                        MainAxisAlignment
-                                                            .center,
-                                                    children: [
-                                                      Padding(
-                                                        padding:
-                                                            EdgeInsets.all(25),
-                                                        child: TextButton(
-                                                          style: TextButton.styleFrom(
-                                                              backgroundColor:
-                                                                  HexColor(
-                                                                      '0C205B'),
-                                                              shadowColor:
-                                                                  Colors.white),
-                                                          onPressed: () =>
-                                                              Navigator.pop(
-                                                                  context,
-                                                                  'Thoát'),
-                                                          child: Text(
-                                                            'Thoát',
-                                                            style: TextStyle(
-                                                                color: HexColor(
-                                                                    'FFFDA2'),
-                                                                fontSize: 23,
-                                                                fontFamily:
-                                                                    'FSAriston'),
-                                                          ),
-                                                        ),
-                                                      ),
-                                                      TextButton(
-                                                        style: TextButton
-                                                            .styleFrom(
-                                                                backgroundColor:
-                                                                    HexColor(
-                                                                        '0C205B'),
-                                                                shadowColor:
-                                                                    Colors
-                                                                        .white),
-                                                        onPressed: () {
-                                                          Navigator.of(context)
-                                                              .pop();
-                                                          Navigator.push(
-                                                            context,
-                                                            MaterialPageRoute(
-                                                                builder:
-                                                                    (context) =>
-                                                                        const BatDauChoi()),
-                                                          );
-                                                        },
-                                                        child: Text(
-                                                          'Đồng ý',
-                                                          style: TextStyle(
-                                                              color: HexColor(
-                                                                  'FFFDA2'),
-                                                              fontSize: 23,
-                                                              fontFamily:
-                                                                  'FSAriston'),
-                                                        ),
-                                                      ),
-                                                    ],
-                                                  ),
-                                                  Positioned(
-                                                    child: Image.asset(
-                                                        'assets/monster-1.png'),
-                                                    height: 55,
-                                                    width: 55,
-                                                    left: 40,
-                                                    bottom: 29,
-                                                  ),
-                                                ],
-                                              ),
-                                            ],
-                                          ))),
-                            ),
-                            Padding(
-                                padding: EdgeInsets.only(right: 10),
-                                child: ElevatedButton(
-                                    style: ElevatedButton.styleFrom(
-                                      backgroundColor: HexColor('FFEE52'),
-                                      minimumSize: Size(70, 60),
-                                      side: const BorderSide(
-                                          width: 2, color: Colors.black),
-                                    ),
-                                    child: Padding(
-                                        padding: EdgeInsets.all(0),
-                                        child: Row(
-                                          children: [
-                                            const Padding(
-                                              padding: EdgeInsets.all(2),
-                                              child: Text(
-                                                'Xem lại',
-                                                textAlign: TextAlign.center,
-                                                style: TextStyle(
-                                                  fontSize: 22,
-                                                  fontFamily: 'FSAriston',
-                                                  color: Colors.black,
-                                                ),
-                                              ),
-                                            ),
-                                            Image.asset(
-                                              'assets/eye-open.png',
-                                              height: 25,
-                                              width: 25,
-                                            ),
-                                          ],
-                                        )),
-                                    onPressed: () {
-                                      Navigator.push(
-                                        context,
-                                        MaterialPageRoute(
-                                            builder: (context) =>
-                                                const XemlaiDapAn()),
-                                      );
-                                    })),
-                            Padding(
-                              padding: EdgeInsets.zero,
-                              child: ElevatedButton(
                                 style: ElevatedButton.styleFrom(
                                   backgroundColor: HexColor('FFEE52'),
-                                  minimumSize: Size(70, 60),
-                                  side: const BorderSide(
-                                      width: 2, color: Colors.black),
+                                  minimumSize: Size(70, 70),
+                                  
                                 ),
                                 child: Padding(
                                     padding: EdgeInsets.all(0),
@@ -340,30 +189,179 @@ class _KetThucLuotChoiState extends State<KetThucLuotChoi> {
                                         const Padding(
                                           padding: EdgeInsets.all(2),
                                           child: Text(
-                                            'Kế tiếp',
-                                            textAlign: TextAlign.center,
-                                            style: TextStyle(
-                                              fontSize: 22,
-                                              fontFamily: 'FSAriston',
-                                              color: Colors.black,
-                                            ),
+                                          'Chơi lại',
+                                          textAlign: TextAlign.center,
+                                          style: TextStyle(
+                                            fontSize: 20,
+                                            fontFamily: 'LinotteBold',
+                                            color: Colors.black,
                                           ),
                                         ),
-                                        Image.asset(
-                                          'assets/right-arrow.png',
-                                          height: 25,
-                                          width: 25,
+                                        ),
+                                        
+                                      ],
+                                    )),
+                                onPressed: () => showDialog<String>(
+                                  context: context,
+                                  builder: (BuildContext context) =>
+                                      AlertDialog(
+                                    backgroundColor: HexColor('fde787'),
+                                    title: Stack(
+                                      children: [
+                                        Text(
+                                          'Lưu ý',
+                                          style: TextStyle(
+                                              color: HexColor('f4a000'),
+                                              fontSize: 35,
+                                              fontFamily: 'FSAriston'),
+                                        ),
+                                        Positioned(
+                                          child: IconButton(
+                                              onPressed: (() {}),
+                                              icon: Image.asset(
+                                                'assets/cross.png',
+                                                height: 30,
+                                                width: 30,
+                                              )),
+                                          left: 210,
+                                          bottom: 1,
+                                        ),
+                                      ],
+                                    ),
+                                    content: const Text(
+                                      'Nếu bạn chọn Chơi lại, đồng nghĩa với việc điểm vừa rồi sẽ bị hủy',
+                                      textAlign: TextAlign.center,
+                                      style: TextStyle(
+                                          fontFamily: 'LinotteBold',
+                                          fontSize: 22),
+                                    ),
+                                    actions: <Widget>[
+                                      Stack(
+                                        children: [
+                                          Row(
+                                            mainAxisAlignment:
+                                                MainAxisAlignment.center,
+                                            children: [
+                                              InkWell(
+                                                child: Container(
+                                                  child: Stack(children: [
+                                                    Row(
+                                                      mainAxisAlignment:
+                                                          MainAxisAlignment
+                                                              .center,
+                                                      crossAxisAlignment:
+                                                          CrossAxisAlignment
+                                                              .center,
+                                                      children: [
+                                                        Image.asset(
+                                                          'assets/btn.png',
+                                                          fit: BoxFit.fill,
+                                                          height: 50,
+                                                          width: 120,
+                                                        )
+                                                      ],
+                                                    ),
+                                                    Positioned(
+                                                      child: Padding(
+                                                        padding:
+                                                            EdgeInsets.zero,
+                                                        child: Text(
+                                                          'Đồng ý',
+                                                          textAlign:
+                                                              TextAlign.center,
+                                                          style: TextStyle(
+                                                              fontSize: 23,
+                                                              fontFamily:
+                                                                  'FSAriston',
+                                                              color:
+                                                                  Colors.black),
+                                                        ),
+                                                      ),
+                                                      top: 11,
+                                                      left: 35,
+                                                    ),
+                                                  ]),
+                                                ),
+                                                onTap: () {
+                                                  Navigator.push(
+                                                    context,
+                                                    MaterialPageRoute(
+                                                        builder: (context) =>
+                                                            const BatDauChoi()),
+                                                  );
+                                                },
+                                              ),
+                                            ],
+                                          ),
+                                        ],
+                                      )
+                                    ],
+                                  ),
+                                ),
+                              ),
+                            ),
+                            Padding(
+                              padding: EdgeInsets.only(right: 10),
+                              child: ElevatedButton(
+                                style: ElevatedButton.styleFrom(
+                                  backgroundColor: HexColor('FFEE52'),
+                                  minimumSize: Size(70, 70),
+                                  /*side: const BorderSide(
+                                      width: 2, color: Colors.black),*/
+                                ),
+                                child: Padding(
+                                    padding: EdgeInsets.all(0),
+                                    child: Column(
+                                      children: [
+                                        /* Image.asset(
+                                              'assets/eye-open.png',
+                                              width: 30,
+                                              height: 30,
+                                            ),*/
+                                         Text(
+                                          'Xem lại',
+                                          textAlign: TextAlign.center,
+                                          style: TextStyle(
+                                            fontSize: 20,
+                                            fontFamily: 'LinotteBold',
+                                            color: Colors.black,
+                                          ),
                                         ),
                                       ],
                                     )),
-                                onPressed: () {
-                                  Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                        builder: (context) =>
-                                            const TrangChuTabBarGoogle()),
-                                  );
-                                },
+                                onPressed: () {},
+                              ),
+                            ),
+                            Padding(
+                              padding: EdgeInsets.zero,
+                              child: ElevatedButton(
+                                style: ElevatedButton.styleFrom(
+                                  backgroundColor: HexColor('FFEE52'),
+                                  minimumSize: Size(70, 70),
+                                  /*side: const BorderSide(
+                                      width: 2, color: Colors.black),*/
+                                ),
+                                child: Padding(
+                                    padding: EdgeInsets.all(0),
+                                    child: Column(
+                                      children: [
+                                        /* Image.asset(
+                                              'assets/eye-open.png',
+                                              width: 30,
+                                              height: 30,
+                                            ),*/
+                                        const Text(
+                                          'Kế tiếp',
+                                          textAlign: TextAlign.center,
+                                          style: TextStyle(
+                                            fontSize: 20,
+                                            fontFamily: 'LinotteBold',
+                                            color: Colors.black,
+                                          ),
+                                        ),
+                                      ],
+                                    )),
+                                onPressed: () {},
                               ),
                             ),
                           ],
