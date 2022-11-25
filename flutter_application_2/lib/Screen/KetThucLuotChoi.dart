@@ -266,7 +266,7 @@ class _KetThucLuotChoiState extends State<KetThucLuotChoi> {
                                                         padding:
                                                             EdgeInsets.zero,
                                                         child: Text(
-                                                          'Đồng ý',
+                                                          'Đã hiểu',
                                                           textAlign:
                                                               TextAlign.center,
                                                           style: TextStyle(
@@ -329,7 +329,14 @@ class _KetThucLuotChoiState extends State<KetThucLuotChoi> {
                                         ),
                                       ],
                                     )),
-                                onPressed: () {},
+                                onPressed: () {
+                                   Navigator.push(
+                                                    context,
+                                                    MaterialPageRoute(
+                                                        builder: (context) =>
+                                                            const XemlaiDapAn()),
+                                                  );
+                                },
                               ),
                             ),
                             Padding(
@@ -361,7 +368,9 @@ class _KetThucLuotChoiState extends State<KetThucLuotChoi> {
                                         ),
                                       ],
                                     )),
-                                onPressed: () {},
+                                onPressed: () {
+                                  
+                                },
                               ),
                             ),
                           ],

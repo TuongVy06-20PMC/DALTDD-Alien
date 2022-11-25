@@ -1,6 +1,7 @@
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter_application_2/Screen/KetThucLuotChoi.dart';
+import 'package:flutter_application_2/Screen/TrangChu.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'package:flutter/material.dart';
 
@@ -17,90 +18,100 @@ class _XemlaiDapAnState extends State<XemlaiDapAn> {
   Widget build(BuildContext context) {
     return Scaffold(
         body: Container(
-            decoration: BoxDecoration(color: HexColor('0C205B')),
-            width: MediaQuery.of(context).size.width,
-            height: MediaQuery.of(context).size.height,
-            child:
-                Column(mainAxisAlignment: MainAxisAlignment.start, children: [
-              Row(
-                mainAxisAlignment: MainAxisAlignment.start,
-                children: [
-                  Container(
-                    padding: EdgeInsets.only(left: 15, right: 15, top: 20),
-                    height: MediaQuery.of(context).size.height / 3.5,
-                    width: MediaQuery.of(context).size.width,
-                    decoration: BoxDecoration(
-                        color: Colors.white.withOpacity(0.3),
-                        /*border: Border.all(
+      decoration: BoxDecoration(color: HexColor('0C205B')),
+      width: MediaQuery.of(context).size.width,
+      height: MediaQuery.of(context).size.height,
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.start,
+        children: [
+          Row(
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: [
+              Container(
+                padding: EdgeInsets.only(left: 15, right: 15, top: 10),
+                height: MediaQuery.of(context).size.height / 3.5,
+                width: MediaQuery.of(context).size.width,
+                decoration: BoxDecoration(
+                    color: Colors.white.withOpacity(0.3),
+                    /*border: Border.all(
                     width: 2,
                     color: Colors.white.withOpacity(0.5)
                   ),*/
-                        borderRadius: const BorderRadius.only(
-                            bottomLeft: Radius.circular(30),
-                            bottomRight: Radius.circular(30))),
-                    child: Column(
-                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    borderRadius: const BorderRadius.only(
+                        bottomLeft: Radius.circular(30),
+                        bottomRight: Radius.circular(30))),
+                child: Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              IconButton(
-                                  onPressed: (() {}),
-                                  icon: Image.asset(
-                                    'assets/delete.png',
-                                    height: 25,
-                                    width: 25,
-                                    color: HexColor('FFF323'),
-                                  )),
-                              IconButton(
-                                  onPressed: (() {}),
-                                  icon: Image.asset(
-                                    'assets/menu.png',
-                                    height: 30,
-                                    width: 30,
-                                    color: HexColor('FFF323'),
-                                  )),
-                            ],
-                          ),
-                          Container(
-                              padding: EdgeInsets.only(bottom: 20),
-                              width: MediaQuery.of(context).size.width / 1.2,
-                              child: Column(
-                                children: const [
-                                  SizedBox(
-                                    width: double.infinity,
-                                    child: Text(
-                                      'Câu 1/10',
-                                      style: TextStyle(
-                                          fontFamily: 'FSAriston',
-                                          fontSize: 25,
-                                          color: Colors.white),
-                                    ),
-                                  ),
-                                  Divider(
-                                    color: Colors.white,
-                                    height: 2.0,
-                                    thickness: 2,
-                                  ),
-                                  SizedBox(
-                                    height: 10,
-                                  ),
-                                  Text(
-                                    'Tàu Apollo số bao nhiêu được phóng vào ngày 31/1/1971?',
-                                    textAlign: TextAlign.center,
-                                    style: TextStyle(
-                                        fontWeight: FontWeight.bold,
-                                        fontSize: 20,
-                                        color: Colors.white),
-                                  )
-                                ],
+                          IconButton(
+                              onPressed: (() {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) =>
+                                          const TrangChu()),
+                                );
+                              }),
+                              icon: Image.asset(
+                                'assets/icon6.png',
+                                height: 70,
+                                width: 70,
                               )),
-                        ]),
-                  ),
-                ],
+                          IconButton(
+                              onPressed: () {},
+                              icon: Image.asset(
+                                'assets/menu-icon.png',
+                                height: 70,
+                                width: 70,
+                              )),
+                        ],
+                      ),
+                      Container(
+                          padding: EdgeInsets.only(bottom: 20),
+                          width: MediaQuery.of(context).size.width / 1.2,
+                          child: Column(
+                            children: const [
+                              SizedBox(
+                                width: double.infinity,
+                                child: Text(
+                                  'Câu 1/10',
+                                  style: TextStyle(
+                                      fontFamily: 'LinotteBold',
+                                      fontSize: 18,
+                                      color: Colors.white),
+                                ),
+                              ),
+                              Divider(
+                                color: Colors.white,
+                                height: 2.0,
+                                thickness: 2,
+                              ),
+                              SizedBox(
+                                height: 10,
+                              ),
+                              Text(
+                                'Tàu Apollo số bao nhiêu được phóng vào ngày 31/1/1971?',
+                                textAlign: TextAlign.center,
+                                style: TextStyle(
+                                    fontFamily: 'LinotteBold',
+                                    fontSize: 20,
+                                    color: Colors.white),
+                              )
+                            ],
+                          )),
+                    ]),
               ),
-              Column(mainAxisAlignment: MainAxisAlignment.end, children: [
-                Stack(alignment: Alignment.topLeft, children: [
+            ],
+          ),
+          Column(
+            mainAxisAlignment: MainAxisAlignment.end,
+            children: [
+              Stack(
+                alignment: Alignment.topLeft,
+                children: [
                   Container(
                     margin: EdgeInsets.only(top: 35),
                     //padding: EdgeInsets.all(20),
@@ -112,11 +123,11 @@ class _XemlaiDapAnState extends State<XemlaiDapAn> {
                             topLeft: Radius.circular(30),
                             topRight: Radius.circular(30))),
                     child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
+                      mainAxisAlignment: MainAxisAlignment.start,
                       children: [
                         Padding(
                           padding:
-                              EdgeInsets.only(top: 25, right: 60, bottom: 20),
+                              EdgeInsets.only(top: 25, right: 60, bottom: 60),
                           child: Row(
                               mainAxisAlignment: MainAxisAlignment.end,
                               children: [
@@ -134,8 +145,8 @@ class _XemlaiDapAnState extends State<XemlaiDapAn> {
                                         const Text(
                                           '00:00',
                                           style: TextStyle(
-                                              //fontFamily: 'FSAriston',
-                                              fontSize: 25),
+                                              fontFamily: 'LinotteBold',
+                                              fontSize: 22),
                                         )
                                       ],
                                     )),
@@ -151,8 +162,8 @@ class _XemlaiDapAnState extends State<XemlaiDapAn> {
                                         const Text(
                                           'Số xu',
                                           style: TextStyle(
-                                              fontFamily: 'FSAriston',
-                                              fontSize: 30),
+                                              fontFamily: 'LinotteBold',
+                                              fontSize: 22),
                                         )
                                       ],
                                     )),
@@ -162,19 +173,20 @@ class _XemlaiDapAnState extends State<XemlaiDapAn> {
                           padding: EdgeInsets.all(5),
                           child: ElevatedButton(
                             style: ElevatedButton.styleFrom(
-                              backgroundColor: Colors.white,
-                              minimumSize: Size(350, 25),
-                              side: const BorderSide(
-                                  width: 3, color: Colors.black),
-                            ),
+                                backgroundColor: Colors.white,
+                                minimumSize: Size(350, 30),
+                                side: BorderSide(
+                                    width: 3, color: HexColor('614400')),
+                                shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(20))),
                             child: const Padding(
-                              padding: EdgeInsets.all(10),
+                              padding: EdgeInsets.all(15),
                               child: Text(
                                 'Apollo 11',
                                 textAlign: TextAlign.center,
                                 style: TextStyle(
-                                  fontSize: 25,
-                                  fontFamily: 'FSAriston',
+                                  fontSize: 22,
+                                  fontFamily: 'Linotte',
                                   color: Colors.black,
                                 ),
                               ),
@@ -186,19 +198,20 @@ class _XemlaiDapAnState extends State<XemlaiDapAn> {
                           padding: EdgeInsets.all(5),
                           child: ElevatedButton(
                             style: ElevatedButton.styleFrom(
-                              backgroundColor: Colors.white,
-                              minimumSize: Size(350, 25),
-                              side: const BorderSide(
-                                  width: 3, color: Colors.black),
-                            ),
+                                backgroundColor: Colors.white,
+                                minimumSize: Size(350, 30),
+                                side: BorderSide(
+                                    width: 3, color: HexColor('614400')),
+                                shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(20))),
                             child: const Padding(
-                              padding: EdgeInsets.all(10),
+                              padding: EdgeInsets.all(15),
                               child: Text(
                                 'Apollo 12',
                                 textAlign: TextAlign.center,
                                 style: TextStyle(
-                                  fontSize: 25,
-                                  fontFamily: 'FSAriston',
+                                  fontSize: 22,
+                                  fontFamily: 'Linotte',
                                   color: Colors.black,
                                 ),
                               ),
@@ -210,19 +223,20 @@ class _XemlaiDapAnState extends State<XemlaiDapAn> {
                           padding: EdgeInsets.all(5),
                           child: ElevatedButton(
                             style: ElevatedButton.styleFrom(
-                              backgroundColor: Colors.white,
-                              minimumSize: Size(350, 25),
-                              side: const BorderSide(
-                                  width: 3, color: Colors.black),
-                            ),
+                                backgroundColor: Colors.white,
+                                minimumSize: Size(350, 30),
+                                side: BorderSide(
+                                    width: 3, color: HexColor('614400')),
+                                shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(20))),
                             child: const Padding(
-                              padding: EdgeInsets.all(10),
+                              padding: EdgeInsets.all(15),
                               child: Text(
                                 'Apollo 13',
                                 textAlign: TextAlign.center,
                                 style: TextStyle(
-                                  fontSize: 25,
-                                  fontFamily: 'FSAriston',
+                                  fontSize: 22,
+                                  fontFamily: 'Linotte',
                                   color: Colors.black,
                                 ),
                               ),
@@ -234,19 +248,20 @@ class _XemlaiDapAnState extends State<XemlaiDapAn> {
                           padding: EdgeInsets.all(5),
                           child: ElevatedButton(
                             style: ElevatedButton.styleFrom(
-                              backgroundColor: HexColor('3EC70B'),
-                              minimumSize: Size(350, 25),
-                              side: const BorderSide(
-                                  width: 3, color: Colors.black),
-                            ),
+                                backgroundColor: Color.fromARGB(255, 135, 122, 1),
+                                minimumSize: Size(350, 30),
+                                side: BorderSide(
+                                    width: 3, color: HexColor('614400')),
+                                shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(20))),
                             child: const Padding(
-                              padding: EdgeInsets.all(10),
+                              padding: EdgeInsets.all(15),
                               child: Text(
                                 'Apollo 14',
                                 textAlign: TextAlign.center,
                                 style: TextStyle(
-                                  fontSize: 25,
-                                  fontFamily: 'FSAriston',
+                                  fontSize: 22,
+                                  fontFamily: 'Linotte',
                                   color: Colors.black,
                                 ),
                               ),
@@ -254,6 +269,7 @@ class _XemlaiDapAnState extends State<XemlaiDapAn> {
                             onPressed: () {},
                           ),
                         ),
+                       
                         Row(
                           mainAxisAlignment: MainAxisAlignment.end,
                           children: [
@@ -274,22 +290,38 @@ class _XemlaiDapAnState extends State<XemlaiDapAn> {
                             ),
                             ),*/
                             Padding(
-                                padding: EdgeInsets.only(right: 22, top: 20),
-                                child: IconButton(
-                                  icon: Image.asset(
-                                    'assets/fast-forward.png',
-                                    height: 100,
-                                    width: 100,
+                              padding: EdgeInsets.only(top: 25, right: 20),
+                              child: ElevatedButton(
+                                style: ElevatedButton.styleFrom(
+                                    backgroundColor: Colors.yellow[400],
+                                    minimumSize: Size(50, 20),
+                                    side:  BorderSide(
+                                        width: 2, color: HexColor('614400')),
+                                    shape: RoundedRectangleBorder(
+                                        borderRadius:
+                                            BorderRadius.circular(20))),
+                                child:  Padding(
+                                  padding: EdgeInsets.all(10),
+                                  child: Text(
+                                    'Tiếp theo >>',
+                                    textAlign: TextAlign.center,
+                                    style: TextStyle(
+                                      fontSize: 20,
+                                      fontFamily: 'LinotteBold',
+                                      color: HexColor('614400'),
+                                    ),
                                   ),
-                                  onPressed: () {
-                                    Navigator.push(
-                                      context,
-                                      MaterialPageRoute(
-                                          builder: (context) =>
-                                              const KetThucLuotChoi()),
-                                    );
-                                  },
-                                ))
+                                ),
+                                onPressed: () {
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) =>
+                                            const KetThucLuotChoi()),
+                                  );
+                                },
+                              ),
+                            ),
                           ],
                         ),
                       ],
@@ -302,9 +334,13 @@ class _XemlaiDapAnState extends State<XemlaiDapAn> {
                         image: AssetImage('assets/monster.png'),
                         height: 100,
                         width: 100,
-                      ))
-                ])
-              ]),
-            ])));
+                      )),
+                ],
+              )
+            ],
+          )
+        ],
+      ),
+    ));
   }
 }
