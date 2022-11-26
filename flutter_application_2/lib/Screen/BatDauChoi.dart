@@ -20,7 +20,10 @@ class _BatDauChoiState extends State<BatDauChoi> {
   Widget build(BuildContext context) {
     return Scaffold(
         body: Container(
-      decoration: BoxDecoration(color: HexColor('0C205B')),
+      decoration: BoxDecoration(
+            //color: HexColor('0C205B')
+            image: DecorationImage(image: AssetImage('assets/bgg.jpg'), fit: BoxFit.fill)
+            ),
       width: MediaQuery.of(context).size.width,
       height: MediaQuery.of(context).size.height,
       child: Column(
@@ -225,7 +228,7 @@ class _BatDauChoiState extends State<BatDauChoi> {
                           padding: EdgeInsets.all(5),
                           child: ElevatedButton(
                             style: ElevatedButton.styleFrom(
-                                backgroundColor: Colors.white,
+                                backgroundColor: HexColor('FF0000'),
                                 minimumSize: Size(350, 30),
                                 side: BorderSide(
                                     width: 3, color: HexColor('614400')),
@@ -250,7 +253,7 @@ class _BatDauChoiState extends State<BatDauChoi> {
                           padding: EdgeInsets.all(5),
                           child: ElevatedButton(
                             style: ElevatedButton.styleFrom(
-                                backgroundColor: Colors.white,
+                                backgroundColor: HexColor('3EC70B'),
                                 minimumSize: Size(350, 30),
                                 side: BorderSide(
                                     width: 3, color: HexColor('614400')),
@@ -280,7 +283,7 @@ class _BatDauChoiState extends State<BatDauChoi> {
                                   padding: EdgeInsets.only(right: 23),
                                   child: ElevatedButton(
                                     style: ElevatedButton.styleFrom(
-                                      backgroundColor: HexColor('FF4848'),
+                                      backgroundColor: HexColor('DC3535'),
                                       minimumSize: Size(80, 80),
                                       /*side: const BorderSide(
                                       width: 2, color: Colors.black),*/
@@ -312,7 +315,7 @@ class _BatDauChoiState extends State<BatDauChoi> {
                                   padding: EdgeInsets.only(right: 23),
                                   child: ElevatedButton(
                                     style: ElevatedButton.styleFrom(
-                                      backgroundColor: HexColor('F037A5'),
+                                      backgroundColor: HexColor('FF0075'),
                                       minimumSize: Size(80, 80),
                                       /*side: const BorderSide(
                                       width: 2, color: Colors.black),*/
@@ -398,10 +401,10 @@ class _BatDauChoiState extends State<BatDauChoi> {
                               padding: EdgeInsets.only(top: 12),
                               child: ElevatedButton(
                                 style: ElevatedButton.styleFrom(
-                                    backgroundColor: Colors.yellow[400],
+                                    backgroundColor: Colors.white,
                                     minimumSize: Size(50, 20),
                                     side:  BorderSide(
-                                        width: 2, color: HexColor('614400')),
+                                        width: 3, color: HexColor('614400')),
                                     shape: RoundedRectangleBorder(
                                         borderRadius:
                                             BorderRadius.circular(20))),
@@ -413,7 +416,7 @@ class _BatDauChoiState extends State<BatDauChoi> {
                                     style: TextStyle(
                                       fontSize: 20,
                                       fontFamily: 'LinotteBold',
-                                      color: HexColor('614400'),
+                                      color: HexColor('000000'),
                                     ),
                                   ),
                                 ),

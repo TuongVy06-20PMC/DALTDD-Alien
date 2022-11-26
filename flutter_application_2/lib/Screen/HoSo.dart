@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_2/Screen/ChinhSuaHoSo.dart';
+import 'package:flutter_application_2/component/TrangChuTabBarGoogle.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'package:intl/intl.dart';
+import '../Screen/TrangChu.dart';
+import '../component/menu.dart';
 
 class HoSo extends StatefulWidget {
   const HoSo({super.key});
@@ -11,191 +14,300 @@ class HoSo extends StatefulWidget {
 }
 
 class _HoSoState extends State<HoSo> {
-  TextEditingController dateinput = TextEditingController();
+  GlobalKey<ScaffoldState> _sKey = GlobalKey<ScaffoldState>();
+
   void initState() {
-    dateinput.text = "";
     super.initState();
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Container(
-        decoration: const BoxDecoration(
-          image: DecorationImage(
-              image: AssetImage('assets/bg2.png'), fit: BoxFit.cover),
-        ),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Container(
-              margin: EdgeInsets.only(top: 30),
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.start,
-                children: [
-                  Image.asset(
-                    'assets/logo.png',
-                    fit: BoxFit.cover,
-                    height: 90,
-                    width: 160,
-                  ),
-                  Image.asset(
-                    'assets/user.png',
-                    height: 60,
-                    fit: BoxFit.cover,
-                  ),
-                  Container(
-                      decoration: BoxDecoration(
-                          color: HexColor('FFEE52'),
-                          borderRadius: BorderRadius.circular(6)),
-                      height: 20,
-                      width: 50,
-                      child: Padding(
-                          padding: EdgeInsets.fromLTRB(10, 0, 4, 3),
-                          child: Row(children: [
-                            Text(
-                              'Cấp 1 ',
-                              textAlign: TextAlign.center,
-                              style: TextStyle(
-                                  fontSize: 11,
-                                  fontWeight: FontWeight.bold,
-                                  fontFamily: 'FSAriston'),
-                            ),
-                          ]))),
-                  Container(
-                      child: Text('TuongVy2812',
-                          style: TextStyle(
-                              color: Colors.white,
-                              fontFamily: 'FSAriston',
-                              fontSize: 20,
-                              fontWeight: FontWeight.bold))),
-                  Padding(
-                      padding: EdgeInsets.fromLTRB(0, 15, 0, 5),
-                      child: SizedBox(
-                        width: 280,
-                        height: 50,
-                        child: TextField(
-                          style: TextStyle(
-                            color: Colors.black,
-                            fontFamily: 'FSAriston',
-                            fontSize: 23,
-                          ),
-                          decoration: InputDecoration(
-                            filled: true,
-                            fillColor: Colors.white,
-                            enabledBorder: OutlineInputBorder(
-                                borderSide:
-                                    BorderSide(color: Colors.black, width: 2)),
-                            border: OutlineInputBorder(),
-                            hintText: "Họ tên",
-                            hintStyle: TextStyle(
-                                color: Colors.grey,
-                                fontFamily: 'FSAriston',
-                                fontSize: 23),
-                          ),
-                        ),
-                      )),
-                  Padding(
-                      padding: EdgeInsets.all(5),
-                      child: SizedBox(
-                        width: 280,
-                        height: 50,
-                        child: TextField(
-                          controller: dateinput,
-                          style: TextStyle(
-                            color: Colors.black,
-                            fontFamily: 'FSAriston',
-                            fontSize: 23,
-                          ),
-                          decoration: InputDecoration(
-                            filled: true,
-                            fillColor: Colors.white,
-                            enabledBorder: OutlineInputBorder(
-                                borderSide:
-                                    BorderSide(color: Colors.black, width: 2)),
-                            border: OutlineInputBorder(),
-                            hintText: "Ngày sinh",
-                            suffixIcon: Padding(
-                              padding: EdgeInsets.all(5),
-                              child: Icon(Icons.calendar_month),
-                            ),
-                            hintStyle: TextStyle(
-                                color: Colors.grey,
-                                fontFamily: 'FSAriston',
-                                fontSize: 23),
-                          ),
-                          readOnly: true,
-                          onTap: () async {
-                            DateTime? pickedDate = await showDatePicker(
-                                context: context,
-                                initialDate: DateTime.now(),
-                                firstDate: DateTime(1900),
-                                lastDate: DateTime(2100));
-                            if (pickedDate != null) {
-                              print(pickedDate);
-                              String formattedDate =
-                                  DateFormat('dd-MM-yyyy').format(pickedDate);
-                              print(formattedDate);
-                              setState(() {
-                                dateinput.text = formattedDate;
-                              });
-                            } else {
-                              print("Ngày không được chọn");
-                            }
-                          },
-                        ),
-                      )),
-                  Padding(
-                      padding: EdgeInsets.all(5),
-                      child: SizedBox(
-                        width: 280,
-                        height: 50,
-                        child: TextField(
-                          style: TextStyle(
-                            color: Colors.black,
-                            fontFamily: 'FSAriston',
-                            fontSize: 23,
-                          ),
-                          decoration: InputDecoration(
-                            filled: true,
-                            fillColor: Colors.white,
-                            enabledBorder: OutlineInputBorder(
-                                borderSide:
-                                    BorderSide(color: Colors.black, width: 2)),
-                            border: OutlineInputBorder(),
-                            hintText: "Email",
-                            hintStyle: TextStyle(
-                                color: Colors.grey,
-                                fontFamily: 'FSAriston',
-                                fontSize: 23),
-                          ),
-                        ),
-                      )),
-                  Padding(
-                    padding: EdgeInsets.only(left: 200),
-                    child: TextButton(
-                        child: Text(
-                          'Chỉnh sửa',
-                          style: TextStyle(
-                            color: HexColor('F0CB05'),
-                            fontFamily: 'FSAriston',
-                            fontSize: 20,
-                          ),
-                        ),
-                        onPressed: () {
+        key: _sKey,
+        endDrawer: Menu(),
+        body: Center(
+            child: ListView(children: [
+          Container(
+              height: MediaQuery.of(context).size.height,
+              width: MediaQuery.of(context).size.width,
+              decoration: const BoxDecoration(
+                image: DecorationImage(
+                    image: AssetImage('assets/bg-1.png'), fit: BoxFit.cover),
+              ),
+              child:
+                  Column(mainAxisAlignment: MainAxisAlignment.start, children: [
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    IconButton(
+                        onPressed: (() {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => const ChinhSuaHoSo()),
+                                builder: (context) => const TrangChuTabBarGoogle()),
                           );
                         }),
-                  )
-                ],
+                        icon: Image.asset(
+                          'assets/delete.png',
+                          height: 25,
+                          width: 25,
+                          color: HexColor('FFF323'),
+                        )),
+                    IconButton(
+                        onPressed: () => _sKey.currentState?.openEndDrawer(),
+                        icon: Image.asset(
+                          'assets/menu.png',
+                          height: 30,
+                          width: 30,
+                          color: HexColor('FFF323'),
+                        )),
+                  ],
+                ),
+                SizedBox(
+                  height: 30,
+                ),
+                Stack(children: [
+                  CircleAvatar(
+                    backgroundImage: AssetImage('assets/user.png'),
+                    radius: 60.0,
+                  ),
+                  Positioned(
+                    top: 50,
+                    bottom: 0.0,
+                    right: 0.0,
+                    left: 93,
+                    child: InkWell(
+                      onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => ChinhSuaHoSo()));
+                      },
+                      child: Icon(
+                        Icons.edit,
+                        color: Colors.white,
+                        size: 35.0,
+                      ),
+                    ),
+                  ),
+                  Positioned(
+                    child: Padding(
+                      padding: EdgeInsets.only(left: 20, top: 50),
+                      child: Row(
+                        children: [
+                          Container(
+                            decoration: BoxDecoration(
+                                color: HexColor('FFEE52'),
+                                borderRadius: BorderRadius.circular(10)),
+                            height: 20,
+                            width: 80,
+                            child: Padding(
+                                padding: EdgeInsets.zero,
+                                child: Row(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    Text(
+                                      'Cấp 1',
+                                      style: TextStyle(
+                                          fontSize: 13,
+                                          fontFamily: 'LinotteBold'),
+                                    ),
+                                  ],
+                                )),
+                          ),
+                        ],
+                      ),
+                    ),
+                    top: 50,
+                  ),
+                ]),
+                SizedBox(
+                  height: 10,
+                ),
+                Text(
+                  'TuongVie2812',
+                  style: TextStyle(
+                      fontSize: 23,
+                      fontFamily: "LinotteBold",
+                      color: Colors.white),
+                ),
+                // SizedBox(height: 10,),
+                Column(
+                  children: [
+                    InkWell(
+                      child: Container(
+                        width: MediaQuery.of(context).size.width / 1.15,
+                        height: MediaQuery.of(context).size.height / 2.2,
+                        decoration: BoxDecoration(
+                            image: DecorationImage(
+                                image: AssetImage('assets/bg-menu.png'),
+                                fit: BoxFit.fill)),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            InkWell(
+                              child: Container(
+                                margin: EdgeInsets.only(bottom: 15, top: 40),
+                                child: Stack(children: [
+                                  Row(
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.center,
+                                    children: [
+                                      Image.asset(
+                                        'assets/btn.png',
+                                        fit: BoxFit.fill,
+                                        height: 55,
+                                        width: 200,
+                                      )
+                                    ],
+                                  ),
+                                  Positioned(
+                                    child: Padding(
+                                      padding: EdgeInsets.all(10),
+                                      child: Text(
+                                        'Họ tên',
+                                        textAlign: TextAlign.center,
+                                        style: TextStyle(
+                                          fontSize: 20,
+                                          fontFamily: 'LinotteBold',
+                                          color: Colors.black,
+                                        ),
+                                      ),
+                                    ),
+                                    left: 96,
+                                    top: 7,
+                                  ),
+                                ]),
+                              ),
+                              onTap: () {},
+                            ),
+                            //giao dau
+
+                            //xep hang
+                            InkWell(
+                              child: Container(
+                                margin: EdgeInsets.only(bottom: 15),
+                                child: Stack(children: [
+                                  Row(
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.center,
+                                    children: [
+                                      Image.asset(
+                                        'assets/btn.png',
+                                        fit: BoxFit.fill,
+                                        height: 55,
+                                        width: 200,
+                                      )
+                                    ],
+                                  ),
+                                  Positioned(
+                                    child: Padding(
+                                      padding: EdgeInsets.all(10),
+                                      child: Text(
+                                        'Ngày sinh',
+                                        textAlign: TextAlign.center,
+                                        style: TextStyle(
+                                          fontSize: 20,
+                                          fontFamily: 'LinotteBold',
+                                          color: Colors.black,
+                                        ),
+                                      ),
+                                    ),
+                                    left: 96,
+                                    top: 7,
+                                  ),
+                                ]),
+                              ),
+                              onTap: () {},
+                            ),
+
+                            //thống kê
+                            InkWell(
+                              child: Container(
+                                margin: EdgeInsets.only(bottom: 15),
+                                child: Stack(children: [
+                                  Row(
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.center,
+                                    children: [
+                                      Image.asset(
+                                        'assets/btn.png',
+                                        fit: BoxFit.fill,
+                                        height: 55,
+                                        width: 200,
+                                      )
+                                    ],
+                                  ),
+                                  Positioned(
+                                    child: Padding(
+                                      padding: EdgeInsets.all(10),
+                                      child: Text(
+                                        'Email',
+                                        textAlign: TextAlign.center,
+                                        style: TextStyle(
+                                          fontSize: 20,
+                                          fontFamily: 'LinotteBold',
+                                          color: Colors.black,
+                                        ),
+                                      ),
+                                    ),
+                                    left: 96,
+                                    top: 7,
+                                  ),
+                                ]),
+                              ),
+                              onTap: () {},
+                            ),
+                          ],
+                        ),
+                        
+                      ),
+                    ),
+                    InkWell(
+                child: Container(
+                  child: Stack(children: [
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        Image.asset(
+                          'assets/btn.png',
+                          fit: BoxFit.fill,
+                          height: 60,
+                          width: 230,
+                        )
+                      ],
+                    ),
+                    Positioned(
+                      child: Padding(
+                        padding: EdgeInsets.all(10),
+                        child: Text(
+                          'Chỉnh sửa',
+                          textAlign: TextAlign.center,
+                          style: TextStyle(
+                              fontSize: 35,
+                              fontFamily: 'FSAriston',
+                              color: Colors.black),
+                        ),
+                      ),
+                      left: 135,
+                      top: 1,
+                    ),
+                  ]),
+                ),
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => const ChinhSuaHoSo()),
+                  );
+                },
               ),
-            ),
-          ],
-        ),
-      ),
-    );
+                  ],
+                )
+              ])),
+        ])));
   }
-}//thay doi
+}

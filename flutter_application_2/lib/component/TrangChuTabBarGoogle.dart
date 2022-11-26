@@ -26,7 +26,7 @@ class _TrangChuTabBarGoogleState extends State<TrangChuTabBarGoogle> {
       bottomNavigationBar: Container(
         color: Colors.black,
         child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 10.0, vertical: 20),
+          padding: const EdgeInsets.symmetric(horizontal: 10.0, vertical: 5),
           child: GNav(
             backgroundColor: Colors.black,
             color: Colors.white,
@@ -39,7 +39,7 @@ class _TrangChuTabBarGoogleState extends State<TrangChuTabBarGoogle> {
                 _selectedIndex = index;
               });
             },
-            padding: EdgeInsets.all(30),
+            padding: EdgeInsets.all(25),
             tabs: [
               GButton(
                 icon: Icons.person,
