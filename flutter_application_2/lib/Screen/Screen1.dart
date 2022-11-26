@@ -21,8 +21,9 @@ class _Screen1State extends State<Screen1> {
           width: MediaQuery.of(context).size.width,
           height: MediaQuery.of(context).size.height,
           decoration: BoxDecoration(
-            color: HexColor('0C205B'),
-          ),
+            //color: HexColor('0C205B')
+            image: DecorationImage(image: AssetImage('assets/bgg.jpg'), fit: BoxFit.cover)
+            ),
           child: Container(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
@@ -45,10 +46,10 @@ class _Screen1State extends State<Screen1> {
                               crossAxisAlignment: CrossAxisAlignment.center,
                               children: [
                                 Image.asset(
-                                  'assets/btn.png',
+                                  'assets/btn-2.png',
                                   fit: BoxFit.fill,
-                                  height: 65,
-                                  width: 280,
+                                  height: 80,
+                                  width: 250,
                                 )
                               ],
                             ),
@@ -61,12 +62,12 @@ class _Screen1State extends State<Screen1> {
                                   style: TextStyle(
                                     fontSize: 35,
                                     fontFamily: 'FSAriston',
-                                    color: HexColor('614400'),
+                                    color: Colors.black,
                                   ),
                                 ),
                               ),
-                              left: 130,
-                              top: 3,
+                              left: 137,
+                              top: 9,
                             ),
                           ]),
                         ),
@@ -87,10 +88,10 @@ class _Screen1State extends State<Screen1> {
                               crossAxisAlignment: CrossAxisAlignment.center,
                               children: [
                                 Image.asset(
-                                  'assets/btn.png',
+                                  'assets/btn-2.png',
                                   fit: BoxFit.fill,
-                                  height: 65,
-                                  width: 280,
+                                  height: 80,
+                                  width: 250,
                                 )
                               ],
                             ),
@@ -103,12 +104,12 @@ class _Screen1State extends State<Screen1> {
                                   style: TextStyle(
                                     fontSize: 35,
                                     fontFamily: 'FSAriston',
-                                    color: HexColor('614400'),
+                                    color: Colors.black,
                                   ),
                                 ),
                               ),
-                              left: 120,
-                              top: 3,
+                              left: 123,
+                              top: 9,
                             ),
                           ]),
                         ),

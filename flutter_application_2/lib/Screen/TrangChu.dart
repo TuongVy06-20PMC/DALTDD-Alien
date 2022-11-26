@@ -28,11 +28,10 @@ class _TrangChuState extends State<TrangChu> {
       body: Container(
         height: MediaQuery.of(context).size.height,
         width: MediaQuery.of(context).size.width,
-        decoration: BoxDecoration(
-          /* image: DecorationImage(
-              image: AssetImage('assets/bg-1.png'), fit: BoxFit.cover),*/
-          color: HexColor('0C205B'),
-        ),
+       decoration: BoxDecoration(
+            //color: HexColor('0C205B')
+            image: DecorationImage(image: AssetImage('assets/bgg.jpg'), fit: BoxFit.fill)
+            ),
         child: Column(mainAxisAlignment: MainAxisAlignment.start, children: [
           Row(
             children: [
@@ -60,9 +59,9 @@ class _TrangChuState extends State<TrangChu> {
                                 _sKey.currentState?.openEndDrawer(),
                             icon: Image.asset(
                               'assets/menu.png',
-                              height: 30,
-                              width: 30,
-                              color: HexColor('FFF323'),
+                              height: 40,
+                              width: 40,
+                              color: HexColor('fbecb0'),
                             )),
                       ],
                     ),
@@ -247,7 +246,7 @@ class _TrangChuState extends State<TrangChu> {
                                   ),
                                 ),
                               ),
-                              left: 96,
+                              left: 100,
                               top: 2,
                             ),
                           ]),
@@ -290,7 +289,7 @@ class _TrangChuState extends State<TrangChu> {
                                   ),
                                 ),
                               ),
-                              left: 111,
+                              left: 115,
                               top: 2,
                             ),
                           ]),
@@ -334,7 +333,7 @@ class _TrangChuState extends State<TrangChu> {
                                   ),
                                 ),
                               ),
-                              left: 111,
+                              left: 115,
                               top: 2,
                             ),
                           ]),
@@ -378,7 +377,7 @@ class _TrangChuState extends State<TrangChu> {
                                   ),
                                 ),
                               ),
-                              left: 111,
+                              left: 115,
                               top: 2,
                             ),
                           ]),
@@ -422,7 +421,7 @@ class _TrangChuState extends State<TrangChu> {
                                   ),
                                 ),
                               ),
-                              left: 112,
+                              left: 116,
                               top: 2,
                             ),
                           ]),

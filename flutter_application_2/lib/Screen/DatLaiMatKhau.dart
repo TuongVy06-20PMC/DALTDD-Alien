@@ -71,7 +71,7 @@ class _DatLaiMatKhauState extends State<DatLaiMatKhau> {
                       padding: EdgeInsets.all(5),
                       child: SizedBox(
                         width: 280,
-                        height: 52,
+                        height: 50,
                         child: TextField(
                           obscureText: _obscureText,
                           style: TextStyle(
@@ -107,7 +107,7 @@ class _DatLaiMatKhauState extends State<DatLaiMatKhau> {
                       padding: EdgeInsets.all(5),
                       child: SizedBox(
                         width: 280,
-                        height: 52,
+                        height: 50,
                         child: TextField(
                             obscureText: _obscureText,
                           style: TextStyle(
@@ -147,9 +147,9 @@ class _DatLaiMatKhauState extends State<DatLaiMatKhau> {
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
                         Image.asset(
-                          'assets/btn.png',
+                          'assets/btn-2.png',
                           fit: BoxFit.fill,
-                          height: 60,
+                          height: 70,
                           width: 230,
                         )
                       ],
@@ -166,8 +166,8 @@ class _DatLaiMatKhauState extends State<DatLaiMatKhau> {
                               color: Colors.black),
                         ),
                       ),
-                      left: 113,
-                      top: 1,
+                      left: 115,
+                      top: 6,
                     ),
                   ]),
                 ),

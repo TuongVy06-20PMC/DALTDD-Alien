@@ -24,7 +24,10 @@ class _DangNhapState extends State<DangNhap> {
         Container(
           width: MediaQuery.of(context).size.width,
           height: MediaQuery.of(context).size.height,
-          decoration: BoxDecoration(color: HexColor('0C205B')),
+          decoration: BoxDecoration(
+            //color: HexColor('0C205B')
+            image: DecorationImage(image: AssetImage('assets/bgg.jpg'), fit: BoxFit.cover)
+            ),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
@@ -123,7 +126,7 @@ class _DangNhapState extends State<DangNhap> {
                         fontFamily: 'LinotteBold',
                         // fontWeight: FontWeight.bold,
                         fontSize: 20,
-                        fontStyle: FontStyle.normal),
+                        ),
                   ),
                   onPressed: () {
                     Navigator.push(
@@ -142,10 +145,10 @@ class _DangNhapState extends State<DangNhap> {
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
                         Image.asset(
-                          'assets/btn.png',
+                          'assets/btn-2.png',
                           fit: BoxFit.fill,
-                          height: 60,
-                          width: 230,
+                          height: 70,
+                            width: 220,
                         )
                       ],
                     ),
@@ -162,14 +165,14 @@ class _DangNhapState extends State<DangNhap> {
                         ),
                       ),
                       left: 120,
-                      top: 1,
+                      top: 5,
                     ),
                   ]),
                 ),
                 onTap: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => const TrangChu()),
+                    MaterialPageRoute(builder: (context) => const TrangChuTabBarGoogle()),
                   );
                 },
               ),
@@ -190,7 +193,7 @@ class _DangNhapState extends State<DangNhap> {
                       child: Text(
                         'Đăng ký ngay',
                         style: TextStyle(
-                          color: HexColor('F2FA5A'),
+                          color: HexColor('f1c500'),
                           fontFamily: 'LinotteBold',
                           fontSize: 20,
                         ),

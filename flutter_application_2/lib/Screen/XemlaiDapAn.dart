@@ -18,7 +18,10 @@ class _XemlaiDapAnState extends State<XemlaiDapAn> {
   Widget build(BuildContext context) {
     return Scaffold(
         body: Container(
-      decoration: BoxDecoration(color: HexColor('0C205B')),
+       decoration: BoxDecoration(
+            //color: HexColor('0C205B')
+            image: DecorationImage(image: AssetImage('assets/bgg.jpg'), fit: BoxFit.fill)
+            ),
       width: MediaQuery.of(context).size.width,
       height: MediaQuery.of(context).size.height,
       child: Column(
@@ -248,7 +251,7 @@ class _XemlaiDapAnState extends State<XemlaiDapAn> {
                           padding: EdgeInsets.all(5),
                           child: ElevatedButton(
                             style: ElevatedButton.styleFrom(
-                                backgroundColor: Color.fromARGB(255, 135, 122, 1),
+                                backgroundColor: HexColor('F48B29'),
                                 minimumSize: Size(350, 30),
                                 side: BorderSide(
                                     width: 3, color: HexColor('614400')),
@@ -289,14 +292,14 @@ class _XemlaiDapAnState extends State<XemlaiDapAn> {
 
                             ),
                             ),*/
-                            Padding(
-                              padding: EdgeInsets.only(top: 25, right: 20),
+                             Padding(
+                              padding: EdgeInsets.only(top: 12, right: 20),
                               child: ElevatedButton(
                                 style: ElevatedButton.styleFrom(
-                                    backgroundColor: Colors.yellow[400],
+                                    backgroundColor: Colors.white,
                                     minimumSize: Size(50, 20),
                                     side:  BorderSide(
-                                        width: 2, color: HexColor('614400')),
+                                        width: 3, color: HexColor('614400')),
                                     shape: RoundedRectangleBorder(
                                         borderRadius:
                                             BorderRadius.circular(20))),
@@ -308,7 +311,7 @@ class _XemlaiDapAnState extends State<XemlaiDapAn> {
                                     style: TextStyle(
                                       fontSize: 20,
                                       fontFamily: 'LinotteBold',
-                                      color: HexColor('614400'),
+                                      color: HexColor('000000'),
                                     ),
                                   ),
                                 ),

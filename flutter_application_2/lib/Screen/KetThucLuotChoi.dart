@@ -20,7 +20,10 @@ class _KetThucLuotChoiState extends State<KetThucLuotChoi> {
     return Scaffold(
       body: Material(
         child: Container(
-          decoration: BoxDecoration(color: HexColor('0C205B')),
+          decoration: BoxDecoration(
+            //color: HexColor('0C205B')
+            image: DecorationImage(image: AssetImage('assets/bgg.jpg'), fit: BoxFit.fill)
+            ),
           child: Container(
             margin: EdgeInsets.only(top: 40, left: 15, right: 15),
             child:
@@ -29,19 +32,27 @@ class _KetThucLuotChoiState extends State<KetThucLuotChoi> {
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: [
                   Padding(
-                    padding: EdgeInsets.only(right: 80, top: 20),
+                    padding: EdgeInsets.only(right: 50, top: 20),
                     child: Image.asset(
                       'assets/logo.png',
-                      width: 120,
+                      width: 140,
                     ),
                   ),
-                  IconButton(
-                      onPressed: (() {}),
-                      icon: Image.asset(
-                        'assets/icon3.png',
-                        height: 70,
-                        width: 70,
-                      )),
+                  InkWell(
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        Image.asset(
+                          'assets/icon3.png',
+                          fit: BoxFit.fill,
+                          height: 45,
+                          width: 45,
+                        )
+                      ],
+                    ),
+                  ),
+                  
                 ],
               ),
               Container(
@@ -103,7 +114,14 @@ class _KetThucLuotChoiState extends State<KetThucLuotChoi> {
                                         style: TextStyle(
                                             fontFamily: 'FSAriston',
                                             fontSize: 40,
-                                            color: HexColor('614400')),
+                                            color: HexColor('ffffff'),
+                                            shadows: [
+                                              Shadow(
+                                                blurRadius: 7,
+                                                color: Colors.black,
+                                                offset: Offset(4.0,4.0)
+                                              )
+                                            ]),
                                       )
                                     ],
                                   ),
@@ -178,8 +196,14 @@ class _KetThucLuotChoiState extends State<KetThucLuotChoi> {
                               padding: EdgeInsets.only(right: 10),
                               child: ElevatedButton(
                                 style: ElevatedButton.styleFrom(
-                                  backgroundColor: HexColor('FFEE52'),
+                                  backgroundColor: HexColor('FFF9CA'),
                                   minimumSize: Size(70, 70),
+                                  side:  BorderSide(
+                                        width: 3, color: HexColor('614400')),
+                                   shape: RoundedRectangleBorder(
+                                        borderRadius:
+                                            BorderRadius.circular(20))
+                          
                                   
                                 ),
                                 child: Padding(
@@ -209,10 +233,10 @@ class _KetThucLuotChoiState extends State<KetThucLuotChoi> {
                                     title: Stack(
                                       children: [
                                         Text(
-                                          'Lưu ý',
+                                          '| Lưu ý',
                                           style: TextStyle(
-                                              color: HexColor('f4a000'),
-                                              fontSize: 35,
+                                              color: HexColor('614400'),
+                                              fontSize: 38,
                                               fontFamily: 'FSAriston'),
                                         ),
                                         Positioned(
@@ -254,7 +278,7 @@ class _KetThucLuotChoiState extends State<KetThucLuotChoi> {
                                                               .center,
                                                       children: [
                                                         Image.asset(
-                                                          'assets/btn.png',
+                                                          'assets/btn-2.png',
                                                           fit: BoxFit.fill,
                                                           height: 50,
                                                           width: 120,
@@ -266,19 +290,19 @@ class _KetThucLuotChoiState extends State<KetThucLuotChoi> {
                                                         padding:
                                                             EdgeInsets.zero,
                                                         child: Text(
-                                                          'Đã hiểu',
+                                                          'Đồng ý',
                                                           textAlign:
                                                               TextAlign.center,
                                                           style: TextStyle(
-                                                              fontSize: 23,
+                                                              fontSize: 20,
                                                               fontFamily:
-                                                                  'FSAriston',
+                                                                  'LinotteBold',
                                                               color:
                                                                   Colors.black),
                                                         ),
                                                       ),
-                                                      top: 11,
-                                                      left: 35,
+                                                      top: 12,
+                                                      left: 28,
                                                     ),
                                                   ]),
                                                 ),
@@ -304,7 +328,12 @@ class _KetThucLuotChoiState extends State<KetThucLuotChoi> {
                               padding: EdgeInsets.only(right: 10),
                               child: ElevatedButton(
                                 style: ElevatedButton.styleFrom(
-                                  backgroundColor: HexColor('FFEE52'),
+                                  backgroundColor: HexColor('FFF9CA'),
+                                   side:  BorderSide(
+                                        width: 3, color: HexColor('614400')),
+                                   shape: RoundedRectangleBorder(
+                                        borderRadius:
+                                            BorderRadius.circular(20)),
                                   minimumSize: Size(70, 70),
                                   /*side: const BorderSide(
                                       width: 2, color: Colors.black),*/
@@ -343,7 +372,12 @@ class _KetThucLuotChoiState extends State<KetThucLuotChoi> {
                               padding: EdgeInsets.zero,
                               child: ElevatedButton(
                                 style: ElevatedButton.styleFrom(
-                                  backgroundColor: HexColor('FFEE52'),
+                                   backgroundColor: HexColor('FFF9CA'),
+                                   side:  BorderSide(
+                                        width: 3, color: HexColor('614400')),
+                                   shape: RoundedRectangleBorder(
+                                        borderRadius:
+                                            BorderRadius.circular(20)),
                                   minimumSize: Size(70, 70),
                                   /*side: const BorderSide(
                                       width: 2, color: Colors.black),*/

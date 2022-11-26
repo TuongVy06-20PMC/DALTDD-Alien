@@ -78,11 +78,11 @@ class _DangKyState extends State<DangKy> {
                     ],
                   ),
                 ),
-                const Padding(
+                Padding(
                     padding: EdgeInsets.all(5),
                     child: SizedBox(
                       width: 280,
-                      height: 52,
+                      height: 50,
                       child: TextField(
                         style: TextStyle(
                           color: Colors.black,
@@ -93,8 +93,9 @@ class _DangKyState extends State<DangKy> {
                           filled: true,
                           fillColor: Colors.white,
                           enabledBorder: OutlineInputBorder(
-                              borderSide:
-                                  BorderSide(color: Colors.black, width: 2)),
+                            borderSide: BorderSide(
+                                color: Colors.black, width: 2), //<-- SEE HERE
+                          ),
                           border: OutlineInputBorder(),
                           hintText: "Họ tên",
                           hintStyle: TextStyle(
@@ -108,7 +109,7 @@ class _DangKyState extends State<DangKy> {
                     padding: EdgeInsets.all(5),
                     child: SizedBox(
                       width: 280,
-                      height: 52,
+                      height: 50,
                       child: TextField(
                         controller: dateinput,
                         style: TextStyle(
@@ -158,7 +159,7 @@ class _DangKyState extends State<DangKy> {
                     padding: EdgeInsets.all(5),
                     child: SizedBox(
                       width: 280,
-                      height: 52,
+                      height: 50,
                       child: TextField(
                         style: TextStyle(
                           color: Colors.black,
@@ -184,7 +185,7 @@ class _DangKyState extends State<DangKy> {
                     padding: EdgeInsets.all(5),
                     child: SizedBox(
                       width: 280,
-                      height: 52,
+                      height: 50,
                       child: TextField(
                         style: TextStyle(
                           color: Colors.black,
@@ -210,7 +211,7 @@ class _DangKyState extends State<DangKy> {
                     padding: EdgeInsets.all(5),
                     child: SizedBox(
                       width: 280,
-                      height: 52,
+                      height: 50,
                       child: TextField(
                         obscureText: _obscureText,
                         style: TextStyle(
@@ -243,7 +244,7 @@ class _DangKyState extends State<DangKy> {
                     padding: EdgeInsets.all(5),
                     child: SizedBox(
                       width: 280,
-                      height: 52,
+                      height: 50,
                       child: TextField(
                         obscureText: _obscureText,
                         style: TextStyle(
@@ -281,10 +282,10 @@ class _DangKyState extends State<DangKy> {
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
                           Image.asset(
-                            'assets/btn.png',
+                            'assets/btn-2.png',
                             fit: BoxFit.fill,
-                            height: 60,
-                            width: 230,
+                            height: 70,
+                            width: 220,
                           )
                         ],
                       ),
@@ -300,39 +301,18 @@ class _DangKyState extends State<DangKy> {
                                 color: Colors.black),
                           ),
                         ),
-                        left: 130,
-                        top: 3,
+                        left: 137,
+                        top: 6,
                       ),
                     ]),
                   ),
                   onTap: () => showDialog<String>(
                     context: context,
                     builder: (BuildContext context) => AlertDialog(
-                      backgroundColor: HexColor('fde787'),
-                      title: Stack(
-                        children: [
-                          Text(
-                            'Alien xin chào!!!',
-                            style: TextStyle(
-                                color: HexColor('f4a000'),
-                                fontSize: 35,
-                                fontFamily: 'FSAriston'),
-                          ),
-                          Positioned(
-                            child: IconButton(
-                                onPressed: (() {}),
-                                icon: Image.asset(
-                                  'assets/cross.png',
-                                  height: 30,
-                                  width: 30,
-                                )),
-                            left: 210,
-                            bottom: 1,
-                          ),
-                        ],
-                      ),
+                      backgroundColor: HexColor('fcdf69'),
+                      
                       content: const Text(
-                        'Đăng ký tài khoản thành công',
+                        'Chào mừng bạn đến với AlienQuizzz',
                         textAlign: TextAlign.center,
                         style:
                             TextStyle(fontFamily: 'LinotteBold', fontSize: 22),
@@ -356,7 +336,7 @@ class _DangKyState extends State<DangKy> {
                                             'assets/btn.png',
                                             fit: BoxFit.fill,
                                             height: 50,
-                                            width: 120,
+                                            width: 140,
                                           )
                                         ],
                                       ),
@@ -367,13 +347,13 @@ class _DangKyState extends State<DangKy> {
                                             'Đăng Nhập',
                                             textAlign: TextAlign.center,
                                             style: TextStyle(
-                                                fontSize: 23,
-                                                fontFamily: 'FSAriston',
+                                                fontSize: 18,
+                                                fontFamily: 'LinotteBold',
                                                 color: Colors.black),
                                           ),
                                         ),
-                                        top: 11,
-                                        left: 18,
+                                        top: 13,
+                                        left: 35,
                                       ),
                                     ]),
                                   ),
@@ -387,6 +367,15 @@ class _DangKyState extends State<DangKy> {
                                   },
                                 ),
                               ],
+                            ),
+                            Positioned(
+                              child: Image.asset(
+                                'assets/monster-1.png',
+                                fit: BoxFit.fill,
+                                height: 50,
+                                width: 50,
+                              ),
+                              left: 60,
                             ),
                           ],
                         )
@@ -404,14 +393,14 @@ class _DangKyState extends State<DangKy> {
                         style: TextStyle(
                           color: Colors.white,
                           fontFamily: 'Linotte',
-                          fontSize: 15,
+                          fontSize: 16,
                         ),
                       ),
                       TextButton(
                         child: Text(
-                          'Đăng nhập ngay',
+                          'Đăng Nhập ngay',
                           style: TextStyle(
-                            color: HexColor('F2FA5A'),
+                            color: HexColor('f1c500'),
                             fontFamily: 'LinotteBold',
                             fontSize: 20,
                           ),

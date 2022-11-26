@@ -64,7 +64,7 @@ class _QuenMatKhauState extends State<QuenMatKhau> {
                 padding: EdgeInsets.all(10),
                 child: SizedBox(
                   width: 280,
-                  height: 56,
+                  height: 50,
                   child: TextFormField(
                     controller: emailController,
                     cursorColor:Colors.white,
