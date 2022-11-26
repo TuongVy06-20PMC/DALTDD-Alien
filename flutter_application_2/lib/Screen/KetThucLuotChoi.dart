@@ -6,6 +6,7 @@ import 'package:flutter_application_2/Screen/XemlaiDapAn.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'package:flutter/material.dart';
 import 'BatDauChoi.dart';
+import 'Level.dart';
 
 class KetThucLuotChoi extends StatefulWidget {
   const KetThucLuotChoi({super.key});
@@ -21,9 +22,9 @@ class _KetThucLuotChoiState extends State<KetThucLuotChoi> {
       body: Material(
         child: Container(
           decoration: BoxDecoration(
-            //color: HexColor('0C205B')
-            image: DecorationImage(image: AssetImage('assets/bgg.jpg'), fit: BoxFit.fill)
-            ),
+              //color: HexColor('0C205B')
+              image: DecorationImage(
+                  image: AssetImage('assets/bgg.jpg'), fit: BoxFit.fill)),
           child: Container(
             margin: EdgeInsets.only(top: 40, left: 15, right: 15),
             child:
@@ -52,7 +53,6 @@ class _KetThucLuotChoiState extends State<KetThucLuotChoi> {
                       ],
                     ),
                   ),
-                  
                 ],
               ),
               Container(
@@ -69,7 +69,7 @@ class _KetThucLuotChoiState extends State<KetThucLuotChoi> {
                                 EdgeInsets.only(left: 60, top: 15, right: 50),
                             //padding: EdgeInsets.all(20),
                             height: MediaQuery.of(context).size.height / 2,
-                            width: MediaQuery.of(context).size.width / 1.05,
+                            width: MediaQuery.of(context).size.width / 1,
                             decoration: const BoxDecoration(
                                 image: DecorationImage(
                                     image: AssetImage('assets/bg-menu.png'),
@@ -86,7 +86,7 @@ class _KetThucLuotChoiState extends State<KetThucLuotChoi> {
                                           child: Image.asset(
                                             'assets/btn.png',
                                             width: 230,
-                                            height: 60,
+                                            //height: 60,
                                           ),
                                         ),
                                         const Positioned(
@@ -97,8 +97,8 @@ class _KetThucLuotChoiState extends State<KetThucLuotChoi> {
                                                 fontFamily: 'LinotteBold',
                                                 fontSize: 25),
                                           ),
-                                          left: 65,
-                                          bottom: 15,
+                                          left: 62,
+                                          bottom: 10,
                                         ),
                                       ],
                                     ),
@@ -113,14 +113,13 @@ class _KetThucLuotChoiState extends State<KetThucLuotChoi> {
                                         'Làm tốt lắm!!',
                                         style: TextStyle(
                                             fontFamily: 'FSAriston',
-                                            fontSize: 45,
-                                            color: HexColor('000D6B'),
+                                            fontSize: 50,
+                                            color: HexColor('0C1E7F'),
                                             shadows: [
                                               Shadow(
-                                                blurRadius: 5,
-                                                color: Colors.white,
-                                                offset: Offset(3.0,3.0)
-                                              )
+                                                  blurRadius: 5,
+                                                  color: Colors.white,
+                                                  offset: Offset(2.0, 2.5))
                                             ]),
                                       )
                                     ],
@@ -196,16 +195,13 @@ class _KetThucLuotChoiState extends State<KetThucLuotChoi> {
                               padding: EdgeInsets.only(right: 10),
                               child: ElevatedButton(
                                 style: ElevatedButton.styleFrom(
-                                  backgroundColor: HexColor('FFF9CA'),
-                                  minimumSize: Size(70, 70),
-                                  side:  BorderSide(
+                                    backgroundColor: HexColor('FFF9CA'),
+                                    minimumSize: Size(70, 70),
+                                    side: BorderSide(
                                         width: 3, color: HexColor('614400')),
-                                   shape: RoundedRectangleBorder(
+                                    shape: RoundedRectangleBorder(
                                         borderRadius:
-                                            BorderRadius.circular(20))
-                          
-                                  
-                                ),
+                                            BorderRadius.circular(20))),
                                 child: Padding(
                                     padding: EdgeInsets.all(0),
                                     child: Row(
@@ -213,16 +209,15 @@ class _KetThucLuotChoiState extends State<KetThucLuotChoi> {
                                         const Padding(
                                           padding: EdgeInsets.all(2),
                                           child: Text(
-                                          'Chơi lại',
-                                          textAlign: TextAlign.center,
-                                          style: TextStyle(
-                                            fontSize: 20,
-                                            fontFamily: 'LinotteBold',
-                                            color: Colors.black,
+                                            'Chơi lại',
+                                            textAlign: TextAlign.center,
+                                            style: TextStyle(
+                                              fontSize: 20,
+                                              fontFamily: 'LinotteBold',
+                                              color: Colors.black,
+                                            ),
                                           ),
                                         ),
-                                        ),
-                                        
                                       ],
                                     )),
                                 onPressed: () => showDialog<String>(
@@ -329,11 +324,10 @@ class _KetThucLuotChoiState extends State<KetThucLuotChoi> {
                               child: ElevatedButton(
                                 style: ElevatedButton.styleFrom(
                                   backgroundColor: HexColor('FFF9CA'),
-                                   side:  BorderSide(
-                                        width: 3, color: HexColor('614400')),
-                                   shape: RoundedRectangleBorder(
-                                        borderRadius:
-                                            BorderRadius.circular(20)),
+                                  side: BorderSide(
+                                      width: 3, color: HexColor('614400')),
+                                  shape: RoundedRectangleBorder(
+                                      borderRadius: BorderRadius.circular(20)),
                                   minimumSize: Size(70, 70),
                                   /*side: const BorderSide(
                                       width: 2, color: Colors.black),*/
@@ -347,7 +341,7 @@ class _KetThucLuotChoiState extends State<KetThucLuotChoi> {
                                               width: 30,
                                               height: 30,
                                             ),*/
-                                         Text(
+                                        Text(
                                           'Xem lại',
                                           textAlign: TextAlign.center,
                                           style: TextStyle(
@@ -359,12 +353,12 @@ class _KetThucLuotChoiState extends State<KetThucLuotChoi> {
                                       ],
                                     )),
                                 onPressed: () {
-                                   Navigator.push(
-                                                    context,
-                                                    MaterialPageRoute(
-                                                        builder: (context) =>
-                                                            const XemlaiDapAn()),
-                                                  );
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) =>
+                                            const XemlaiDapAn()),
+                                  );
                                 },
                               ),
                             ),
@@ -372,12 +366,11 @@ class _KetThucLuotChoiState extends State<KetThucLuotChoi> {
                               padding: EdgeInsets.zero,
                               child: ElevatedButton(
                                 style: ElevatedButton.styleFrom(
-                                   backgroundColor: HexColor('FFF9CA'),
-                                   side:  BorderSide(
-                                        width: 3, color: HexColor('614400')),
-                                   shape: RoundedRectangleBorder(
-                                        borderRadius:
-                                            BorderRadius.circular(20)),
+                                  backgroundColor: HexColor('FFF9CA'),
+                                  side: BorderSide(
+                                      width: 3, color: HexColor('614400')),
+                                  shape: RoundedRectangleBorder(
+                                      borderRadius: BorderRadius.circular(20)),
                                   minimumSize: Size(70, 70),
                                   /*side: const BorderSide(
                                       width: 2, color: Colors.black),*/
@@ -403,7 +396,12 @@ class _KetThucLuotChoiState extends State<KetThucLuotChoi> {
                                       ],
                                     )),
                                 onPressed: () {
-                                  
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) =>
+                                            const LevelScreen()),
+                                  );
                                 },
                               ),
                             ),
