@@ -113,13 +113,13 @@ class _KetThucLuotChoiState extends State<KetThucLuotChoi> {
                                         'Làm tốt lắm!!',
                                         style: TextStyle(
                                             fontFamily: 'FSAriston',
-                                            fontSize: 40,
-                                            color: HexColor('ffffff'),
+                                            fontSize: 45,
+                                            color: HexColor('000D6B'),
                                             shadows: [
                                               Shadow(
-                                                blurRadius: 7,
-                                                color: Colors.black,
-                                                offset: Offset(4.0,4.0)
+                                                blurRadius: 5,
+                                                color: Colors.white,
+                                                offset: Offset(3.0,3.0)
                                               )
                                             ]),
                                       )
@@ -132,7 +132,7 @@ class _KetThucLuotChoiState extends State<KetThucLuotChoi> {
                                   children: const [
                                     Padding(
                                       padding:
-                                          EdgeInsets.only(bottom: 10, top: 20),
+                                          EdgeInsets.only(bottom: 10, top: 25),
                                       child: Text(
                                         'Tổng số điểm: 700',
                                         style: TextStyle(
