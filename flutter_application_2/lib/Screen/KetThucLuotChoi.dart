@@ -44,11 +44,19 @@ class _KetThucLuotChoiState extends State<KetThucLuotChoi> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
-                        Image.asset(
-                          'assets/icon3.png',
-                          fit: BoxFit.fill,
-                          height: 45,
-                          width: 45,
+                        IconButton(
+                          onPressed: () => {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => const BatDauChoi()),
+                            )
+                          },
+                          icon: Image.asset(
+                            'assets/close-option.png',
+                            color: HexColor('FFDE00'),
+                          ),
+                          iconSize: 40,
                         )
                       ],
                     ),
@@ -238,9 +246,10 @@ class _KetThucLuotChoiState extends State<KetThucLuotChoi> {
                                           child: IconButton(
                                               onPressed: (() {}),
                                               icon: Image.asset(
-                                                'assets/cross.png',
+                                                'assets/close-option.png',
                                                 height: 30,
                                                 width: 30,
+                                                color: HexColor('614400'),
                                               )),
                                           left: 210,
                                           bottom: 1,

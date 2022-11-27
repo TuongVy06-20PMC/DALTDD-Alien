@@ -30,7 +30,9 @@ class _DatLaiMatKhauState extends State<DatLaiMatKhau> {
           child: Container(
               width: MediaQuery.of(context).size.width,
               height: MediaQuery.of(context).size.height,
-              decoration: BoxDecoration(color: HexColor('0C205B')),
+              decoration: const BoxDecoration(
+          image: DecorationImage(
+              image: AssetImage('assets/bgg.jpg'), fit: BoxFit.cover)),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [

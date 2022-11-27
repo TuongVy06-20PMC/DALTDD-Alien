@@ -1,3 +1,4 @@
+
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter_application_2/Screen/KetThucLuotChoi.dart';
@@ -6,15 +7,14 @@ import 'package:flutter_application_2/component/TrangChuTabBarGoogle.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'package:flutter/material.dart';
 import 'TrangChu.dart';
-
-class BatDauChoi extends StatefulWidget {
-  const BatDauChoi({super.key});
+class VaoTran extends StatefulWidget {
+  const VaoTran({super.key});
 
   @override
-  State<BatDauChoi> createState() => _BatDauChoiState();
+  State<VaoTran> createState() => _VaoTranState();
 }
 
-class _BatDauChoiState extends State<BatDauChoi> {
+class _VaoTranState extends State<VaoTran> {
    BorderRadiusGeometry _borderRadius = BorderRadius.circular(8);
   GlobalKey<ScaffoldState> _sKey = GlobalKey<ScaffoldState>();
   Color? color = Colors.white;

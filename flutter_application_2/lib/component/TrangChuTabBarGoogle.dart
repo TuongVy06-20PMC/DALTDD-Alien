@@ -39,25 +39,25 @@ class _TrangChuTabBarGoogleState extends State<TrangChuTabBarGoogle> {
                 _selectedIndex = index;
               });
             },
-            padding: EdgeInsets.all(25),
-            tabs: [
+            padding: EdgeInsets.all(16),
+            tabs:const [
               GButton(
                 icon: Icons.person,
                 text: 'Hồ sơ',
                 textStyle: TextStyle(
-                    fontFamily: 'FSAriston', fontSize: 20, color: Colors.white),
+                    fontFamily: 'LinotteBold', fontSize: 17, color: Colors.white),
               ),
               GButton(
                 icon: Icons.home,
                 text: 'Trang chủ',
                 textStyle: TextStyle(
-                    fontFamily: 'FSAriston', fontSize: 20, color: Colors.white),
+                    fontFamily: 'LinotteBold', fontSize: 17, color: Colors.white),
               ),
               GButton(
                 icon: Icons.search,
                 text: 'Tìm kiếm',
                 textStyle: TextStyle(
-                    fontFamily: 'FSAriston', fontSize: 20, color: Colors.white),
+                    fontFamily: 'LinotteBold', fontSize: 17, color: Colors.white),
               ),
             ],
           ),

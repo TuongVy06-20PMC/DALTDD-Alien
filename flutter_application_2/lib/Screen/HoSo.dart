@@ -28,6 +28,7 @@ class _HoSoState extends State<HoSo> {
         body: Center(
             child: ListView(children: [
           Container(
+            padding: EdgeInsets.only(left: 15, right: 15, top: 15),
               height: MediaQuery.of(context).size.height,
               width: MediaQuery.of(context).size.width,
               decoration: const BoxDecoration(
@@ -44,27 +45,28 @@ class _HoSoState extends State<HoSo> {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => const TrangChuTabBarGoogle()),
+                                builder: (context) =>
+                                    const TrangChuTabBarGoogle()),
                           );
                         }),
                         icon: Image.asset(
-                          'assets/delete.png',
-                          height: 25,
-                          width: 25,
-                          color: HexColor('FFF323'),
+                          'assets/left-arrow.png',
+                          height: 50,
+                          width: 50,
+                          color: HexColor('#FFDE00'),
                         )),
                     IconButton(
                         onPressed: () => _sKey.currentState?.openEndDrawer(),
                         icon: Image.asset(
                           'assets/menu.png',
-                          height: 30,
-                          width: 30,
-                          color: HexColor('FFF323'),
+                          height: 40,
+                          width: 40,
+                          color: HexColor('FFDE00'),
                         )),
                   ],
                 ),
                 SizedBox(
-                  height: 30,
+                  height: 20,
                 ),
                 Stack(children: [
                   CircleAvatar(
@@ -133,6 +135,7 @@ class _HoSoState extends State<HoSo> {
                 ),
                 // SizedBox(height: 10,),
                 Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     InkWell(
                       child: Container(
@@ -263,48 +266,48 @@ class _HoSoState extends State<HoSo> {
                             ),
                           ],
                         ),
-                        
                       ),
                     ),
                     InkWell(
-                child: Container(
-                  child: Stack(children: [
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
-                        Image.asset(
-                          'assets/btn.png',
-                          fit: BoxFit.fill,
-                          height: 60,
-                          width: 230,
-                        )
-                      ],
-                    ),
-                    Positioned(
-                      child: Padding(
-                        padding: EdgeInsets.all(10),
-                        child: Text(
-                          'Chỉnh sửa',
-                          textAlign: TextAlign.center,
-                          style: TextStyle(
-                              fontSize: 35,
-                              fontFamily: 'FSAriston',
-                              color: Colors.black),
-                        ),
+                      child: Container(
+                        child: Stack(children: [
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            children: [
+                              Image.asset(
+                                'assets/btn.png',
+                                fit: BoxFit.fill,
+                                height: 60,
+                                width: 230,
+                              )
+                            ],
+                          ),
+                          Positioned(
+                            child: Padding(
+                              padding: EdgeInsets.all(10),
+                              child: Text(
+                                'Chỉnh sửa',
+                                textAlign: TextAlign.center,
+                                style: TextStyle(
+                                    fontSize: 35,
+                                    fontFamily: 'FSAriston',
+                                    color: Colors.black),
+                              ),
+                            ),
+                            left: 117,
+                            top: 1,
+                          ),
+                        ]),
                       ),
-                      left: 135,
-                      top: 1,
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const ChinhSuaHoSo()),
+                        );
+                      },
                     ),
-                  ]),
-                ),
-                onTap: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => const ChinhSuaHoSo()),
-                  );
-                },
-              ),
                   ],
                 )
               ])),

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_2/Screen/BatDauChoi.dart';
-import 'package:flutter_application_2/Screen/GiaoDau.dart';
+import 'package:flutter_application_2/Screen/TimTran.dart';
 import 'package:flutter_application_2/Screen/ThongKe.dart';
 import 'package:flutter_application_2/Screen/TrangChu.dart';
 import 'package:flutter_application_2/component/TrangChuTabBarGoogle.dart';
@@ -45,12 +45,20 @@ class _MyHomePageState extends State<MyHomePage> {
       height: MediaQuery.of(context).size.height,
       decoration: const BoxDecoration(
           image: DecorationImage(
-              image: AssetImage('assets/bg.png'), fit: BoxFit.cover)),
+              image: AssetImage('assets/bgg.jpg'), fit: BoxFit.cover)),
       child: Column(
-        mainAxisAlignment: MainAxisAlignment.end,
+        mainAxisAlignment: MainAxisAlignment.start,
         children: [
+          Container(
+                  margin: EdgeInsets.only(bottom: 80, top: 150),
+                  child: Image.asset(
+                    'assets/logo.png',
+                    fit: BoxFit.cover,
+                    width: 200,
+                  ),
+                ),
           Padding(
-            padding: EdgeInsets.only(bottom: 60),
+            padding: EdgeInsets.only(top: 350),
             child: TextButton(
               child: const Text(
                 'Bắt đầu.......',

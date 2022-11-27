@@ -86,7 +86,7 @@ class _CaiDatState extends State<CaiDat> {
               padding: EdgeInsets.only(top: 40),
                 decoration: const BoxDecoration(
                   image: DecorationImage(
-                      image: AssetImage('assets/bg-1.png'), fit: BoxFit.cover),
+                      image: AssetImage('assets/bgg.jpg'), fit: BoxFit.cover),
                 ),
                 child: Padding(
                     padding: const EdgeInsets.all(5.0),

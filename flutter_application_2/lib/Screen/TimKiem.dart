@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_2/Screen/BatDauChoi.dart';
-import 'package:flutter_application_2/Screen/GiaoDau.dart';
+import 'package:flutter_application_2/Screen/TimTran.dart';
 import 'package:flutter_application_2/Screen/HoSo.dart';
 import 'package:flutter_application_2/Screen/ThongKe.dart';
 import 'package:flutter_application_2/component/TrangChuTabBarGoogle.dart';
@@ -31,7 +31,8 @@ class _TimKiemState extends State<TimKiem> {
                   height: MediaQuery.of(context).size.height,
                   width: MediaQuery.of(context).size.width,
                   decoration: const BoxDecoration(
-                    image: DecorationImage(image: AssetImage('assets/bg2.png')),
+                    image: DecorationImage(
+              image: AssetImage('assets/bgg.jpg'), fit: BoxFit.cover),
                     gradient: LinearGradient(
                       colors: [
                         Color.fromARGB(255, 3, 3, 3),

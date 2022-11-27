@@ -30,29 +30,38 @@ class _LevelScreenState extends State<LevelScreen> {
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
                 Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
+                  mainAxisAlignment: MainAxisAlignment.end,
                   children: [
                     Padding(
-                      padding: EdgeInsets.only(top: 20),
+                      padding: EdgeInsets.only(right: 50, top: 10),
                       child: Image.asset(
                         'assets/logo.png',
-                        width: 110,
+                        height: 80,
+                        width: 150,
                       ),
                     ),
-                    /* InkWell(
+                    InkWell(
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
-                        Image.asset(
-                          'assets/icon3.png',
-                          fit: BoxFit.fill,
-                          height: 45,
-                          width: 45,
+                        IconButton(
+                          onPressed: () => {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => const TrangChuTabBarGoogle()),
+                            )
+                          },
+                          icon: Image.asset(
+                            'assets/close-option.png',
+                            color: HexColor('FFDE00'),
+                          ),
+                          iconSize: 40,
                         )
                       ],
                     ),
-                  ),*/
+                  ),
                   ],
                 ),
                 Container(
@@ -61,7 +70,7 @@ class _LevelScreenState extends State<LevelScreen> {
                       children: <Widget>[
                         // Stroked text as border.
                         Text(
-                          'LEVEL',
+                          'CẤP ĐỘ',
                           style: TextStyle(
                             fontSize: 65,
                             fontFamily: 'FSAriston',
@@ -73,7 +82,7 @@ class _LevelScreenState extends State<LevelScreen> {
                         ),
                         // Solid text as fill.
                         Text(
-                          'LEVEL',
+                          'CẤP ĐỘ',
                           style: TextStyle(
                             fontSize: 65,
                             fontFamily: 'FSAriston',
@@ -84,7 +93,7 @@ class _LevelScreenState extends State<LevelScreen> {
                     )),
                 Container(
                   margin: EdgeInsets.only(
-                    top: 30,
+                    top: 15,
                   ),
                   child: Column(
                     children: [
@@ -114,7 +123,7 @@ class _LevelScreenState extends State<LevelScreen> {
                                         height: 5,
                                       ),
                                       Text(
-                                        'Level 1',
+                                        'Cấp 1',
                                         style: TextStyle(
                                             color: Colors.black,
                                             fontSize: 15,
@@ -272,7 +281,7 @@ class _LevelScreenState extends State<LevelScreen> {
                                       ),
                                       // SizedBox(height: 5,),
                                       Text(
-                                        'Level 2',
+                                        'Cấp 2',
                                         style: TextStyle(
                                             color: Colors.black,
                                             fontSize: 15,
@@ -317,7 +326,7 @@ class _LevelScreenState extends State<LevelScreen> {
                                         height: 5,
                                       ),
                                       Text(
-                                        'Level 3',
+                                        'Cấp 3',
                                         style: TextStyle(
                                             color: Colors.black,
                                             fontSize: 15,
@@ -373,7 +382,7 @@ class _LevelScreenState extends State<LevelScreen> {
                                         height: 5,
                                       ),
                                       Text(
-                                        'Level 4',
+                                        'Cấp 4',
                                         style: TextStyle(
                                             color: Colors.black,
                                             fontSize: 15,
@@ -419,7 +428,7 @@ class _LevelScreenState extends State<LevelScreen> {
                                       ),
                                       // SizedBox(height: 5,),
                                       Text(
-                                        'Level 5',
+                                        'Cấp 5',
                                         style: TextStyle(
                                             color: Colors.black,
                                             fontSize: 15,
@@ -464,7 +473,7 @@ class _LevelScreenState extends State<LevelScreen> {
                                         height: 5,
                                       ),
                                       Text(
-                                        'Level 6',
+                                        'Cấp 6',
                                         style: TextStyle(
                                             color: Colors.black,
                                             fontSize: 15,
@@ -520,7 +529,7 @@ class _LevelScreenState extends State<LevelScreen> {
                                         height: 5,
                                       ),
                                       Text(
-                                        'Level 7',
+                                        'Cấp 7',
                                         style: TextStyle(
                                             color: Colors.black,
                                             fontSize: 15,
@@ -568,7 +577,7 @@ class _LevelScreenState extends State<LevelScreen> {
                                         height: 5,
                                       ),
                                       Text(
-                                        'Level 8',
+                                        'Cấp 8',
                                         style: TextStyle(
                                             color: Colors.black,
                                             fontSize: 15,
@@ -613,7 +622,7 @@ class _LevelScreenState extends State<LevelScreen> {
                                         height: 5,
                                       ),
                                       Text(
-                                        'Level 9',
+                                        'Cấp 9',
                                         style: TextStyle(
                                             color: Colors.black,
                                             fontSize: 15,
@@ -669,7 +678,7 @@ class _LevelScreenState extends State<LevelScreen> {
                                         height: 5,
                                       ),
                                       Text(
-                                        'Level 10',
+                                        'Cấp 10',
                                         style: TextStyle(
                                             color: Colors.black,
                                             fontSize: 15,

@@ -147,7 +147,7 @@ class _DangNhapState extends State<DangNhap> {
                         Image.asset(
                           'assets/btn-2.png',
                           fit: BoxFit.fill,
-                          height: 70,
+                          height: 65,
                             width: 220,
                         )
                       ],
@@ -164,7 +164,7 @@ class _DangNhapState extends State<DangNhap> {
                               color: Colors.black),
                         ),
                       ),
-                      left: 120,
+                      left: 125,
                       top: 5,
                     ),
                   ]),
