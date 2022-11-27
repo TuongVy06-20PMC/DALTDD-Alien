@@ -1,6 +1,6 @@
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter_application_2/Screen/KetThucLuotChoi.dart';
+import 'package:flutter_application_2/Screen/KetThucTran.dart';
 import 'package:flutter_application_2/Screen/TrangChu.dart';
 import 'package:flutter_application_2/component/TrangChuTabBarGoogle.dart';
 import 'package:hexcolor/hexcolor.dart';
@@ -540,7 +540,7 @@ class _VaoTranState extends State<VaoTran> {
                                     context,
                                     MaterialPageRoute(
                                         builder: (context) =>
-                                            const KetThucLuotChoi()),
+                                            const KetThucTran()),
                                   );
                                 },
                               ),
