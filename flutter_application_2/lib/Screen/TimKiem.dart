@@ -8,6 +8,7 @@ import 'package:flutter_application_2/Screen/XepHang.dart';
 import 'package:flutter_application_2/Screen/TrangChu.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'package:intl/intl.dart';
+import 'package:searchbar_animation/const/colours.dart';
 import '../component/menu.dart';
 import 'package:searchbar_animation/searchbar_animation.dart';
 
@@ -32,7 +33,7 @@ class _TimKiemState extends State<TimKiem> {
                   width: MediaQuery.of(context).size.width,
                   decoration: const BoxDecoration(
                     image: DecorationImage(
-              image: AssetImage('assets/bgg.jpg'), fit: BoxFit.cover),
+                        image: AssetImage('assets/bgg.jpg'), fit: BoxFit.cover),
                     gradient: LinearGradient(
                       colors: [
                         Color.fromARGB(255, 3, 3, 3),
@@ -43,33 +44,36 @@ class _TimKiemState extends State<TimKiem> {
                   child: Column(
                     children: [
                       Row(
+                        mainAxisAlignment: MainAxisAlignment.end,
                         children: [
                           Padding(
-                            padding: EdgeInsets.fromLTRB(20, 10, 0, 0),
-                            child: Column(
-                              children: [
-                                IconButton(
-                                    onPressed: () {
-                                      Navigator.popUntil(
-                                          context, (route) => route.isFirst);
-                                      Navigator.push(
-                                          context,
-                                          MaterialPageRoute(
-                                              builder: (context) =>
-                                                  const TrangChuTabBarGoogle()));
-                                    },
-                                    icon: Image.asset('assets/delete.png'))
-                              ],
+                            padding: EdgeInsets.only(right: 50, top: 20),
+                            child: Image.asset(
+                              'assets/logo.png',
+                              width: 130,
                             ),
                           ),
-                          const Padding(
-                            padding: EdgeInsets.only(top: 20.0, left: 50),
-                            child: Text(
-                              'Tìm kiếm',
-                              style: TextStyle(
-                                  color: Colors.white,
-                                  fontSize: 60.0,
-                                  fontFamily: 'FSAriston'),
+                          InkWell(
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              crossAxisAlignment: CrossAxisAlignment.center,
+                              children: [
+                                IconButton(
+                                  onPressed: () => {
+                                    Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                          builder: (context) =>
+                                              const TrangChuTabBarGoogle()),
+                                    )
+                                  },
+                                  icon: Image.asset(
+                                    'assets/close-option.png',
+                                    color: HexColor('FFDE00'),
+                                  ),
+                                  iconSize: 40,
+                                )
+                              ],
                             ),
                           ),
                         ],
@@ -90,6 +94,10 @@ class _TimKiemState extends State<TimKiem> {
                               Padding(
                                 padding: const EdgeInsets.all(20.0),
                                 child: SearchBarAnimation(
+                                  
+                                  buttonColour: Color.fromARGB(255, 255, 244, 143),
+                                  hintText: 'Tìm kiếm..',
+                                  hintTextColour: AppColours.black,
                                   textEditingController:
                                       TextEditingController(),
                                   isOriginalAnimation: true,
@@ -106,20 +114,20 @@ class _TimKiemState extends State<TimKiem> {
                                     debugPrint(
                                         'do something before animation started. It\'s the ${isSearchBarOpens ? 'opening' : 'closing'} animation');
                                   },
-                                  trailingWidget: const Icon(
+                                  trailingWidget:  Icon(
                                     Icons.search,
                                     size: 20,
-                                    color: Colors.black,
+                                    color: HexColor('0C205B'),
                                   ),
-                                  secondaryButtonWidget: const Icon(
+                                  secondaryButtonWidget:  Icon(
                                     Icons.close,
                                     size: 20,
-                                    color: Colors.black,
+                                    color: HexColor('0C205B'),
                                   ),
-                                  buttonWidget: const Icon(
+                                  buttonWidget:  Icon(
                                     Icons.search,
                                     size: 20,
-                                    color: Colors.black,
+                                    color: HexColor('0C205B'),
                                   ),
                                 ),
                               ),

@@ -1,7 +1,7 @@
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter_application_2/Screen/KetThucLuotChoi.dart';
-import 'package:flutter_application_2/Screen/TrangChu.dart';
+import 'package:flutter_application_2/component/TrangChuTabBarGoogle.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'package:flutter/material.dart';
 
@@ -13,6 +13,8 @@ class XemlaiDapAn extends StatefulWidget {
 }
 
 class _XemlaiDapAnState extends State<XemlaiDapAn> {
+  BorderRadiusGeometry _borderRadius = BorderRadius.circular(8);
+  GlobalKey<ScaffoldState> _sKey = GlobalKey<ScaffoldState>();
   Color? color = Colors.white;
   @override
   Widget build(BuildContext context) {
@@ -46,7 +48,7 @@ class _XemlaiDapAnState extends State<XemlaiDapAn> {
                 child: Column(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
-                      Row(
+                     Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           IconButton(
@@ -55,20 +57,23 @@ class _XemlaiDapAnState extends State<XemlaiDapAn> {
                                   context,
                                   MaterialPageRoute(
                                       builder: (context) =>
-                                          const TrangChu()),
+                                          const TrangChuTabBarGoogle()),
                                 );
                               }),
                               icon: Image.asset(
-                                'assets/icon6.png',
-                                height: 70,
-                                width: 70,
+                                'assets/left-arrow.png',
+                                height: 50,
+                                width: 50,
+                                color: HexColor('#FFDE00'),
                               )),
                           IconButton(
-                              onPressed: () {},
+                              onPressed: () =>
+                                  _sKey.currentState?.openEndDrawer(),
                               icon: Image.asset(
-                                'assets/menu-icon.png',
-                                height: 70,
-                                width: 70,
+                                'assets/menu.png',
+                                height: 40,
+                                width: 40,
+                                color: HexColor('FFDE00'),
                               )),
                         ],
                       ),

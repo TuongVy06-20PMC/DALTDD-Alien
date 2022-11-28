@@ -30,44 +30,40 @@ class _ThongKeState extends State<ThongKe> {
               image: DecorationImage(
                   image: AssetImage('assets/bgg.jpg'), fit: BoxFit.fill)),
           child: Column(mainAxisAlignment: MainAxisAlignment.start, children: [
-             Row(
+            Row(
+            mainAxisAlignment: MainAxisAlignment.end,
             children: [
-              
-              Expanded(
-                  child: Padding(
-                padding: EdgeInsets.fromLTRB(0, 45, 0, 0),
-                child: Column(
+              Padding(
+                padding: EdgeInsets.only(right: 50, top: 40),
+                child: Image.asset(
+                  'assets/logo.png',
+                  height: 80,
+                  width: 150,
+                ),
+              ),
+              InkWell(
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
-                    Image(
-                      image: AssetImage('assets/logo.png'),
-                      height: 80,
-                        width: 150,
-                      fit: BoxFit.cover,
+                    IconButton(
+                      onPressed: () => {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) =>
+                                  const TrangChuTabBarGoogle()),
+                        )
+                      },
+                      icon: Image.asset(
+                        'assets/close-option.png',
+                        color: HexColor('FFDE00'),
+                      ),
+                      iconSize: 40,
                     )
                   ],
                 ),
-              )),
-              Padding(
-                padding: EdgeInsets.fromLTRB(20, 30, 0, 0),
-                child: Column(
-                  children: [
-                    IconButton(
-                        onPressed: () {
-                          Navigator.popUntil(context, (route) => route.isFirst);
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) =>
-                                      const TrangChuTabBarGoogle()));
-                        },
-                        icon: Image.asset(
-                            'assets/close-option.png',
-                            color: HexColor('FFDE00'),
-                          ),iconSize: 40,)
-                  ],
-                ),
               ),
-              
             ],
           ),
             Row(
@@ -183,13 +179,12 @@ class _ThongKeState extends State<ThongKe> {
                 Container(
                   margin: EdgeInsets.fromLTRB(0, 0, 0, 0),
                   decoration: BoxDecoration(
-                    
                       color: Colors.white.withOpacity(0.3),
                       borderRadius: BorderRadius.circular(20)),
                   height: MediaQuery.of(context).size.height / 1.8,
                   width: MediaQuery.of(context).size.width / 1.2,
                   child: SingleChildScrollView(
-                      child: Column( 
+                      child: Column(
                     children: [
                       Container(
                         margin: EdgeInsets.only(

@@ -244,7 +244,14 @@ class _KetThucLuotChoiState extends State<KetThucLuotChoi> {
                                         ),
                                         Positioned(
                                           child: IconButton(
-                                              onPressed: (() {}),
+                                              onPressed: (() {
+                                                Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                          builder: (context) =>
+                                              const KetThucLuotChoi()),
+                                    );
+                                              }),
                                               icon: Image.asset(
                                                 'assets/close-option.png',
                                                 height: 30,

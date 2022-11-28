@@ -31,10 +31,10 @@ class _HoSoState extends State<HoSo> {
             padding: EdgeInsets.only(left: 15, right: 15, top: 15),
               height: MediaQuery.of(context).size.height,
               width: MediaQuery.of(context).size.width,
-              decoration: const BoxDecoration(
-                image: DecorationImage(
-                    image: AssetImage('assets/bg-1.png'), fit: BoxFit.cover),
-              ),
+             decoration: BoxDecoration(
+          //color: HexColor('0C205B')
+          image: DecorationImage(
+              image: AssetImage('assets/bgg.jpg'), fit: BoxFit.fill)),
               child:
                   Column(mainAxisAlignment: MainAxisAlignment.start, children: [
                 Row(
