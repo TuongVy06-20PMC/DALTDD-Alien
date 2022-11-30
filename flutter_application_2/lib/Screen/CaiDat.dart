@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_application_2/Screen/TrangChu.dart';
+import 'package:flutter_application_2/component/TrangChuTabBarGoogle.dart';
 import 'package:flutter_screen_wake/flutter_screen_wake.dart';
 import 'dart:async';
 import 'package:hexcolor/hexcolor.dart';
@@ -86,35 +86,45 @@ class _CaiDatState extends State<CaiDat> {
               padding: EdgeInsets.only(top: 40),
                 decoration: const BoxDecoration(
                   image: DecorationImage(
-                      image: AssetImage('assets/bg-1.png'), fit: BoxFit.cover),
+                      image: AssetImage('assets/bgg.jpg'), fit: BoxFit.cover),
                 ),
                 child: Padding(
                     padding: const EdgeInsets.all(5.0),
                     child: Column(children: <Widget>[
                       Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            IconButton(
-                                onPressed: (() {
-                                  Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                        builder: (context) => const TrangChu()),
-                                  );
-                                }),
-                                icon: Image.asset(
-                                  'assets/delete.png',
-                                  height: 25,
-                                  width: 25,
-                                  color: HexColor('FFF323'),
-                                )),
-                          ]),
-                      Image.asset(
-                        'assets/logo.png',
-                        fit: BoxFit.cover,
-                        height: 90,
-                        width: 160,
-                      ),
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: [
+                  Padding(
+                    padding: EdgeInsets.only(right: 50, top: 40),
+                    child: Image.asset(
+                      'assets/logo.png',
+                      width: 140,
+                    ),
+                  ),
+                  InkWell(
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        IconButton(
+                          onPressed: () => {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => const TrangChuTabBarGoogle()),
+                            )
+                          },
+                          icon: Image.asset(
+                            'assets/close-option.png',
+                            color: HexColor('FFDE00'),
+                          ),
+                          iconSize: 40,
+                        )
+                      ],
+                    ),
+                  ),
+                ],
+              ),
                       Container(
                           margin: EdgeInsets.only(top: 30),
                           child: Stack(
@@ -141,14 +151,15 @@ class _CaiDatState extends State<CaiDat> {
                                 ),
                               ),
                             ],
-                          )),
+                          )
+                        ),
                       SizedBox(
-                        height: 5,
+                        height: 65,
                       ),
                       Row(
                         children: <Widget>[
                           Container(
-                            margin: EdgeInsets.only(top: 60),
+                           // margin: EdgeInsets.only(top: 60),
                             padding: EdgeInsets.all(10),
                             width: 305,
                             height: 100,
@@ -162,7 +173,25 @@ class _CaiDatState extends State<CaiDat> {
                                   Column(
                                     mainAxisAlignment: MainAxisAlignment.center,
                                     children: [
-                                      Icon(Icons.play_circle_sharp, size: 30, color: HexColor('0C205B'),),
+                                      InkWell(
+                                    radius: 25,
+                                    child: IconButton(
+                                      icon: Icon(
+                                        isPlaying
+                                            ? Icons.music_note
+                                            : Icons.music_off,
+                                        size: 30,
+                                        color: HexColor('0C205B'),
+                                      ),
+                                      onPressed: () {
+                                        if (isPlaying) {
+                                          player.pause();
+                                        } else {
+                                          player.play(AssetSource('1.mp3'));
+                                        }
+                                      },
+                                    ),
+                                  ),
                                       Text('Âm thanh', style: TextStyle(
                                         fontFamily: 'LinotteBold',
                                         fontSize: 15,
@@ -187,25 +216,7 @@ class _CaiDatState extends State<CaiDat> {
                                       divisions: 100,
                                     ),
                                   ),
-                                  InkWell(
-                                    radius: 25,
-                                    child: IconButton(
-                                      icon: Icon(
-                                        isPlaying
-                                            ? Icons.music_note
-                                            : Icons.music_off,
-                                        size: 30,
-                                        color: HexColor('0C205B'),
-                                      ),
-                                      onPressed: () {
-                                        if (isPlaying) {
-                                          player.pause();
-                                        } else {
-                                          player.play(AssetSource('1.mp3'));
-                                        }
-                                      },
-                                    ),
-                                  ),
+                                  
                                 ]),
                           )
                         ],

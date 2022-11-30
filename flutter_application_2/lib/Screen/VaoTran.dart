@@ -1,21 +1,21 @@
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter_application_2/Screen/KetThucLuotChoi.dart';
+import 'package:flutter_application_2/Screen/KetThucTran.dart';
 import 'package:flutter_application_2/Screen/TrangChu.dart';
 import 'package:flutter_application_2/component/TrangChuTabBarGoogle.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'package:flutter/material.dart';
 import 'TrangChu.dart';
 
-class BatDauChoi extends StatefulWidget {
-  const BatDauChoi({super.key});
+class VaoTran extends StatefulWidget {
+  const VaoTran({super.key});
 
   @override
-  State<BatDauChoi> createState() => _BatDauChoiState();
+  State<VaoTran> createState() => _VaoTranState();
 }
 
-class _BatDauChoiState extends State<BatDauChoi> {
-   BorderRadiusGeometry _borderRadius = BorderRadius.circular(8);
+class _VaoTranState extends State<VaoTran> {
+  BorderRadiusGeometry _borderRadius = BorderRadius.circular(8);
   GlobalKey<ScaffoldState> _sKey = GlobalKey<ScaffoldState>();
   Color? color = Colors.white;
   @override
@@ -23,9 +23,9 @@ class _BatDauChoiState extends State<BatDauChoi> {
     return Scaffold(
         body: Container(
       decoration: BoxDecoration(
-            //color: HexColor('0C205B')
-            image: DecorationImage(image: AssetImage('assets/bgg.jpg'), fit: BoxFit.fill)
-            ),
+          //color: HexColor('0C205B')
+          image: DecorationImage(
+              image: AssetImage('assets/bgg.jpg'), fit: BoxFit.fill)),
       width: MediaQuery.of(context).size.width,
       height: MediaQuery.of(context).size.height,
       child: Column(
@@ -35,8 +35,8 @@ class _BatDauChoiState extends State<BatDauChoi> {
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
               Container(
-                padding: EdgeInsets.only(left: 15, right: 15, top: 15),
-                height: MediaQuery.of(context).size.height / 3.5,
+                padding: EdgeInsets.only(left: 15, right: 15, top: 30),
+                height: MediaQuery.of(context).size.height / 3.0,
                 width: MediaQuery.of(context).size.width,
                 decoration: BoxDecoration(
                     color: Colors.white.withOpacity(0.3),
@@ -48,7 +48,7 @@ class _BatDauChoiState extends State<BatDauChoi> {
                         bottomLeft: Radius.circular(30),
                         bottomRight: Radius.circular(30))),
                 child: Column(
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    mainAxisAlignment: MainAxisAlignment.start,
                     children: [
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -79,8 +79,134 @@ class _BatDauChoiState extends State<BatDauChoi> {
                               )),
                         ],
                       ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        children: [
+                          Container(
+                              height: 60,
+                              width: 150,
+                              child: Row(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Stack(
+                                    children: [
+                                      Positioned(
+                                        child: Container(
+                                          margin: EdgeInsets.only(top: 9, left: 8),
+                                          decoration: BoxDecoration(
+                                              color:
+                                                  Colors.white.withOpacity(0.9),
+                                              borderRadius:
+                                                  BorderRadius.circular(20)),
+                                          height: 30,
+                                          width: 120,
+                                          child:const Padding(
+                                            padding:  EdgeInsets.only(
+                                                left: 45, top: 5),
+                                            child:  Text(
+                                              'Số xu nè',
+                                              style: TextStyle(
+                                                  fontSize: 16,
+                                                  fontFamily: 'LinotteBold',
+                                                  color: Colors.black),
+                                            ),
+                                          ),
+                                        ),
+                                      ),
+                                      Padding(
+                                        padding: EdgeInsets.zero,
+                                        child: Container(
+                                          child: Row(
+                                            children: [
+                                              Row(
+                                                children: const [
+                                                  Image(
+                                                    image: AssetImage(
+                                                        'assets/user.png'),
+                                                    height: 50,
+                                                    fit: BoxFit.cover,
+                                                  ),
+                                                ],
+                                              ),
+                                            ],
+                                          ),
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ],
+                              )),
+                          Padding(
+                            padding: EdgeInsets.zero,
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Image(
+                                  image: AssetImage('assets/versus.png'),
+                                  height: 50,
+                                  color: Color.fromARGB(255, 249, 17, 0)
+                                )
+                              ],
+                            ),
+                          ),
+                          Container(
+                              height: 60,
+                              width: 150,
+                              child: Row(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Stack(
+                                    children: [
+                                      Positioned(
+                                        child: Container(
+                                          margin: EdgeInsets.only(top: 9),
+                                          decoration: BoxDecoration(
+                                              color:
+                                                  Colors.white.withOpacity(0.9),
+                                              borderRadius:
+                                                  BorderRadius.circular(20)),
+                                          height: 30,
+                                          width: 120,
+                                          child: Padding(
+                                            padding: const EdgeInsets.only(
+                                                left: 15, top: 5),
+                                            child: const Text(
+                                              'Số xu nè',
+                                              style: TextStyle(
+                                                  fontSize: 16,
+                                                  fontFamily: 'LinotteBold',
+                                                  color: Colors.black),
+                                            ),
+                                          ),
+                                        ),
+                                      ),
+                                      Padding(
+                                        padding: EdgeInsets.only(left: 80),
+                                        child: Container(
+                                          child: Row(
+                                            children: [
+                                              Row(
+                                                children: const [
+                                                  Image(
+                                                    image: AssetImage(
+                                                        'assets/user.png'),
+                                                    height: 50,
+                                                    fit: BoxFit.cover,
+                                                  ),
+                                                ],
+                                              ),
+                                            ],
+                                          ),
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ],
+                              )),
+                        ],
+                      ),
+                      SizedBox(height: 15),
                       Container(
-                          padding: EdgeInsets.only(bottom: 20),
                           width: MediaQuery.of(context).size.width / 1.2,
                           child: Column(
                             children: const [
@@ -123,9 +249,9 @@ class _BatDauChoiState extends State<BatDauChoi> {
                 alignment: Alignment.topLeft,
                 children: [
                   Container(
-                    margin: EdgeInsets.only(top: 35),
+                    margin: EdgeInsets.only(top: 25),
                     //padding: EdgeInsets.all(20),
-                    height: MediaQuery.of(context).size.height / 1.5,
+                    height: MediaQuery.of(context).size.height / 1.58,
                     width: MediaQuery.of(context).size.width,
                     decoration: const BoxDecoration(
                         color: Colors.white,
@@ -136,10 +262,11 @@ class _BatDauChoiState extends State<BatDauChoi> {
                       mainAxisAlignment: MainAxisAlignment.start,
                       children: [
                         Padding(
-                          padding:
-                              EdgeInsets.only(top: 25, right: 60, bottom: 20),
+                          padding: EdgeInsets.only(
+                            top: 20,
+                          ),
                           child: Row(
-                              mainAxisAlignment: MainAxisAlignment.end,
+                              mainAxisAlignment: MainAxisAlignment.center,
                               children: [
                                 Padding(
                                     padding: EdgeInsets.only(
@@ -154,23 +281,6 @@ class _BatDauChoiState extends State<BatDauChoi> {
                                         ),
                                         const Text(
                                           '00:00',
-                                          style: TextStyle(
-                                              fontFamily: 'LinotteBold',
-                                              fontSize: 22),
-                                        )
-                                      ],
-                                    )),
-                                Padding(
-                                    padding: EdgeInsets.all(0),
-                                    child: Row(
-                                      children: [
-                                        Icon(
-                                          Icons.monetization_on,
-                                          size: 30,
-                                          color: HexColor('FFC600'),
-                                        ),
-                                        const Text(
-                                          'Số xu',
                                           style: TextStyle(
                                               fontFamily: 'LinotteBold',
                                               fontSize: 22),
@@ -280,7 +390,7 @@ class _BatDauChoiState extends State<BatDauChoi> {
                           ),
                         ),
                         Container(
-                            margin: EdgeInsets.only(top: 30),
+                            margin: EdgeInsets.only(top: 25),
                             child: Row(
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
@@ -306,7 +416,7 @@ class _BatDauChoiState extends State<BatDauChoi> {
                                               '-100 xu',
                                               textAlign: TextAlign.center,
                                               style: TextStyle(
-                                                fontSize: 20,
+                                                fontSize: 18,
                                                 fontFamily: 'LinotteBold',
                                                 color: Colors.white,
                                               ),
@@ -339,7 +449,7 @@ class _BatDauChoiState extends State<BatDauChoi> {
                                               '-150 xu',
                                               textAlign: TextAlign.center,
                                               style: TextStyle(
-                                                fontSize: 20,
+                                                fontSize: 18,
                                                 fontFamily: 'LinotteBold',
                                                 color: Colors.white,
                                               ),
@@ -371,7 +481,7 @@ class _BatDauChoiState extends State<BatDauChoi> {
                                               '-250 xu',
                                               textAlign: TextAlign.center,
                                               style: TextStyle(
-                                                fontSize: 20,
+                                                fontSize: 18,
                                                 fontFamily: 'LinotteBold',
                                                 color: Colors.white,
                                               ),
@@ -403,17 +513,17 @@ class _BatDauChoiState extends State<BatDauChoi> {
                             ),
                             ),*/
                             Padding(
-                              padding: EdgeInsets.only(top: 12),
+                              padding: EdgeInsets.only(top: 15),
                               child: ElevatedButton(
                                 style: ElevatedButton.styleFrom(
                                     backgroundColor: Colors.white,
                                     minimumSize: Size(50, 20),
-                                    side:  BorderSide(
+                                    side: BorderSide(
                                         width: 3, color: HexColor('614400')),
                                     shape: RoundedRectangleBorder(
                                         borderRadius:
                                             BorderRadius.circular(20))),
-                                child:  Padding(
+                                child: Padding(
                                   padding: EdgeInsets.all(10),
                                   child: Text(
                                     'Tiếp theo >>',
@@ -430,7 +540,7 @@ class _BatDauChoiState extends State<BatDauChoi> {
                                     context,
                                     MaterialPageRoute(
                                         builder: (context) =>
-                                            const KetThucLuotChoi()),
+                                            const KetThucTran()),
                                   );
                                 },
                               ),
@@ -442,11 +552,11 @@ class _BatDauChoiState extends State<BatDauChoi> {
                   ),
                   const Positioned(
                       left: 20,
-                      bottom: 450,
+                      bottom: 440,
                       child: Image(
                         image: AssetImage('assets/monster.png'),
-                        height: 100,
-                        width: 100,
+                        height: 70,
+                        width: 70,
                       )),
                 ],
               )

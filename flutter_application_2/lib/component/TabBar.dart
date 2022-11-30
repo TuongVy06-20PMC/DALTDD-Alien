@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_2/Screen/BatDauChoi.dart';
-import 'package:flutter_application_2/Screen/GiaoDau.dart';
+import 'package:flutter_application_2/Screen/TimTran.dart';
 import 'package:flutter_application_2/Screen/HoSo.dart';
 import 'package:flutter_application_2/Screen/ThongKe.dart';
 import 'package:flutter_application_2/Screen/TimKiem.dart';

@@ -244,7 +244,7 @@ class _DangKyState extends State<DangKy> {
                     padding: EdgeInsets.all(5),
                     child: SizedBox(
                       width: 280,
-                      height: 50,
+                      height: 45,
                       child: TextField(
                         obscureText: _obscureText,
                         style: TextStyle(
@@ -284,7 +284,7 @@ class _DangKyState extends State<DangKy> {
                           Image.asset(
                             'assets/btn-2.png',
                             fit: BoxFit.fill,
-                            height: 70,
+                            height: 65,
                             width: 220,
                           )
                         ],
@@ -302,7 +302,7 @@ class _DangKyState extends State<DangKy> {
                           ),
                         ),
                         left: 137,
-                        top: 6,
+                        top: 4,
                       ),
                     ]),
                   ),
@@ -335,7 +335,7 @@ class _DangKyState extends State<DangKy> {
                                           Image.asset(
                                             'assets/btn.png',
                                             fit: BoxFit.fill,
-                                            height: 50,
+                                            height: 53,
                                             width: 140,
                                           )
                                         ],
@@ -352,7 +352,7 @@ class _DangKyState extends State<DangKy> {
                                                 color: Colors.black),
                                           ),
                                         ),
-                                        top: 13,
+                                        top: 15,
                                         left: 35,
                                       ),
                                     ]),

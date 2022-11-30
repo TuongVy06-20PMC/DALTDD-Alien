@@ -48,8 +48,8 @@ class _Screen1State extends State<Screen1> {
                                 Image.asset(
                                   'assets/btn-2.png',
                                   fit: BoxFit.fill,
-                                  height: 80,
-                                  width: 250,
+                                  height: 70,
+                                  width: 240,
                                 )
                               ],
                             ),
@@ -66,8 +66,8 @@ class _Screen1State extends State<Screen1> {
                                   ),
                                 ),
                               ),
-                              left: 137,
-                              top: 9,
+                              left: 135,
+                              top: 6,
                             ),
                           ]),
                         ),
@@ -90,8 +90,8 @@ class _Screen1State extends State<Screen1> {
                                 Image.asset(
                                   'assets/btn-2.png',
                                   fit: BoxFit.fill,
-                                  height: 80,
-                                  width: 250,
+                                  height: 70,
+                                  width: 240,
                                 )
                               ],
                             ),
@@ -108,8 +108,8 @@ class _Screen1State extends State<Screen1> {
                                   ),
                                 ),
                               ),
-                              left: 123,
-                              top: 9,
+                              left: 120,
+                              top: 6,
                             ),
                           ]),
                         ),

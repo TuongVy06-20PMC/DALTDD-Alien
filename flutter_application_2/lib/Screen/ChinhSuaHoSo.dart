@@ -10,7 +10,7 @@ import 'package:intl/intl.dart';
 import 'package:image_cropper/image_cropper.dart';
 import '../component/Select_Photo_Options_Screen.dart';
 import '../component/menu.dart';
-import 'TrangChu.dart';
+import '../component/TrangChuTabBarGoogle.dart';
 
 class ChinhSuaHoSo extends StatefulWidget {
   const ChinhSuaHoSo({super.key});
@@ -89,42 +89,44 @@ class _ChinhSuaHoSoState extends State<ChinhSuaHoSo> {
         body: Center(
             child: ListView(children: [
           Container(
+            padding: EdgeInsets.only(left: 15, right: 15, top: 15),
               height: MediaQuery.of(context).size.height,
               width: MediaQuery.of(context).size.width,
               decoration: const BoxDecoration(
                 image: DecorationImage(
-                    image: AssetImage('assets/bg-1.png'), fit: BoxFit.cover),
+                    image: AssetImage('assets/bgg.jpg'), fit: BoxFit.cover),
               ),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
                   Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      IconButton(
-                          onPressed: (() {
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => const HoSo()),
-                            );
-                          }),
-                          icon: Image.asset(
-                            'assets/delete.png',
-                            height: 25,
-                            width: 25,
-                            color: HexColor('FFF323'),
-                          )),
-                      IconButton(
-                          onPressed: () => _sKey.currentState?.openEndDrawer(),
-                          icon: Image.asset(
-                            'assets/menu.png',
-                            height: 30,
-                            width: 30,
-                            color: HexColor('FFF323'),
-                          )),
-                    ],
-                  ),
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    IconButton(
+                        onPressed: (() {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) =>
+                                    const TrangChuTabBarGoogle()),
+                          );
+                        }),
+                        icon: Image.asset(
+                          'assets/left-arrow.png',
+                          height: 50,
+                          width: 50,
+                          color: HexColor('#FFDE00'),
+                        )),
+                    IconButton(
+                        onPressed: () => _sKey.currentState?.openEndDrawer(),
+                        icon: Image.asset(
+                          'assets/menu.png',
+                          height: 40,
+                          width: 40,
+                          color: HexColor('FFDE00'),
+                        )),
+                  ],
+                ),
                   SizedBox(
                     height: 40,
                   ),
@@ -155,9 +157,20 @@ class _ChinhSuaHoSoState extends State<ChinhSuaHoSo> {
                           ),
                         ),
                       ),
+                      
                     ],
                   ),
-                  SizedBox(height: 90),
+                  SizedBox(
+                  height: 10,
+                ),
+                Text(
+                  'TuongVie2812',
+                  style: TextStyle(
+                      fontSize: 23,
+                      fontFamily: "LinotteBold",
+                      color: Colors.white),
+                ),
+                  SizedBox(height: 60),
                  const Padding(
                     padding: EdgeInsets.all(5),
                     child: SizedBox(
@@ -271,10 +284,10 @@ class _ChinhSuaHoSoState extends State<ChinhSuaHoSo> {
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
                         Image.asset(
-                          'assets/btn.png',
+                          'assets/btn-2.png',
                           fit: BoxFit.fill,
-                          height: 60,
-                          width: 230,
+                          height: 65,
+                          width: 215,
                         )
                       ],
                     ),
@@ -290,10 +303,11 @@ class _ChinhSuaHoSoState extends State<ChinhSuaHoSo> {
                               color: Colors.black),
                         ),
                       ),
-                      left: 120,
-                      top: 1,
+                      left: 102,
+                      top: 4,
                     ),
                   ]),
+                  
                 ),
                onTap: () => showDialog<String>(
                     context: context,
@@ -302,7 +316,7 @@ class _ChinhSuaHoSoState extends State<ChinhSuaHoSo> {
                       title: Stack(
                         children: [
                           Text(
-                            'Alien xin chào!!!',
+                            'Thông báo!!!',
                             style: TextStyle(
                                 color: HexColor('f4a000'),
                                 fontSize: 35,
@@ -319,7 +333,7 @@ class _ChinhSuaHoSoState extends State<ChinhSuaHoSo> {
                                     );
                                 }),
                                 icon: Image.asset(
-                                  'assets/cross.png',
+                                  'assets/close-option.png',
                                   height: 30,
                                   width: 30,
                                 )),
