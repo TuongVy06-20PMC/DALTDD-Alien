@@ -98,7 +98,7 @@ class _BatDauChoiState extends State<BatDauChoi> {
     });
   }
 
-  void addgold() {
+  void addcoin() {
     Random random = new Random();
     int randomNumber = random.nextInt(150) + 10;
     coinplus += randomNumber;
@@ -339,7 +339,7 @@ class _BatDauChoiState extends State<BatDauChoi> {
                                                         .score ==
                                                     true &&
                                                 youranwser == "a") {
-                                              addgold();
+                                              addcoin();
                                               score += x2score + 30;
                                             }
                                             onpress();
@@ -403,7 +403,7 @@ class _BatDauChoiState extends State<BatDauChoi> {
                                                         .score ==
                                                     true &&
                                                 youranwser == "b") {
-                                              addgold();
+                                              addcoin();
                                               score += x2score + 30;
                                             }
                                             onpress();
@@ -467,7 +467,7 @@ class _BatDauChoiState extends State<BatDauChoi> {
                                                         .score ==
                                                     true &&
                                                 youranwser == "c") {
-                                              addgold();
+                                              addcoin();
                                               score += x2score + 30;
                                             }
                                             onpress();
@@ -531,7 +531,7 @@ class _BatDauChoiState extends State<BatDauChoi> {
                                                         .score ==
                                                     true &&
                                                 youranwser == "d") {
-                                              addgold();
+                                              addcoin();
                                               score += x2score + 30;
                                             }
                                             onpress();
