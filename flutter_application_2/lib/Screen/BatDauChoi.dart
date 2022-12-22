@@ -68,8 +68,8 @@ class BatDauChoi extends StatefulWidget {
 }
 
 class _BatDauChoiState extends State<BatDauChoi> {
-  int gold = 0;
-  int goldplus = 0;
+  int coin = 0;
+  int coinplus = 0;
   int index = 0;
   int score = 0;
   int exp = 0;
@@ -78,25 +78,20 @@ class _BatDauChoiState extends State<BatDauChoi> {
   late bool anwser2 = question[index].answers[0].score;
   late bool anwser3 = question[index].answers[0].score;
   late bool anwser4 = question[index].answers[0].score;
-  bool fuc1 = true;
-  bool fuc2 = true;
-  bool fuc3 = true;
-  bool fuc4 = true;
+  bool function1 = true;
+  bool function2 = true;
+  bool function3 = true;
+  bool function4 = true;
   bool function_5050 = true;
-  bool fuc_master = true;
-  bool fuc_x2 = true;
-  bool fuc_time = true;
   String youranwser = "";
   bool pick = false;
   int time = 150000;
-  int timeonce = 10;
   int x2score = 0;
   void start() {
     Timer.periodic(Duration(seconds: 1), (timer) {
       if (time >= 0) {
         setState(() {
           time--;
-          timeonce--;
           updategold();
         });
       }
@@ -106,7 +101,7 @@ class _BatDauChoiState extends State<BatDauChoi> {
   void addgold() {
     Random random = new Random();
     int randomNumber = random.nextInt(150) + 10;
-    goldplus += randomNumber;
+    coinplus += randomNumber;
     setState(() {});
   }
 
@@ -121,14 +116,13 @@ class _BatDauChoiState extends State<BatDauChoi> {
         anwser2 = question[index].answers[0].score;
         anwser3 = question[index].answers[0].score;
         anwser4 = question[index].answers[0].score;
-        fuc1 = true;
-        fuc2 = true;
-        fuc3 = true;
-        fuc4 = true;
+        function1 = true;
+        function2 = true;
+        function3 = true;
+        function4 = true;
         pick = false;
         x2score = 0;
         youranwser = "";
-        timeonce = 10;
       }
       updategold();
       setState(() {});
@@ -136,14 +130,14 @@ class _BatDauChoiState extends State<BatDauChoi> {
   }
 
   void function5050() {
-    gold -= 100;
+    coin -= 100;
     int a = 0;
     for (int i = 0; i < 4; i++) {
       if (question[index].answers[i].score == false) {
-        if (i == 0) fuc1 = false;
-        if (i == 1) fuc2 = false;
-        if (i == 2) fuc3 = false;
-        if (i == 3) fuc4 = false;
+        if (i == 0) function1 = false;
+        if (i == 1) function2 = false;
+        if (i == 2) function3 = false;
+        if (i == 3) function4 = false;
         a++;
       }
       if (a == 2) break;
@@ -153,18 +147,11 @@ class _BatDauChoiState extends State<BatDauChoi> {
   }
 
   void updategold() {
-    if (gold < 250) {
-      fuc_master = false;
-    }
-    if (gold < 200) {
-      fuc_x2 = false;
-    }
-    if (gold < 100) {
+
+    if (coin < 100) {
       function_5050 = false;
     }
-    if (gold < 50) {
-      fuc_x2 = false;
-    }
+
   }
 
   @override
@@ -340,7 +327,7 @@ class _BatDauChoiState extends State<BatDauChoi> {
                                               )),
                                         ]),
                                   ),
-                                  fuc1
+                                  function1
                                       ? InkWell(
                                           onTap: () {
                                             pick = true;
@@ -404,7 +391,7 @@ class _BatDauChoiState extends State<BatDauChoi> {
                                                 BorderRadius.circular(10),
                                           ),
                                         ),
-                                  fuc2
+                                  function2
                                       ? InkWell(
                                           onTap: () {
                                             pick = true;
@@ -468,7 +455,7 @@ class _BatDauChoiState extends State<BatDauChoi> {
                                                 BorderRadius.circular(10),
                                           ),
                                         ),
-                                  fuc3
+                                  function3
                                       ? InkWell(
                                           onTap: () {
                                             pick = true;
@@ -532,7 +519,7 @@ class _BatDauChoiState extends State<BatDauChoi> {
                                                 BorderRadius.circular(10),
                                           ),
                                         ),
-                                  fuc4
+                                  function4
                                       ? InkWell(
                                           onTap: () {
                                             pick = true;
