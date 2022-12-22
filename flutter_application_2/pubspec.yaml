@@ -42,6 +42,11 @@ dependencies:
   flutter_screen_wake: ^1.0.2
   searchbar_animation: ^0.0.4
   google_nav_bar: ^5.0.6
+  image_picker: ^0.8.6
+  image_cropper: ^3.0.1
+  perfect_volume_control: ^1.0.5
+  firebase_auth: ^4.1.2
+  cloud_firestore: ^4.0.5
 
 dev_dependencies:
   flutter_test:
@@ -69,6 +74,7 @@ flutter:
   assets:
 
     - assets/
+    - Data/
 
 
   # An image asset can refer to one or more resolution-specific "variants", see

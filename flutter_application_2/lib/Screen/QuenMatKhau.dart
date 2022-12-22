@@ -23,7 +23,9 @@ class _QuenMatKhauState extends State<QuenMatKhau> {
           child: Container(
               width: MediaQuery.of(context).size.width,
               height: MediaQuery.of(context).size.height,
-              decoration: BoxDecoration(color: HexColor('0C205B')),
+              decoration: const BoxDecoration(
+          image: DecorationImage(
+              image: AssetImage('assets/bgg.jpg'), fit: BoxFit.cover)),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
@@ -64,7 +66,7 @@ class _QuenMatKhauState extends State<QuenMatKhau> {
                 padding: EdgeInsets.all(10),
                 child: SizedBox(
                   width: 280,
-                  height: 56,
+                  height: 50,
                   child: TextFormField(
                     controller: emailController,
                     cursorColor:Colors.white,

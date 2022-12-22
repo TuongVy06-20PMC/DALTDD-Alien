@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_application_2/component/TrangChuTabBarGoogle.dart';
 import 'package:flutter_screen_wake/flutter_screen_wake.dart';
 import 'dart:async';
 import 'package:hexcolor/hexcolor.dart';
+import 'package:perfect_volume_control/perfect_volume_control.dart';
+import '../component/menu.dart';
 
 class CaiDat extends StatefulWidget {
   const CaiDat({super.key});
@@ -13,24 +16,26 @@ class CaiDat extends StatefulWidget {
 }
 
 class _CaiDatState extends State<CaiDat> {
-  double brightness =0.0;
-  bool toggle=false;
+  GlobalKey<ScaffoldState> _sKey = GlobalKey<ScaffoldState>();
+  double brightness = 0.0;
+  bool toggle = false;
+  double currentvol = 0.5;
 
-Future<void>initPlatformBrightness()async{
-  double bright;
-  try{
-    bright=await FlutterScreenWake.brightness;
+  Future<void> initPlatformBrightness() async {
+    double bright;
+    try {
+      bright = await FlutterScreenWake.brightness;
+    } on PlatformException {
+      bright = 1.0;
+    }
+    if (!mounted) return;
+    setState(() {
+      brightness = bright;
+    });
   }
-  on PlatformException{
-    bright=1.0;
-  }
-  if(!mounted)return;
-  setState(() {
-    brightness=bright;
-  });
-}
 
-  final player = AudioPlayer();
+  AudioPlayer player = AudioPlayer();
+  AudioCache cache = AudioCache();
   bool isPlaying = false;
   Duration duration = Duration.zero;
   Duration position = Duration.zero;
@@ -39,10 +44,18 @@ Future<void>initPlatformBrightness()async{
     return '${(Duration(seconds: seconds))}'.split('.')[0].padLeft(8, '0');
   }
 
+  void playSound() async {
+    await player.play(AssetSource('1.mp3'));
+  }
+
+  void loop() {
+    player.setReleaseMode(ReleaseMode.loop);
+  }
+
   @override
   void initState() {
     super.initState();
-     initPlatformBrightness();
+    initPlatformBrightness();
     player.onPlayerStateChanged.listen((state) {
       setState(() {
         isPlaying = state == PlayerState.playing;
@@ -60,77 +73,224 @@ Future<void>initPlatformBrightness()async{
         position = newPosition;
       });
     });
+    PerfectVolumeControl.hideUI = false;
+    Future.delayed(Duration.zero, () async {
+      currentvol = await PerfectVolumeControl.getVolume();
+      setState(() {});
+    });
+
+    PerfectVolumeControl.stream.listen((volume) {
+      setState(() {
+        currentvol = volume;
+      });
+    });
   }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body:Center(
-        child:Container(
-           width: MediaQuery.of(context).size.width,
-              height: MediaQuery.of(context).size.height,
-             decoration: const BoxDecoration(
-        image: DecorationImage(
-        image: AssetImage('assets/caidat.png'), fit: BoxFit.cover),
-      ),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Container(
-                      child: Row(mainAxisAlignment: MainAxisAlignment.start,
-                        children: [
-                          Text('Âm thanh       ',style: TextStyle(color: Colors.yellow,fontSize: 20,fontWeight: FontWeight.bold),),
-                          CircleAvatar(
-                            radius: 25,
-                            child: IconButton(
-                            icon: Icon(
-                             isPlaying ? Icons.pause : Icons.play_arrow,
-                            ),
-                               onPressed: (){
-                               if(isPlaying)
-                             {
-                                 player.pause();
-                              }
-                              else{
-                               player.play(AssetSource('1.mp3'));
-                      }
-                    },
-                  ),
+        key: _sKey,
+        body: Center(
+            child: Container(
+                padding: EdgeInsets.only(top: 40),
+                decoration: const BoxDecoration(
+                  image: DecorationImage(
+                      image: AssetImage('assets/bgg.jpg'), fit: BoxFit.cover),
                 ),
-                        ]
+                child: Padding(
+                    padding: const EdgeInsets.all(5.0),
+                    child: Column(children: <Widget>[
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.end,
+                        children: [
+                          Padding(
+                            padding: EdgeInsets.only(right: 50, top: 40),
+                            child: Image.asset(
+                              'assets/logo.png',
+                              width: 140,
+                            ),
+                          ),
+                          InkWell(
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              crossAxisAlignment: CrossAxisAlignment.center,
+                              children: [
+                                IconButton(
+                                  onPressed: () => {
+                                    Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                          builder: (context) =>
+                                              const TrangChuTabBarGoogle()),
+                                    )
+                                  },
+                                  icon: Image.asset(
+                                    'assets/close-option.png',
+                                    color: HexColor('FFDE00'),
+                                  ),
+                                  iconSize: 40,
+                                )
+                              ],
+                            ),
+                          ),
+                        ],
+                      ),
+                      Container(
+                          margin: EdgeInsets.only(top: 30),
+                          child: Stack(
+                            children: <Widget>[
+                              // Stroked text as border.
+                              Text(
+                                'CÀI ĐẶT',
+                                style: TextStyle(
+                                  fontSize: 65,
+                                  fontFamily: 'FSAriston',
+                                  foreground: Paint()
+                                    ..style = PaintingStyle.stroke
+                                    ..strokeWidth = 5
+                                    ..color = HexColor('FFEE52'),
+                                ),
+                              ),
+                              // Solid text as fill.
+                              Text(
+                                'CÀI ĐẶT',
+                                style: TextStyle(
+                                  fontSize: 65,
+                                  fontFamily: 'FSAriston',
+                                  color: HexColor('000000'),
+                                ),
+                              ),
+                            ],
+                          )),
+                      SizedBox(
+                        height: 65,
+                      ),
+                      Row(
+                        children: <Widget>[
+                          Container(
+                            // margin: EdgeInsets.only(top: 60),
+                            padding: EdgeInsets.all(10),
+                            width: 305,
+                            height: 100,
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(10),
+                              color: Colors.white,
+                            ),
+                            child: Row(
+                                mainAxisAlignment: MainAxisAlignment.start,
+                                children: [
+                                  Column(
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    children: [
+                                      InkWell(
+                                        radius: 25,
+                                        child: IconButton(
+                                          icon: Icon(
+                                            isPlaying
+                                                ? Icons.music_note
+                                                : Icons.music_off,
+                                            size: 30,
+                                            color: HexColor('0C205B'),
+                                          ),
+                                          onPressed: () {
+                                            if (isPlaying) {
+                                              player.pause();
+                                            } else {
+                                              player.play(AssetSource('1.mp3'));
+                                              loop();
+                                            }
+                                          },
+                                        ),
+                                      ),
+                                      Text(
+                                        'Âm thanh',
+                                        style: TextStyle(
+                                            fontFamily: 'LinotteBold',
+                                            fontSize: 15,
+                                            color: HexColor('0C205B')),
+                                      )
+                                    ],
+                                  ),
+                                  Expanded(
+                                    child: Slider(
+                                      activeColor: HexColor('FFEE52'),
+                                      inactiveColor: Colors.amber[700],
+                                      value: currentvol,
+                                      onChanged: (newvol) {
+                                        currentvol = newvol;
+                                        PerfectVolumeControl.setVolume(
+                                            newvol); //set new volume
+                                        setState(() {});
+                                      },
+                                      min: 0, //
+                                      max: 1,
+                                      divisions: 100,
+                                    ),
+                                  ),
+                                ]),
+                          )
+                        ],
+                        mainAxisAlignment: MainAxisAlignment.center,
+                      ),
+                      SizedBox(
+                        height: 5,
+                      ),
+                      Container(
+                        margin: EdgeInsets.all(10),
+                        padding: EdgeInsets.all(10),
+                        width: 305,
+                        height: 100,
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(10),
+                            color: Colors.white),
+                        child: Row(
+                          children: [
+                            AnimatedCrossFade(
+                                firstChild: Column(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    Icon(
+                                      Icons.brightness_7,
+                                      size: 30,
+                                      color: HexColor('0C205B'),
+                                    ),
+                                    Text(
+                                      'Độ sáng',
+                                      style: TextStyle(
+                                          fontFamily: 'LinotteBold',
+                                          fontSize: 15,
+                                          color: HexColor('0C205B')),
+                                    )
+                                  ],
+                                ),
+                                secondChild: Icon(
+                                  Icons.brightness_3,
+                                  size: 40,
+                                ),
+                                crossFadeState: toggle
+                                    ? CrossFadeState.showSecond
+                                    : CrossFadeState.showFirst,
+                                duration: Duration(seconds: 1)),
+                            Expanded(
+                                child: Slider(
+                              activeColor: HexColor('FFEE52'),
+                              inactiveColor: Colors.amber[700],
+                              value: brightness,
+                              onChanged: (value) {
+                                setState(() {
+                                  brightness = value;
+                                });
+                                FlutterScreenWake.setBrightness(brightness);
+                                if (brightness == 0) {
+                                  toggle = true;
+                                } else {
+                                  toggle = false;
+                                }
+                              },
+                            )),
+                          ],
                         ),
-                    ),
-            Row(
-              children: [
-                AnimatedCrossFade(
-              firstChild: Icon(Icons.brightness_7,size: 40,), 
-              secondChild: Icon(Icons.brightness_3,size: 40,), 
-              crossFadeState: toggle?CrossFadeState.showSecond:CrossFadeState.showFirst, 
-              duration: Duration(seconds: 1)  
-              ),
-            Expanded(
-              child: Slider(
-                value: brightness,
-                onChanged: (value){
-                  setState(() {
-                    brightness=value;
-                  });
-                  FlutterScreenWake.setBrightness(brightness);
-                  if(brightness==0){
-                    toggle=true;
-                  }
-                  else{
-                    toggle=false;
-                  }
-                },
-              )
-              ),
-              ],
-            ),
-            Text('Độ sáng',style: TextStyle(color: Colors.yellow),)
-          ],
-        ),
-        )
-      )
-    );
+                      ),
+                    ])))));
   }
 }

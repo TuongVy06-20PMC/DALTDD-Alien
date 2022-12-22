@@ -1,4 +1,7 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_application_2/Screen/User.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'DangNhap.dart';
 import 'package:intl/intl.dart';
@@ -11,7 +14,13 @@ class DangKy extends StatefulWidget {
 }
 
 class _DangKyState extends State<DangKy> {
-  TextEditingController dateinput = TextEditingController();
+  final dateinput = TextEditingController();
+  final txtEmail = TextEditingController();
+  final txtHoten = TextEditingController();
+  final txtTendn = TextEditingController();
+  final txtPass = TextEditingController();
+
+  final _auth = FirebaseAuth.instance;
   bool _obscureText = true;
   void _XemMatKhau() {
     setState(() {
@@ -78,12 +87,91 @@ class _DangKyState extends State<DangKy> {
                     ],
                   ),
                 ),
-                const Padding(
+                Padding(
                     padding: EdgeInsets.all(5),
                     child: SizedBox(
                       width: 280,
-                      height: 52,
+                      height: 50,
                       child: TextField(
+                        controller: txtHoten,
+                        style: TextStyle(
+                          color: Colors.black,
+                          fontFamily: 'Linotte',
+                          fontSize: 20,
+                        ),
+                        decoration: InputDecoration(
+                          filled: true,
+                          fillColor: Colors.white,
+                          enabledBorder: OutlineInputBorder(
+                            borderSide: BorderSide(
+                                color: Colors.black, width: 2), //<-- SEE HERE
+                          ),
+                          border: OutlineInputBorder(),
+                          hintText: "Họ tên",
+                          hintStyle: TextStyle(
+                              color: Colors.grey,
+                              fontFamily: 'Linotte',
+                              fontSize: 18),
+                        ),
+                      ),
+                    )),
+                // Padding(
+                //     padding: EdgeInsets.all(5),
+                //     child: SizedBox(
+                //       width: 280,
+                //       height: 50,
+                //       child: TextField(
+                //         controller: dateinput,
+                //         style: TextStyle(
+                //           color: Colors.black,
+                //           fontFamily: 'Linotte',
+                //           fontSize: 20,
+                //         ),
+                //         decoration: InputDecoration(
+                //           filled: true,
+                //           fillColor: Colors.white,
+                //           enabledBorder: OutlineInputBorder(
+                //               borderSide:
+                //                   BorderSide(color: Colors.black, width: 2)),
+                //           border: OutlineInputBorder(),
+                //           hintText: "Ngày sinh",
+                //           suffixIcon: Padding(
+                //             padding: EdgeInsets.all(5),
+                //             child: Icon(Icons.calendar_month),
+                //           ),
+                //           hintStyle: TextStyle(
+                //               color: Colors.grey,
+                //               fontFamily: 'Linotte',
+                //               fontSize: 18),
+                //         ),
+                //         readOnly: true,
+                //         onTap: () async {
+                //           DateTime? pickedDate = await showDatePicker(
+                //               context: context,
+                //               initialDate: DateTime.now(),
+                //               firstDate: DateTime(1900),
+                //               lastDate: DateTime(2100));
+                //           if (pickedDate != null) {
+                //             print(pickedDate);
+                //             String formattedDate =
+                //                 DateFormat('yyyy-MM-dd').format(pickedDate);
+                //             print(formattedDate);
+                //             setState(() {
+                //               dateinput.text = formattedDate;
+                //             });
+                //           } else {
+                //             print("Ngày không được chọn");
+                //           }
+                //         },
+                //       ),
+                //     )),
+                Padding(
+                    padding: EdgeInsets.all(5),
+                    child: SizedBox(
+                      width: 280,
+                      height: 50,
+                      child: TextField(
+                        controller: txtTendn,
                         style: TextStyle(
                           color: Colors.black,
                           fontFamily: 'Linotte',
@@ -96,7 +184,7 @@ class _DangKyState extends State<DangKy> {
                               borderSide:
                                   BorderSide(color: Colors.black, width: 2)),
                           border: OutlineInputBorder(),
-                          hintText: "Họ tên",
+                          hintText: "Tên game",
                           hintStyle: TextStyle(
                               color: Colors.grey,
                               fontFamily: 'Linotte',
@@ -108,58 +196,10 @@ class _DangKyState extends State<DangKy> {
                     padding: EdgeInsets.all(5),
                     child: SizedBox(
                       width: 280,
-                      height: 52,
+                      height: 50,
                       child: TextField(
-                        controller: dateinput,
-                        style: TextStyle(
-                          color: Colors.black,
-                          fontFamily: 'Linotte',
-                          fontSize: 20,
-                        ),
-                        decoration: InputDecoration(
-                          filled: true,
-                          fillColor: Colors.white,
-                          enabledBorder: OutlineInputBorder(
-                              borderSide:
-                                  BorderSide(color: Colors.black, width: 2)),
-                          border: OutlineInputBorder(),
-                          hintText: "Ngày sinh",
-                          suffixIcon: Padding(
-                            padding: EdgeInsets.all(5),
-                            child: Icon(Icons.calendar_month),
-                          ),
-                          hintStyle: TextStyle(
-                              color: Colors.grey,
-                              fontFamily: 'Linotte',
-                              fontSize: 18),
-                        ),
-                        readOnly: true,
-                        onTap: () async {
-                          DateTime? pickedDate = await showDatePicker(
-                              context: context,
-                              initialDate: DateTime.now(),
-                              firstDate: DateTime(1900),
-                              lastDate: DateTime(2100));
-                          if (pickedDate != null) {
-                            print(pickedDate);
-                            String formattedDate =
-                                DateFormat('dd-MM-yyyy').format(pickedDate);
-                            print(formattedDate);
-                            setState(() {
-                              dateinput.text = formattedDate;
-                            });
-                          } else {
-                            print("Ngày không được chọn");
-                          }
-                        },
-                      ),
-                    )),
-                const Padding(
-                    padding: EdgeInsets.all(5),
-                    child: SizedBox(
-                      width: 280,
-                      height: 52,
-                      child: TextField(
+                        controller: txtEmail,
+                        keyboardType: TextInputType.emailAddress,
                         style: TextStyle(
                           color: Colors.black,
                           fontFamily: 'Linotte',
@@ -180,38 +220,13 @@ class _DangKyState extends State<DangKy> {
                         ),
                       ),
                     )),
-                const Padding(
-                    padding: EdgeInsets.all(5),
-                    child: SizedBox(
-                      width: 280,
-                      height: 52,
-                      child: TextField(
-                        style: TextStyle(
-                          color: Colors.black,
-                          fontFamily: 'Linotte',
-                          fontSize: 20,
-                        ),
-                        decoration: InputDecoration(
-                          filled: true,
-                          fillColor: Colors.white,
-                          enabledBorder: OutlineInputBorder(
-                              borderSide:
-                                  BorderSide(color: Colors.black, width: 2)),
-                          border: OutlineInputBorder(),
-                          hintText: "Tên đăng nhập",
-                          hintStyle: TextStyle(
-                              color: Colors.grey,
-                              fontFamily: 'Linotte',
-                              fontSize: 18),
-                        ),
-                      ),
-                    )),
                 Padding(
                     padding: EdgeInsets.all(5),
                     child: SizedBox(
                       width: 280,
-                      height: 52,
+                      height: 50,
                       child: TextField(
+                        controller: txtPass,
                         obscureText: _obscureText,
                         style: TextStyle(
                           color: Colors.black,
@@ -243,7 +258,7 @@ class _DangKyState extends State<DangKy> {
                     padding: EdgeInsets.all(5),
                     child: SizedBox(
                       width: 280,
-                      height: 52,
+                      height: 45,
                       child: TextField(
                         obscureText: _obscureText,
                         style: TextStyle(
@@ -281,10 +296,10 @@ class _DangKyState extends State<DangKy> {
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
                           Image.asset(
-                            'assets/btn.png',
+                            'assets/btn-2.png',
                             fit: BoxFit.fill,
-                            height: 60,
-                            width: 230,
+                            height: 65,
+                            width: 220,
                           )
                         ],
                       ),
@@ -300,39 +315,17 @@ class _DangKyState extends State<DangKy> {
                                 color: Colors.black),
                           ),
                         ),
-                        left: 130,
-                        top: 3,
+                        left: 137,
+                        top: 4,
                       ),
                     ]),
                   ),
                   onTap: () => showDialog<String>(
                     context: context,
                     builder: (BuildContext context) => AlertDialog(
-                      backgroundColor: HexColor('fde787'),
-                      title: Stack(
-                        children: [
-                          Text(
-                            'Alien xin chào!!!',
-                            style: TextStyle(
-                                color: HexColor('f4a000'),
-                                fontSize: 35,
-                                fontFamily: 'FSAriston'),
-                          ),
-                          Positioned(
-                            child: IconButton(
-                                onPressed: (() {}),
-                                icon: Image.asset(
-                                  'assets/cross.png',
-                                  height: 30,
-                                  width: 30,
-                                )),
-                            left: 210,
-                            bottom: 1,
-                          ),
-                        ],
-                      ),
+                      backgroundColor: HexColor('fcdf69'),
                       content: const Text(
-                        'Đăng ký tài khoản thành công',
+                        'Chào mừng bạn đến với AlienQuizzz',
                         textAlign: TextAlign.center,
                         style:
                             TextStyle(fontFamily: 'LinotteBold', fontSize: 22),
@@ -355,8 +348,8 @@ class _DangKyState extends State<DangKy> {
                                           Image.asset(
                                             'assets/btn.png',
                                             fit: BoxFit.fill,
-                                            height: 50,
-                                            width: 120,
+                                            height: 53,
+                                            width: 140,
                                           )
                                         ],
                                       ),
@@ -367,26 +360,40 @@ class _DangKyState extends State<DangKy> {
                                             'Đăng Nhập',
                                             textAlign: TextAlign.center,
                                             style: TextStyle(
-                                                fontSize: 23,
-                                                fontFamily: 'FSAriston',
+                                                fontSize: 18,
+                                                fontFamily: 'LinotteBold',
                                                 color: Colors.black),
                                           ),
                                         ),
-                                        top: 11,
-                                        left: 18,
+                                        top: 15,
+                                        left: 35,
                                       ),
                                     ]),
                                   ),
                                   onTap: () {
-                                    Navigator.push(
-                                      context,
-                                      MaterialPageRoute(
-                                          builder: (context) =>
-                                              const DangNhap()),
+                                    final newUser =
+                                        _auth.createUserWithEmailAndPassword(
+                                            email: txtEmail.text,
+                                            password: txtPass.text);
+                                    final user = Nguoidung(
+                                      hoten: txtHoten.text,
+                                      tendangnhap: txtTendn.text,
+                                      //ngaysinh: DateTime.parse(dateinput.text),
+                                      email: txtEmail.text,
                                     );
+                                    createUser(user);
                                   },
                                 ),
                               ],
+                            ),
+                            Positioned(
+                              child: Image.asset(
+                                'assets/monster-1.png',
+                                fit: BoxFit.fill,
+                                height: 50,
+                                width: 50,
+                              ),
+                              left: 60,
                             ),
                           ],
                         )
@@ -404,14 +411,14 @@ class _DangKyState extends State<DangKy> {
                         style: TextStyle(
                           color: Colors.white,
                           fontFamily: 'Linotte',
-                          fontSize: 15,
+                          fontSize: 16,
                         ),
                       ),
                       TextButton(
                         child: Text(
-                          'Đăng nhập ngay',
+                          'Đăng Nhập ngay',
                           style: TextStyle(
-                            color: HexColor('F2FA5A'),
+                            color: HexColor('f1c500'),
                             fontFamily: 'LinotteBold',
                             fontSize: 20,
                           ),
@@ -419,8 +426,7 @@ class _DangKyState extends State<DangKy> {
                         onPressed: () {
                           Navigator.push(
                             context,
-                            MaterialPageRoute(
-                                builder: (context) => const DangNhap()),
+                            MaterialPageRoute(builder: (context) => DangNhap()),
                           );
                         },
                       ),
@@ -431,5 +437,12 @@ class _DangKyState extends State<DangKy> {
             ))
       ]),
     ));
+  }
+
+  Future createUser(Nguoidung user) async {
+    final docUser = FirebaseFirestore.instance.collection('users').doc();
+    user.uid = docUser.id;
+    final json = user.toJson();
+    await docUser.set(json);
   }
 }

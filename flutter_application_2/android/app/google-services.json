@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "416404008918",
+    "project_id": "alien-bc9be",
+    "storage_bucket": "alien-bc9be.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:416404008918:android:551e412fb0b7feb70d3e77",
+        "android_client_info": {
+          "package_name": "com.example.flutter_application_2"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "416404008918-odm57qo4gmmkl1f0aq4nfhgcpfc5gpbm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBC8bU9fv21WFO9v7UHEH-pjDPBvA3s8oo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "416404008918-odm57qo4gmmkl1f0aq4nfhgcpfc5gpbm.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
