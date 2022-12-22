@@ -41,27 +41,28 @@ class _LevelScreenState extends State<LevelScreen> {
                       ),
                     ),
                     InkWell(
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
-                        IconButton(
-                          onPressed: () => {
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => const TrangChuTabBarGoogle()),
-                            )
-                          },
-                          icon: Image.asset(
-                            'assets/close-option.png',
-                            color: HexColor('FFDE00'),
-                          ),
-                          iconSize: 40,
-                        )
-                      ],
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          IconButton(
+                            onPressed: () => {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) =>
+                                        const TrangChuTabBarGoogle()),
+                              )
+                            },
+                            icon: Image.asset(
+                              'assets/close-option.png',
+                              color: HexColor('FFDE00'),
+                            ),
+                            iconSize: 40,
+                          )
+                        ],
+                      ),
                     ),
-                  ),
                   ],
                 ),
                 Container(
@@ -237,7 +238,7 @@ class _LevelScreenState extends State<LevelScreen> {
                                                     context,
                                                     MaterialPageRoute(
                                                         builder: (context) =>
-                                                            const BatDauChoi()),
+                                                            const AnimatedContainerApp()),
                                                   );
                                                 },
                                               ),
