@@ -92,7 +92,7 @@ class _BatDauChoiState extends State<BatDauChoi> {
       if (time >= 0) {
         setState(() {
           time--;
-          updategold();
+          updatecoin();
         });
       }
     });
@@ -124,7 +124,7 @@ class _BatDauChoiState extends State<BatDauChoi> {
         x2score = 0;
         youranwser = "";
       }
-      updategold();
+      updatecoin();
       setState(() {});
     });
   }
@@ -142,11 +142,11 @@ class _BatDauChoiState extends State<BatDauChoi> {
       }
       if (a == 2) break;
     }
-    updategold();
+    updatecoin();
     setState(() {});
   }
 
-  void updategold() {
+  void updatecoin() {
 
     if (coin < 100) {
       function_5050 = false;
