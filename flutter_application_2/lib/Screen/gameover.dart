@@ -84,40 +84,46 @@ class _gameoverState extends State<gameover> {
                                 image: DecorationImage(
                                     image: AssetImage('assets/bg-menu.png'),
                                     fit: BoxFit.fill)),
-                            child: Column(
-                              children: [
-                                Row( mainAxisAlignment: MainAxisAlignment.center,
-                                  children: [
-                                    Padding(
-                                  padding: const EdgeInsets.only(top: 70),
-                                  child: Row(
-                                    mainAxisAlignment: MainAxisAlignment.center,
-                                    children: [
-                                      Text(
-                                        'Hết thời gian rồi',
-                                        style: TextStyle(
-                                            fontFamily: 'FSAriston',
-                                            fontSize: 45,
-                                            color: HexColor('172774'),
-                                            ),
-                                      )
-                                    ],
+                            child: Column(children: [
+                              Row(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Padding(
+                                    padding: const EdgeInsets.only(top: 120),
+                                    child: Row(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.center,
+                                      children: [
+                                        Text(
+                                          'HẾT GIỜ RỒI',
+                                          style: TextStyle(
+                                            fontFamily: 'LinotteBold',
+                                            fontSize: 30,
+                                            color: HexColor('FF0000'),
+                                          ),
+                                        ),
+                                      ],
+                                    ),
                                   ),
-                                ),
-                                  ],
-                                )
-                                
-                      ]
-                        )),
-                      ],
-                    ),
-                    Container(
-                        margin: EdgeInsets.only(top: 100),
-                        child: Row(
+                                ],
+                              ),
+                              Row(
+                                children: [
+                                  Text(
+                                    'Bạn đã thua cuộc',
+                                    style: TextStyle(
+                                      fontFamily: 'LinotteBold',
+                                      fontSize: 30,
+                                      color: HexColor('000000'),
+                                    ),
+                                  ),
+                                ],
+                              ),
+                              Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             Padding(
-                              padding: EdgeInsets.only(right: 10),
+                              padding: EdgeInsets.only(right: 10, top: 50),
                               child: ElevatedButton(
                                 style: ElevatedButton.styleFrom(
                                     backgroundColor: HexColor('FFF9CA'),
@@ -132,7 +138,7 @@ class _gameoverState extends State<gameover> {
                                     child: Row(
                                       children: [
                                         const Padding(
-                                          padding: EdgeInsets.all(2),
+                                          padding: EdgeInsets.all(0),
                                           child: Text(
                                             'Chơi lại',
                                             textAlign: TextAlign.center,
@@ -166,7 +172,7 @@ class _gameoverState extends State<gameover> {
                                                   context,
                                                   MaterialPageRoute(
                                                       builder: (context) =>
-                                                          const KetThucLuotChoi()),
+                                                          const gameover()),
                                                 );
                                               }),
                                               icon: Image.asset(
@@ -175,7 +181,7 @@ class _gameoverState extends State<gameover> {
                                                 width: 30,
                                                 color: HexColor('614400'),
                                               )),
-                                          left: 210,
+                                          left: 180,
                                           bottom: 1,
                                         ),
                                       ],
@@ -187,6 +193,7 @@ class _gameoverState extends State<gameover> {
                                           fontFamily: 'LinotteBold',
                                           fontSize: 22),
                                     ),
+                                    
                                     actions: <Widget>[
                                       Stack(
                                         children: [
@@ -252,10 +259,12 @@ class _gameoverState extends State<gameover> {
                                 ),
                               ),
                             ),
-                            
-                            
                           ],
-                        ))
+                        )
+                            ])),
+                      ],
+                    ),
+                    
                   ],
                 ),
               )

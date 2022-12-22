@@ -86,7 +86,7 @@ class _BatDauChoiState extends State<BatDauChoi> {
   bool function_5050 = true;
   String youranwser = "";
   bool pick = false;
-  int time = 10;
+  int time = 30;
   int x2score = 0;
   void start() {
     Timer.periodic(Duration(seconds: 1), (timer) {
@@ -290,7 +290,7 @@ class _BatDauChoiState extends State<BatDauChoi> {
                                         children: [
                                           Padding(
                                               padding: const EdgeInsets.only(
-                                                right: 30,
+                                                right: 80,
                                               ),
                                               child: Row(
                                                 children: [
