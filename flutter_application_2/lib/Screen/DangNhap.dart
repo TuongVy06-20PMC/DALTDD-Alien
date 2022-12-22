@@ -1,4 +1,7 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter_application_2/Screen/DangKy.dart';
+import 'package:flutter_application_2/Screen/Dialog/loading.dart';
+import 'package:flutter_application_2/Screen/Dialog/msg.dart';
 import 'package:flutter_application_2/Screen/QuenMatKhau.dart';
 import 'package:flutter_application_2/Screen/TrangChu.dart';
 import 'package:flutter_application_2/component/TrangChuTabBarGoogle.dart';
@@ -8,13 +11,16 @@ import 'Screen1.dart';
 import 'QuenMatKhau.dart';
 
 class DangNhap extends StatefulWidget {
-  const DangNhap({super.key});
-
   @override
-  State<DangNhap> createState() => _DangNhapState();
+  State<StatefulWidget> createState() {
+    return DangNhapState();
+  }
 }
 
-class _DangNhapState extends State<DangNhap> {
+class DangNhapState extends State<DangNhap> {
+  TextEditingController txtEmail = TextEditingController();
+  TextEditingController txtPass = TextEditingController();
+  final _auth = FirebaseAuth.instance;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -25,9 +31,9 @@ class _DangNhapState extends State<DangNhap> {
           width: MediaQuery.of(context).size.width,
           height: MediaQuery.of(context).size.height,
           decoration: BoxDecoration(
-            //color: HexColor('0C205B')
-            image: DecorationImage(image: AssetImage('assets/bgg.jpg'), fit: BoxFit.cover)
-            ),
+              //color: HexColor('0C205B')
+              image: DecorationImage(
+                  image: AssetImage('assets/bgg.jpg'), fit: BoxFit.cover)),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
@@ -64,12 +70,14 @@ class _DangNhapState extends State<DangNhap> {
                       ),
                     ],
                   )),
-              const Padding(
+              Padding(
                   padding: EdgeInsets.all(10),
                   child: SizedBox(
                     width: 280,
                     height: 52,
                     child: TextField(
+                      controller: txtEmail,
+                      keyboardType: TextInputType.emailAddress,
                       style: TextStyle(
                         color: Colors.black,
                         fontFamily: 'Linotte',
@@ -82,7 +90,7 @@ class _DangNhapState extends State<DangNhap> {
                             borderSide:
                                 BorderSide(color: Colors.black, width: 2)),
                         border: OutlineInputBorder(),
-                        hintText: "Tên đăng nhập",
+                        hintText: "Email",
                         hintStyle: TextStyle(
                             color: Colors.grey,
                             fontFamily: 'Linotte',
@@ -90,12 +98,14 @@ class _DangNhapState extends State<DangNhap> {
                       ),
                     ),
                   )),
-              const Padding(
+              Padding(
                   padding: EdgeInsets.all(10),
                   child: SizedBox(
                     width: 280,
                     height: 52,
                     child: TextField(
+                      obscureText: true,
+                      controller: txtPass,
                       style: TextStyle(
                         color: Colors.black,
                         fontFamily: 'Linotte',
@@ -122,11 +132,11 @@ class _DangNhapState extends State<DangNhap> {
                   child: const Text(
                     'Quên mật khẩu',
                     style: TextStyle(
-                        color: Colors.white,
-                        fontFamily: 'LinotteBold',
-                        // fontWeight: FontWeight.bold,
-                        fontSize: 20,
-                        ),
+                      color: Colors.white,
+                      fontFamily: 'LinotteBold',
+                      // fontWeight: FontWeight.bold,
+                      fontSize: 20,
+                    ),
                   ),
                   onPressed: () {
                     Navigator.push(
@@ -148,7 +158,7 @@ class _DangNhapState extends State<DangNhap> {
                           'assets/btn-2.png',
                           fit: BoxFit.fill,
                           height: 65,
-                            width: 220,
+                          width: 220,
                         )
                       ],
                     ),
@@ -169,11 +179,34 @@ class _DangNhapState extends State<DangNhap> {
                     ),
                   ]),
                 ),
-                onTap: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => const TrangChuTabBarGoogle()),
-                  );
+                onTap: () async {
+                  try {
+                    LoadingDialog.showLoadingDialog(context, 'Đang tải...');
+                    final _user = await _auth.signInWithEmailAndPassword(
+                        email: txtEmail.text, password: txtPass.text);
+
+                    _auth.authStateChanges().listen((event) {
+                      if (event != null) {
+                        LoadingDialog.hideLoadingDialog(context);
+                        txtEmail.clear();
+                        txtPass.clear();
+                        Navigator.pushNamedAndRemoveUntil(
+                          context,
+                          'TrangChu',
+                          (route) => false,
+                        );
+                      } else {
+                        LoadingDialog.hideLoadingDialog(context);
+                        final snackBar = SnackBar(
+                            content: Text('Email hoặc mật khẩu không đúng'));
+                        ScaffoldMessenger.of(context).showSnackBar(snackBar);
+                      }
+                    });
+                  } catch (e) {
+                    LoadingDialog.hideLoadingDialog(context);
+                    MsgDialog.showMsgDialog(context,
+                        'Email hoặc mật khẩu không đúng vui lòng thử lại');
+                  }
                 },
               ),
               Padding(
