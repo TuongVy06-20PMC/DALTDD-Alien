@@ -2,6 +2,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_application_2/Screen/BatDauChoi.dart';
 import 'package:flutter_application_2/Screen/ChiTietTimKiem.dart';
+import 'package:flutter_application_2/Screen/TimKiem.dart';
 import 'package:flutter_application_2/Screen/TimKiemEmail.dart';
 import 'package:flutter_application_2/Screen/TimTran.dart';
 import 'package:flutter_application_2/Screen/HoSo.dart';
@@ -16,17 +17,15 @@ import 'package:searchbar_animation/const/colours.dart';
 import '../component/menu.dart';
 import 'package:searchbar_animation/searchbar_animation.dart';
 
-class TimKiem extends StatefulWidget {
+class TimKiemEmail extends StatefulWidget {
   @override
-  State<TimKiem> createState() {
-    return TimKiemState();
+  State<TimKiemEmail> createState() {
+    return TimKiemEmailState();
   }
 }
 
-class TimKiemState extends State<TimKiem> {
+class TimKiemEmailState extends State<TimKiemEmail> {
   List searchResult = [];
-
-  var name = "";
 
   List<Nguoidung> Test = [];
 
@@ -34,7 +33,7 @@ class TimKiemState extends State<TimKiem> {
     final result = await FirebaseFirestore.instance
         .collection('users')
         .where(
-          'tendangnhap',
+          'email',
           isEqualTo: query,
         )
         .get();
@@ -121,7 +120,7 @@ class TimKiemState extends State<TimKiem> {
                                         borderRadius:
                                             BorderRadius.circular(20)),
                                     border: OutlineInputBorder(),
-                                    hintText: "Tìm kiếm tên người chơi",
+                                    hintText: "Tìm kiếm email người chơi",
                                     hintStyle: TextStyle(
                                         color: Colors.grey,
                                         fontFamily: 'Linotte',
@@ -129,7 +128,6 @@ class TimKiemState extends State<TimKiem> {
                                   ),
                                   onChanged: (query) {
                                     searchFromFirebase(query);
-                                    name = query;
                                   },
                                 ),
                                 // SearchBarAnimation(
@@ -309,58 +307,53 @@ class TimKiemState extends State<TimKiem> {
                       Padding(
                           padding: const EdgeInsets.only(
                               top: 10.0, left: 8.0, right: 8.0, bottom: 8.0),
-                          child: Column(
-                            children: [
-                              SingleChildScrollView(
-                                child: Container(
-                                    height: 450.0,
-                                    decoration: BoxDecoration(
-                                      color: Colors.white.withOpacity(.6),
-                                      borderRadius: const BorderRadius.all(
-                                        Radius.circular(10.0),
-                                      ),
-                                    ),
-                                    child: ListView.builder(
-                                        itemCount: searchResult.length,
-                                        itemBuilder: (context, index) => Card(
-                                              color: HexColor('FFFF'),
-                                              child: ListTile(
-                                                leading: Icon(
-                                                    Icons.account_box_outlined),
-                                                trailing:
-                                                    Icon(Icons.info_outline),
-                                                title: Text(
-                                                  searchResult[index]
-                                                      ['tendangnhap'],
-                                                  textAlign: TextAlign.left,
-                                                  style: TextStyle(
-                                                    color: Colors.black,
-                                                    fontFamily: 'LinotteBold',
-                                                    fontSize: 25,
-                                                  ),
-                                                ),
-                                                subtitle: Text(
-                                                  searchResult[index]['email'],
-                                                  textAlign: TextAlign.left,
-                                                  style: TextStyle(
-                                                    color: Colors.yellow,
-                                                    fontFamily: 'LinotteBold',
-                                                    fontSize: 18,
-                                                  ),
-                                                ),
-                                                onTap: () {
-                                                  Navigator.push(
-                                                      context,
-                                                      MaterialPageRoute(
-                                                          builder: (context) =>
-                                                              ChiTietTimKiem(
-                                                                  nguoidung: Test[
-                                                                      index])));
-                                                },
+                          child: SingleChildScrollView(
+                            child: Container(
+                                height: 450.0,
+                                decoration: BoxDecoration(
+                                  color: Colors.white.withOpacity(.6),
+                                  borderRadius: const BorderRadius.all(
+                                    Radius.circular(10.0),
+                                  ),
+                                ),
+                                child: ListView.builder(
+                                    itemCount: searchResult.length,
+                                    itemBuilder: (context, index) => Card(
+                                          color: HexColor('FFFF'),
+                                          child: ListTile(
+                                            leading: Icon(
+                                                Icons.account_box_outlined),
+                                            trailing: Icon(Icons.info_outline),
+                                            title: Text(
+                                              searchResult[index]
+                                                  ['tendangnhap'],
+                                              textAlign: TextAlign.left,
+                                              style: TextStyle(
+                                                color: Colors.black,
+                                                fontFamily: 'LinotteBold',
+                                                fontSize: 25,
                                               ),
-                                            ))),
-                              ),
-                            ],
+                                            ),
+                                            subtitle: Text(
+                                              searchResult[index]['email'],
+                                              textAlign: TextAlign.left,
+                                              style: TextStyle(
+                                                color: Colors.yellow,
+                                                fontFamily: 'LinotteBold',
+                                                fontSize: 18,
+                                              ),
+                                            ),
+                                            onTap: () {
+                                              Navigator.push(
+                                                  context,
+                                                  MaterialPageRoute(
+                                                      builder: (context) =>
+                                                          ChiTietTimKiem(
+                                                              nguoidung: Test[
+                                                                  index])));
+                                            },
+                                          ),
+                                        ))),
                           )),
                     ],
                   ),

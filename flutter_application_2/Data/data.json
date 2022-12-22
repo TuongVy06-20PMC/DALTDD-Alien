@@ -1,0 +1,1513 @@
+{
+    "level": [
+        {
+            "id": 1,
+            "question": [
+                {
+                    "id": 1,
+                    "title": "Sao Hải Vương có khối lượng gấp bao nhiêu lần Trái Đất",
+                    "answers": [
+                        {
+                            "answerText": "15 lần",
+                            "score": false
+                        },
+                        {
+                            "answerText": "16 lần",
+                            "score": false
+                        },
+                        {
+                            "answerText": "17 lần",
+                            "score": true
+                        },
+                        {
+                            "answerText": "18 lần",
+                            "score": false
+                        }
+                    ]
+                },
+                {
+                    "id": 2,
+                    "title": "Mùa hè trên sao Hải Vương kéo dài bao lâu",
+                    "answers": [
+                        {
+                            "answerText": "4 tháng",
+                            "score": false
+                        },
+                        {
+                            "answerText": "4 năm",
+                            "score": false
+                        },
+                        {
+                            "answerText": "40 năm",
+                            "score": true
+                        },
+                        {
+                            "answerText": "400 năm",
+                            "score": false
+                        }
+                    ]
+                },
+                {
+                    "id": 3,
+                    "title": "Sao Hải Vương được phát hiện vào ngày, tháng, năm nào?",
+                    "answers": [
+                        {
+                            "answerText": "23-09-1846",
+                            "score": true
+                        },
+                        {
+                            "answerText": "23-09-1847",
+                            "score": false
+                        },
+                        {
+                            "answerText": "23-09-1848",
+                            "score": false
+                        },
+                        {
+                            "answerText": "23-09-1849",
+                            "score": false
+                        }
+                    ]
+                },
+                {
+                    "id": 4,
+                    "title": "Nhiệt độ trung bình bề mặt của sao Hải Vương",
+                    "answers": [
+                        {
+                            "answerText": "-215 độ",
+                            "score": false
+                        },
+                        {
+                            "answerText": "-216 độ",
+                            "score": false
+                        },
+                        {
+                            "answerText": "-217 độ",
+                            "score": false
+                        },
+                        {
+                            "answerText": "-218 độ",
+                            "score": true
+                        }
+                    ]
+                },
+                {
+                    "id": 5,
+                    "title": "Tại sao sao Hải Vương hiện lên với màu xanh lam",
+                    "answers": [
+                        {
+                            "answerText": "Do khí Metan trong tầng khí quyển",
+                            "score": true
+                        },
+                        {
+                            "answerText": "Do khí Hidro trong tầng khí quyển",
+                            "score": false
+                        },
+                        {
+                            "answerText": "Do khí NH3 trong tầng khí quyển",
+                            "score": false
+                        },
+                        {
+                            "answerText": "Không do gì cả.",
+                            "score": false
+                        }
+                    ]
+                },
+                {
+                    "id": 6,
+                    "title": "Thời gian 1 ngày trên sao Hải Vương là",
+                    "answers": [
+                        {
+                            "answerText": "12 giờ 30 phút",
+                            "score": false
+                        },
+                        {
+                            "answerText": "24 giờ",
+                            "score": false
+                        },
+                        {
+                            "answerText": "12 giờ",
+                            "score": false
+                        },
+                        {
+                            "answerText": "15 giờ 58 phút",
+                            "score": true
+                        }
+                    ]
+                },
+                {
+                    "id": 7,
+                    "title": "Chu kỳ quay quanh Mặt trời của sao Hải Vương",
+                    "answers": [
+                        {
+                            "answerText": "130 năm Trái Đất",
+                            "score": false
+                        },
+                        {
+                            "answerText": "165 năm Trái Đất",
+                            "score": true
+                        },
+                        {
+                            "answerText": "120 năm Trái Đất",
+                            "score": false
+                        },
+                        {
+                            "answerText": "35 năm Trái Đất",
+                            "score": false
+                        }
+                    ]
+                },
+                {
+                    "id": 8,
+                    "title": "Sao Hải Vương là hành tinh thứ mấy trong hệ Mặt Trời",
+                    "answers": [
+                        {
+                            "answerText": "2",
+                            "score": false
+                        },
+                        {
+                            "answerText": "4",
+                            "score": false
+                        },
+                        {
+                            "answerText": "6",
+                            "score": false
+                        },
+                        {
+                            "answerText": "8",
+                            "score": true
+                        }
+                    ]
+                },
+                {
+                    "id": 9,
+                    "title": "Sao Hải Vương được đặt tên theo",
+                    "answers": [
+                        {
+                            "answerText": "Một thành phố của Mỹ",
+                            "score": false
+                        },
+                        {
+                            "answerText": "Một vị thần biển cả của Hy Lạp",
+                            "score": true
+                        },
+                        {
+                            "answerText": "Một con sông ở Việt Nam",
+                            "score": false
+                        },
+                        {
+                            "answerText": "Do các nhà khoa học tự nghĩ ra",
+                            "score": false
+                        }
+                    ]
+                },
+                {
+                    "id": 10,
+                    "title": "Tàu vũ trụ duy nhất nhìn thấy sao Hải Vương ở gần là",
+                    "answers": [
+                        {
+                            "answerText": "Voyager",
+                            "score": false
+                        },
+                        {
+                            "answerText": "Voyager 1",
+                            "score": false
+                        },
+                        {
+                            "answerText": "Voyager 2",
+                            "score": true
+                        },
+                        {
+                            "answerText": "Voyager 3",
+                            "score": false
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "question": [
+                {
+                    "id": 1,
+                    "title": "Sao Thiên Vương được phát hiện vào",
+                    "answers": [
+                        {
+                            "answerText": "1782",
+                            "score": false
+                        },
+                        {
+                            "answerText": "1781",
+                            "score": true
+                        },
+                        {
+                            "answerText": "1783",
+                            "score": false
+                        },
+                        {
+                            "answerText": "1784",
+                            "score": false
+                        }
+                    ]
+                },
+                {
+                    "id": 2,
+                    "title": "Vì sao sao Thiên Vương được coi là “gã khổng lồ băng đá”",
+                    "answers": [
+                        {
+                            "answerText": "Vì phần lớn là băng được tạo thành từ nước, metan và amonia",
+                            "score": true
+                        },
+                        {
+                            "answerText": "Vì phần lớn là băng được tạo thành từ hidro, metan và amonia",
+                            "score": false
+                        },
+                        {
+                            "answerText": "Vì phần lớn là băng được tạo thành từ metan và amonia",
+                            "score": false
+                        },
+                        {
+                            "answerText": "Vì phần lớn là băng được tạo thành từ nước, metan ",
+                            "score": false
+                        }
+                    ]
+                },
+                {
+                    "id": 3,
+                    "title": "Nhiệt độ thấp nhất ở sao Thiên Vương có thể xuống tới",
+                    "answers": [
+                        {
+                            "answerText": "Âm 20 độ",
+                            "score": false
+                        },
+                        {
+                            "answerText": "Âm 225 độ",
+                            "score": false
+                        },
+                        {
+                            "answerText": "Âm 224 độ",
+                            "score": true
+                        },
+                        {
+                            "answerText": "Âm 10 độ",
+                            "score": false
+                        }
+                    ]
+                },
+                {
+                    "id": 4,
+                    "title": "Chu kỳ quay quanh Mặt trời của sao Thiên Vương",
+                    "answers": [
+                        {
+                            "answerText": "84 năm",
+                            "score": true
+                        },
+                        {
+                            "answerText": "85 năm",
+                            "score": false
+                        },
+                        {
+                            "answerText": "86 năm",
+                            "score": false
+                        },
+                        {
+                            "answerText": "87 năm",
+                            "score": false
+                        }
+                    ]
+                },
+                {
+                    "id": 5,
+                    "title": "Số lượng Mặt Trăng của sao Thiên Vương",
+                    "answers": [
+                        {
+                            "answerText": "27",
+                            "score": true
+                        },
+                        {
+                            "answerText": "28",
+                            "score": false
+                        },
+                        {
+                            "answerText": "29",
+                            "score": false
+                        },
+                        {
+                            "answerText": "30",
+                            "score": false
+                        }
+                    ]
+                },
+                {
+                    "id": 6,
+                    "title": "Thiên Vương tinh có 5 hành tin chính là",
+                    "answers": [
+                        {
+                            "answerText": "Miranda, Ariel, Umbriel, Titania, Oberon",
+                            "score": true
+                        },
+                        {
+                            "answerText": "Miranda, Talaha, Umbriel, Titania, Oberon",
+                            "score": false
+                        },
+                        {
+                            "answerText": "Miranda, Ariel, Umbriel, Hahaha, Oberon",
+                            "score": false
+                        },
+                        {
+                            "answerText": "Miranda, Ariel, Olala, Titania, Oberon",
+                            "score": false
+                        }
+                    ]
+                },
+                {
+                    "id": 7,
+                    "title": "Sao Thiên Vương có bao nhiêu vành đai",
+                    "answers": [
+                        {
+                            "answerText": "13 vành đai",
+                            "score": true
+                        },
+                        {
+                            "answerText": "15 vành đai",
+                            "score": false
+                        },
+                        {
+                            "answerText": "17 vành đai",
+                            "score": false
+                        },
+                        {
+                            "answerText": "19 vành đai",
+                            "score": false
+                        }
+                    ]
+                },
+                {
+                    "id": 8,
+                    "title": "Một ngày của Thiên Vương tinh mất khoảng bao nhiêu giờ",
+                    "answers": [
+                        {
+                            "answerText": "17 giờ",
+                            "score": true
+                        },
+                        {
+                            "answerText": "18 giờ",
+                            "score": false
+                        },
+                        {
+                            "answerText": "19 giờ",
+                            "score": false
+                        },
+                        {
+                            "answerText": "20 giờ",
+                            "score": false
+                        }
+                    ]
+                },
+                {
+                    "id": 9,
+                    "title": "Vành đai của sao Thiên Vương được hình thành cách đây",
+                    "answers": [
+                        {
+                            "answerText": "200 triệu năm",
+                            "score": false
+                        },
+                        {
+                            "answerText": "400 triệu năm",
+                            "score": false
+                        },
+                        {
+                            "answerText": "500 triệu năm",
+                            "score": false
+                        },
+                        {
+                            "answerText": "600 triệu năm",
+                            "score": true
+                        }
+                    ]
+                },
+                {
+                    "id": 10,
+                    "title": "Sao Thiên Vương nằm cách Mặt Trời xấp xỉ",
+                    "answers": [
+                        {
+                            "answerText": "2,87 tỷ km",
+                            "score": true
+                        },
+                        {
+                            "answerText": "2,80 tỷ km",
+                            "score": false
+                        },
+                        {
+                            "answerText": "2,79 tỷ km",
+                            "score": false
+                        },
+                        {
+                            "answerText": "2,78 tỷ km",
+                            "score": false
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": 3,
+            "question": [
+                {
+                    "id": 1,
+                    "title": "Lớp khí quyển bên ngoài của Sao Thổ chứa",
+                    "answers": [
+                        {
+                            "answerText": "69,3% hidro và 30,25% heli",
+                            "score": false
+                        },
+                        {
+                            "answerText": "70,3% hidro và 29,25% heli",
+                            "score": false
+                        },
+                        {
+                            "answerText": "96,3% hidro và 3,25% heli",
+                            "score": false
+                        },
+                        {
+                            "answerText": "89,3% hidro và 10,25% heli",
+                            "score": true
+                        }
+                    ]
+                },
+                {
+                    "id": 2,
+                    "title": "Vành đai Sao Thổ cũng rất lạnh, nhiệt độ chỉ khoảng",
+                    "answers": [
+                        {
+                            "answerText": "-120 độ",
+                            "score": false
+                        },
+                        {
+                            "answerText": "-130 độ",
+                            "score": true
+                        },
+                        {
+                            "answerText": "-140 độ",
+                            "score": false
+                        },
+                        {
+                            "answerText": "-150 độ",
+                            "score": false
+                        }
+                    ]
+                },
+                {
+                    "id": 3,
+                    "title": "Bề rộng vành đai",
+                    "answers": [
+                        {
+                            "answerText": "Khoảng 10m",
+                            "score": true
+                        },
+                        {
+                            "answerText": "Khoảng 20m",
+                            "score": false
+                        },
+                        {
+                            "answerText": "Khoảng 21m",
+                            "score": false
+                        },
+                        {
+                            "answerText": "Khoảng 22m",
+                            "score": false
+                        }
+                    ]
+                },
+                {
+                    "id": 4,
+                    "title": "Sao Thổ mất bao nhiêu thời gian để quay quanh trục của nó",
+                    "answers": [
+                        {
+                            "answerText": "10,7 giờ",
+                            "score": true
+                        },
+                        {
+                            "answerText": "10,6 giờ",
+                            "score": false
+                        },
+                        {
+                            "answerText": "10,5 giờ",
+                            "score": false
+                        },
+                        {
+                            "answerText": "10,4 giờ",
+                            "score": false
+                        }
+                    ]
+                },
+                {
+                    "id": 5,
+                    "title": "Sao Thổ mất bao lâu để hoàn thành quỹ đạo quanh Mặt Trời",
+                    "answers": [
+                        {
+                            "answerText": "19 năm",
+                            "score": false
+                        },
+                        {
+                            "answerText": "29 năm",
+                            "score": true
+                        },
+                        {
+                            "answerText": "39 năm",
+                            "score": false
+                        },
+                        {
+                            "answerText": "49 năm",
+                            "score": false
+                        }
+                    ]
+                },
+                {
+                    "id": 6,
+                    "title": "Bầu khí quyển ở sao Thổ được tạo chủ yếu bởi",
+                    "answers": [
+                        {
+                            "answerText": "Hidro và Heli",
+                            "score": true
+                        },
+                        {
+                            "answerText": "Natri và Kali",
+                            "score": false
+                        },
+                        {
+                            "answerText": "Canxi và Bari",
+                            "score": false
+                        },
+                        {
+                            "answerText": "Hidro và Amoniac",
+                            "score": false
+                        }
+                    ]
+                },
+                {
+                    "id": 7,
+                    "title": " Phải gộp .......... lại thì mới bằng được đường kính của sao Thổ",
+                    "answers": [
+                        {
+                            "answerText": "2 Trái Đất",
+                            "score": false
+                        },
+                        {
+                            "answerText": "5 Trái Đất",
+                            "score": false
+                        },
+                        {
+                            "answerText": "9 Trái Đất",
+                            "score": true
+                        },
+                        {
+                            "answerText": "15 Trái Đất",
+                            "score": false
+                        }
+                    ]
+                },
+                {
+                    "id": 8,
+                    "title": "Sao Thổ có bao nhiêu Mặt Trăng quay quanh đã được xác nhận",
+                    "answers": [
+                        {
+                            "answerText": "30",
+                            "score": false
+                        },
+                        {
+                            "answerText": "50",
+                            "score": false
+                        },
+                        {
+                            "answerText": "2",
+                            "score": false
+                        },
+                        {
+                            "answerText": "53",
+                            "score": true
+                        }
+                    ]
+                },
+                {
+                    "id": 9,
+                    "title": "Bán kính sao Thổ",
+                    "answers": [
+                        {
+                            "answerText": "58 km",
+                            "score": false
+                        },
+                        {
+                            "answerText": "58.232 km",
+                            "score": true
+                        },
+                        {
+                            "answerText": "20.345 km",
+                            "score": false
+                        },
+                        {
+                            "answerText": "53 km",
+                            "score": false
+                        }
+                    ]
+                },
+                {
+                    "id": 10,
+                    "title": "Gió ở vùng xích đạo sao Thổ có vận tốc lên đến",
+                    "answers": [
+                        {
+                            "answerText": "1.800km/h",
+                            "score": true
+                        },
+                        {
+                            "answerText": "1.000km/h",
+                            "score": false
+                        },
+                        {
+                            "answerText": "2.800km/h",
+                            "score": false
+                        },
+                        {
+                            "answerText": "3.800km/h",
+                            "score": false
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": 4,
+            "question": [
+                {
+                    "id": 1,
+                    "title": "sao Mộc có đường kính ở xích đạo là",
+                    "answers": [
+                        {
+                            "answerText": "142,934 km",
+                            "score": false
+                        },
+                        {
+                            "answerText": "142,984 km",
+                            "score": true
+                        },
+                        {
+                            "answerText": "142,284 km",
+                            "score": false
+                        },
+                        {
+                            "answerText": "14,984 km",
+                            "score": false
+                        }
+                    ]
+                },
+                {
+                    "id": 2,
+                    "title": "Sao Mộc có khối lượng gấp ... lần tất cả hành tinh trong Hệ Mặt trời cộng lại",
+                    "answers": [
+                        {
+                            "answerText": " 2.9",
+                            "score": false
+                        },
+                        {
+                            "answerText": "3.5",
+                            "score": false
+                        },
+                        {
+                            "answerText": "1.3",
+                            "score": false
+                        },
+                        {
+                            "answerText": "2.5",
+                            "score": true
+                        }
+                    ]
+                },
+                {
+                    "id": 3,
+                    "title": "Sao Mộc mất .... để quay hết một vòng quanh trục",
+                    "answers": [
+                        {
+                            "answerText": " 10 giờ",
+                            "score": true
+                        },
+                        {
+                            "answerText": "20 giờ",
+                            "score": false
+                        },
+                        {
+                            "answerText": "25 giờ",
+                            "score": false
+                        },
+                        {
+                            "answerText": "15 giờ",
+                            "score": false
+                        }
+                    ]
+                },
+                {
+                    "id": 4,
+                    "title": "Lực hấp dẫn trên sao Mộc rất mạnh, khoảng...",
+                    "answers": [
+                        {
+                            "answerText": " 217.897547 km/h",
+                            "score": false
+                        },
+                        {
+                            "answerText": "2134567 km/h",
+                            "score": false
+                        },
+                        {
+                            "answerText": "217.224 km/h",
+                            "score": true
+                        },
+                        {
+                            "answerText": "213.111 km/h",
+                            "score": false
+                        }
+                    ]
+                },
+                {
+                    "id": 5,
+                    "title": "Nhiệt độ của lõi sao Mộc ước chừng khoảng...",
+                    "answers": [
+                        {
+                            "answerText": " 37.000 độ",
+                            "score": false
+                        },
+                        {
+                            "answerText": "24.000 độ",
+                            "score": true
+                        },
+                        {
+                            "answerText": "0 độ",
+                            "score": false
+                        },
+                        {
+                            "answerText": "-123.6 độ",
+                            "score": false
+                        }
+                    ]
+                },
+                {
+                    "id": 6,
+                    "title": "Từ trường của sao Mộc mạnh hơn Trái Đất ... lần",
+                    "answers": [
+                        {
+                            "answerText": " 30",
+                            "score": false
+                        },
+                        {
+                            "answerText": "100",
+                            "score": false
+                        },
+                        {
+                            "answerText": "45",
+                            "score": false
+                        },
+                        {
+                            "answerText": "20",
+                            "score": true
+                        }
+                    ]
+                },
+                {
+                    "id": 7,
+                    "title": "Độ nghiêng trục quay của sao Mộc tương đối nhỏ, chỉ .... độ",
+                    "answers": [
+                        {
+                            "answerText": "3,13",
+                            "score": true
+                        },
+                        {
+                            "answerText": "3.5",
+                            "score": false
+                        },
+                        {
+                            "answerText": "4.5",
+                            "score": false
+                        },
+                        {
+                            "answerText": "2.0",
+                            "score": false
+                        }
+                    ]
+                },
+                {
+                    "id": 8,
+                    "title": "Hành tinh này khá kỳ dị khi ..... nên về cơ bản bạn không thể đi lại trên nó.",
+                    "answers": [
+                        {
+                            "answerText": " không có bề mặt ",
+                            "score": true
+                        },
+                        {
+                            "answerText": " không có nước ",
+                            "score": false
+                        },
+                        {
+                            "answerText": " không có sự sống ",
+                            "score": false
+                        },
+                        {
+                            "answerText": "  không có  ",
+                            "score": false
+                        }
+                    ]
+                },
+                {
+                    "id": 9,
+                    "title": "Sao Mộc chủ yếu chứa vật chất ở trạng thái...",
+                    "answers": [
+                        {
+                            "answerText": "rắn",
+                            "score": false
+                        },
+                        {
+                            "answerText": "rắn và lỏng",
+                            "score": false
+                        },
+                        {
+                            "answerText": "khí và rắn",
+                            "score": false
+                        },
+                        {
+                            "answerText": "khí và lỏng",
+                            "score": true
+                        }
+                    ]
+                },
+                {
+                    "id": 10,
+                    "title": "Đặc trưng nổi tiếng nhất của Sao Mộc có lẽ là ",
+                    "answers": [
+                        {
+                            "answerText": "Vết Nâu Lớn",
+                            "score": false
+                        },
+                        {
+                            "answerText": "Vết Hồng Lớn",
+                            "score": false
+                        },
+                        {
+                            "answerText": "Vết Đỏ Lớn",
+                            "score": true
+                        },
+                        {
+                            "answerText": "Vết Xanh Lớn",
+                            "score": false
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": 5,
+            "question": [
+                {
+                    "id": 1,
+                    "title": "Sao Hỏa được gọi là hành tinh đỏ vì ",
+                    "answers": [
+                        {
+                            "answerText": "đá và đất của sao Hỏa chứa một lượng nhỏ sắt đã bị gỉ sét theo thời gian",
+                            "score": true
+                        },
+                        {
+                            "answerText": "chưa tìm ra",
+                            "score": false
+                        },
+                        {
+                            "answerText": "tự nhiên không vì gì cả",
+                            "score": false
+                        },
+                        {
+                            "answerText": "đá và đất của sao Hỏa chứa một lượng nhỏ chì đã bị gỉ sét theo thời gian",
+                            "score": false
+                        }
+                    ]
+                },
+                {
+                    "id": 2,
+                    "title": "Núi lửa lớn nhất trong hệ mặt trời ở sao Hỏa có tên là",
+                    "answers": [
+                        {
+                            "answerText": "Olympus Mons",
+                            "score": true
+                        },
+                        {
+                            "answerText": "Olympus C",
+                            "score": false
+                        },
+                        {
+                            "answerText": "Cris",
+                            "score": false
+                        },
+                        {
+                            "answerText": "Dev Oops",
+                            "score": false
+                        }
+                    ]
+                },
+                {
+                    "id": 3,
+                    "title": "Ngoài Trái đất, sao Hỏa là hành tinh đá duy nhất khác có",
+                    "answers": [
+                        {
+                            "answerText": "nước",
+                            "score": false
+                        },
+                        {
+                            "answerText": "mặt trăng",
+                            "score": true
+                        },
+                        {
+                            "answerText": "rỗng",
+                            "score": false
+                        },
+                        {
+                            "answerText": "băng tuyết",
+                            "score": false
+                        }
+                    ]
+                },
+                {
+                    "id": 4,
+                    "title": "Sao Hỏa nhỏ hơn cả Trái đất và....",
+                    "answers": [
+                        {
+                            "answerText": "sao chổi",
+                            "score": false
+                        },
+                        {
+                            "answerText": "sao Thổ",
+                            "score": false
+                        },
+                        {
+                            "answerText": "sao Thiên Vương",
+                            "score": false
+                        },
+                        {
+                            "answerText": "sao Kim",
+                            "score": true
+                        }
+                    ]
+                },
+                {
+                    "id": 5,
+                    "title": "Hoàng hôn trên sao Hỏa có màu....",
+                    "answers": [
+                        {
+                            "answerText": "xanh",
+                            "score": true
+                        },
+                        {
+                            "answerText": "hường",
+                            "score": false
+                        },
+                        {
+                            "answerText": "đỏ",
+                            "score": false
+                        },
+                        {
+                            "answerText": "đen",
+                            "score": false
+                        }
+                    ]
+                },
+                {
+                    "id": 6,
+                    "title": "Bão bụi làm cho bầu trời của sao Hỏa",
+                    "answers": [
+                        {
+                            "answerText": "xanh",
+                            "score": false
+                        },
+                        {
+                            "answerText": "hường",
+                            "score": false
+                        },
+                        {
+                            "answerText": "đỏ",
+                            "score": true
+                        },
+                        {
+                            "answerText": "đen",
+                            "score": false
+                        }
+                    ]
+                },
+                {
+                    "id": 7,
+                    "title": "Sao Hỏa là hành tinh duy nhất có..",
+                    "answers": [
+                        {
+                            "answerText": "người sinh sống",
+                            "score": false
+                        },
+                        {
+                            "answerText": "robot",
+                            "score": true
+                        },
+                        {
+                            "answerText": "tất cả nhưng thiếu em",
+                            "score": false
+                        },
+                        {
+                            "answerText": "đen",
+                            "score": false
+                        }
+                    ]
+                },
+                {
+                    "id": 8,
+                    "title": " Hai mặt trăng của sao Hỏa được gọi là Phobos và ",
+                    "answers": [
+                        {
+                            "answerText": "Deimos",
+                            "score": true
+                        },
+                        {
+                            "answerText": "robot",
+                            "score": false
+                        },
+                        {
+                            "answerText": "CiCos",
+                            "score": false
+                        },
+                        {
+                            "answerText": "Lios",
+                            "score": false
+                        }
+                    ]
+                },
+                {
+                    "id": 9,
+                    "title": "Deimos nhỏ hơn Phobos, có đường kính chỉ  ",
+                    "answers": [
+                        {
+                            "answerText": "10,4km",
+                            "score": false
+                        },
+                        {
+                            "answerText": "12,4km",
+                            "score": true
+                        },
+                        {
+                            "answerText": "2,4km",
+                            "score": false
+                        },
+                        {
+                            "answerText": "1,4km",
+                            "score": false
+                        }
+                    ]
+                },
+                {
+                    "id": 10,
+                    "title": "Phobos là mặt trăng lớn hơn, có đường kính ",
+                    "answers": [
+                        {
+                            "answerText": "22km",
+                            "score": true
+                        },
+                        {
+                            "answerText": "12,4km",
+                            "score": false
+                        },
+                        {
+                            "answerText": "2km",
+                            "score": false
+                        },
+                        {
+                            "answerText": "1,4km",
+                            "score": false
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id":6,
+            "question":[
+                {
+                    "id": 1,
+                    "title": " Hành tinh này được hình thành cách đây khoảng  ",
+                    "answers": [
+                        {
+                            "answerText": "22 tỷ năm",
+                            "score": false
+                        },
+                        {
+                            "answerText": "12,4 tỷ năm",
+                            "score": false
+                        },
+                        {
+                            "answerText": "45,5 tỷ năm",
+                            "score": false
+                        },
+                        {
+                            "answerText": "4,55 tỷ năm",
+                            "score": true
+                        }
+                    ]
+                },
+                {
+                    "id": 2,
+                    "title": " Khoảng hơn ... bề mặt Trái Đất được bao phủ bởi các đại dương nước mặn, phần còn lại là các lục địa và các đảo",
+                    "answers": [
+                        {
+                            "answerText": "70%",
+                            "score": true
+                        },
+                        {
+                            "answerText": "90%",
+                            "score": false
+                        },
+                        {
+                            "answerText": "20%",
+                            "score": false
+                        },
+                        {
+                            "answerText": "30%",
+                            "score": false
+                        }
+                    ]
+                },
+                {
+                    "id": 3,
+                    "title": " Trái Đất tương tác với các vật thể khác trong không gian bao gồm ....",
+                    "answers": [
+                        {
+                            "answerText": "Mặt Trời và sao Hỏa",
+                            "score": false
+                        },
+                        {
+                            "answerText": "Mặt Trời và Mặt Trăng",
+                            "score": true
+                        },
+                        {
+                            "answerText": "Mặt Trời",
+                            "score": false
+                        },
+                        {
+                            "answerText": "Mặt Trăng",
+                            "score": false
+                        }
+                    ]
+                },
+                {
+                    "id": 4,
+                    "title": "Tên của hai kim loại chính trong lõi Trái Đất là?",
+                    "answers": [
+                        {
+                            "answerText": "Sắt và Kali",
+                            "score": false
+                        },
+                        {
+                            "answerText": "Sắt và Niken",
+                            "score": true
+                        },
+                        {
+                            "answerText": "Sắt và Natri",
+                            "score": false
+                        },
+                        {
+                            "answerText": "Sắt và Bari",
+                            "score": false
+                        }
+                    ]
+                },
+                {
+                    "id": 5,
+                    "title": "Nơi nào có nhiệt độ trung bình lớn hơn: lõi Trái Đất hay bề mặt Mặt Trời?",
+                    "answers": [
+                        {
+                            "answerText": "sao Kim",
+                            "score": false
+                        },
+                        {
+                            "answerText": "bề mặt Mặt Trời",
+                            "score": false
+                        },
+                        {
+                            "answerText": "Trái Đất",
+                            "score": false
+                        },
+                        {
+                            "answerText": "Nhiệt độ tương đương nhau ",
+                            "score": true
+                        }
+                    ]
+                },
+                {
+                    "id": 6,
+                    "title": "Đá nóng chảy trong miệng núi lửa gọi là gì",
+                    "answers": [
+                        {
+                            "answerText": "Dung nham (Magma)",
+                            "score": true
+                        },
+                        {
+                            "answerText": "Tan băng",
+                            "score": false
+                        },
+                        {
+                            "answerText": "Ngưng tụ",
+                            "score": false
+                        },
+                        {
+                            "answerText": "Nhũ hóa",
+                            "score": false
+                        }
+                    ]
+                },
+                {
+                    "id": 7,
+                    "title": " Lớp khí quyển nào của Trái Đất giúp hấp thụ tia tực tím từ Mặt Trời",
+                    "answers": [
+                        {
+                            "answerText": "Tầng Carbon dioxit",
+                            "score": false
+                        },
+                        {
+                            "answerText": "Tầng Oxi",
+                            "score": false
+                        },
+                        {
+                            "answerText": "Tầng Metan",
+                            "score": false
+                        },
+                        {
+                            "answerText": "Tầng Ozon ",
+                            "score": true
+                        }
+                    ]
+                },
+                {
+                    "id": 8,
+                    "title": "Đá Ruby thường có màu gì?",
+                    "answers": [
+                        {
+                            "answerText": "Màu đỏ",
+                            "score": true
+                        },
+                        {
+                            "answerText": "Màu xanh",
+                            "score": false
+                        },
+                        {
+                            "answerText": "Màu vàng",
+                            "score": false
+                        },
+                        {
+                            "answerText": "Màu nước mắt",
+                            "score": false
+                        }
+                    ]
+                },
+                {
+                    "id": 9,
+                    "title": "Đại dương lớn nhất trên Trái Đất là?",
+                    "answers": [
+                        {
+                            "answerText": "Đại Tây Dương",
+                            "score": false
+                        },
+                        {
+                            "answerText": "Thái Bình Dương",
+                            "score": true
+                        },
+                        {
+                            "answerText": "Ấn Độ Dương",
+                            "score": false
+                        },
+                        {
+                            "answerText": "Bắc Băng Dương",
+                            "score": false
+                        }
+                    ]
+                },
+                {
+                    "id": 10,
+                    "title": "Ba kỷ có khủng long là những kỷ nào?",
+                    "answers": [
+                        {
+                            "answerText": "Kỷ Trias, kỷ Jura và kỷ Phấn trắng",
+                            "score": true
+                        },
+                        {
+                            "answerText": "Kỷ Trias, kỷ Jura và kỷ Vira",
+                            "score": false
+                        },
+                        {
+                            "answerText": "Kỷ Trias, kỷ Jura và kỷ Sala",
+                            "score": false
+                        },
+                        {
+                            "answerText": "Kỷ Trias, kỷ Jura",
+                            "score": false
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id":7,
+            "question":[
+                {
+                    "id": 1,
+                    "title": "Mặt Trăng quay quanh Trái Đất một vòng hết bao lâu?",
+                    "answers": [
+                        {
+                            "answerText": "Khoảng nửa tháng.",
+                            "score": false
+                        },
+                        {
+                            "answerText": "Khoảng 1 tháng.",
+                            "score": true
+                        },
+                        {
+                            "answerText": "Khoảng 2 tháng.",
+                            "score": false
+                        },
+                        {
+                            "answerText": "Khoảng 3 tháng.",
+                            "score": false
+                        }
+                    ]
+                },
+                {
+                    "id": 2,
+                    "title": "Ta nhìn thấy Mặt Trăng vì:",
+                    "answers": [
+                        {
+                            "answerText": "Mặt Trăng tự phát ra ánh sáng chiếu vào mắt ta",
+                            "score": false
+                        },
+                        {
+                            "answerText": "Mặt Trăng phản xạ ánh sáng Trái Đất chiếu vào mắt ta.",
+                            "score": false
+                        },
+                        {
+                            "answerText": "Mặt Trăng phản xạ ánh sáng từ các thiên thể chiếu vào mắt ta",
+                            "score": false
+                        },
+                        {
+                            "answerText": "Mặt Trăng phản xạ ánh sáng Mặt Trời chiếu vào mắt ta.",
+                            "score": true
+                        }
+                    ]
+                },
+                {
+                    "id": 3,
+                    "title": "Ánh sáng từ Mặt Trăng mà ta nhìn thấy được có từ đâu?",
+                    "answers": [
+                        {
+                            "answerText": "Mặt Trăng tự phát ra ánh sáng.",
+                            "score": false
+                        },
+                        {
+                            "answerText": "Mặt Trăng phản xạ ánh sáng Thiên Hà",
+                            "score": false
+                        },
+                        {
+                            "answerText": "Mặt Trăng phản xạ ánh sáng Ngân Hà.",
+                            "score": false
+                        },
+                        {
+                            "answerText": "Mặt Trăng phản xạ ánh sáng Mặt Trời.",
+                            "score": true
+                        }
+                    ]
+                },
+                {
+                    "id": 4,
+                    "title": "Hình dạng nhìn thấy của Mặt Trăng thay đổi một cách tuần hoàn vì:",
+                    "answers": [
+                        {
+                            "answerText": "Trái Đất quay quanh Mặt Trời.",
+                            "score": false
+                        },
+                        {
+                            "answerText": "Mặt Trăng quay quanh Trái Đất.",
+                            "score": false
+                        },
+                        {
+                            "answerText": "Ở mỗi thời điểm, phần bề mặt MT hướng về TĐ được MTrời chiếu sáng có diện tích khác nhau",
+                            "score": false
+                        },
+                        {
+                            "answerText": "Cả B và C.",
+                            "score": true
+                        }
+                    ]
+                },
+                {
+                    "id": 5,
+                    "title": "Vì sao Mặt Trời chỉ chiếu sáng được một nửa Mặt Trăng",
+                    "answers": [
+                        {
+                            "answerText": " Vì Mặt Trăng hình khối cầu",
+                            "score": true
+                        },
+                        {
+                            "answerText": "Vì Mặt Trăng hình vuông",
+                            "score": false
+                        },
+                        {
+                            "answerText": "Vì Mặt Trăng hình tròn",
+                            "score": false
+                        },
+                        {
+                            "answerText": "Vì Mặt Trăng quay quanh trục của nó",
+                            "score": false
+                        }
+                    ]
+                },
+                {
+                    "id": 6,
+                    "title": "Chọn đáp án đúng",
+                    "answers": [
+                        {
+                            "answerText": "Mặt Trăng là một vệ tinh của Mặt Trời",
+                            "score": false
+                        },
+                        {
+                            "answerText": "Mặt Trăng là một hành tinh của Trái Đất",
+                            "score": false
+                        },
+                        {
+                            "answerText": "Mặt Trăng là một vệ tinh của Trái Đất",
+                            "score": false
+                        },
+                        {
+                            "answerText": "Mặt Trăng là một ngôi sao",
+                            "score": true
+                        }
+                    ]
+                },
+                {
+                    "id": 7,
+                    "title": "Chọn đáp án đúng",
+                    "answers": [
+                        {
+                            "answerText": "Mặt Trăng là một vệ tinh của Mặt Trời",
+                            "score": false
+                        },
+                        {
+                            "answerText": "Mặt Trăng là một hành tinh của Trái Đất",
+                            "score": false
+                        },
+                        {
+                            "answerText": "Mặt Trăng là một vệ tinh của Trái Đất",
+                            "score": false
+                        },
+                        {
+                            "answerText": "Mặt Trăng là một ngôi sao",
+                            "score": true
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

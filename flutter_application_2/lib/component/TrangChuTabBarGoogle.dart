@@ -15,11 +15,7 @@ class _TrangChuTabBarGoogleState extends State<TrangChuTabBarGoogle> {
   int _selectedIndex = 1;
   static const TextStyle optionStyle = TextStyle(
       fontSize: 30, fontWeight: FontWeight.w600, fontFamily: 'FSAriston');
-  static const List<Widget> _widgetOptions = <Widget>[
-    HoSo(),
-    TrangChu(),
-    TimKiem()
-  ];
+  static List<Widget> _widgetOptions = <Widget>[HoSo(), TrangChu(), TimKiem()];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -40,24 +36,30 @@ class _TrangChuTabBarGoogleState extends State<TrangChuTabBarGoogle> {
               });
             },
             padding: EdgeInsets.all(16),
-            tabs:const [
+            tabs: const [
               GButton(
                 icon: Icons.person,
                 text: 'Hồ sơ',
                 textStyle: TextStyle(
-                    fontFamily: 'LinotteBold', fontSize: 17, color: Colors.white),
+                    fontFamily: 'LinotteBold',
+                    fontSize: 17,
+                    color: Colors.white),
               ),
               GButton(
                 icon: Icons.home,
                 text: 'Trang chủ',
                 textStyle: TextStyle(
-                    fontFamily: 'LinotteBold', fontSize: 17, color: Colors.white),
+                    fontFamily: 'LinotteBold',
+                    fontSize: 17,
+                    color: Colors.white),
               ),
               GButton(
                 icon: Icons.search,
                 text: 'Tìm kiếm',
                 textStyle: TextStyle(
-                    fontFamily: 'LinotteBold', fontSize: 17, color: Colors.white),
+                    fontFamily: 'LinotteBold',
+                    fontSize: 17,
+                    color: Colors.white),
               ),
             ],
           ),

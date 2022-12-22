@@ -26,21 +26,21 @@ class _TrangChuState extends State<TrangChu> {
     return Scaffold(
       key: _sKey,
       endDrawer: Menu(),
-      body: ListView(
-        children:[ Container(
+      body: ListView(children: [
+        Container(
           height: MediaQuery.of(context).size.height,
           width: MediaQuery.of(context).size.width,
-         decoration: BoxDecoration(
+          decoration: BoxDecoration(
               //color: HexColor('0C205B')
-              image: DecorationImage(image: AssetImage('assets/bgg.jpg'), fit: BoxFit.fill)
-              ),
+              image: DecorationImage(
+                  image: AssetImage('assets/bgg.jpg'), fit: BoxFit.fill)),
           child: Column(mainAxisAlignment: MainAxisAlignment.start, children: [
             Row(
               children: [
                 Padding(
                   padding: EdgeInsets.fromLTRB(130, 10, 0, 0),
                   child: Column(
-                    children:const [
+                    children: const [
                       Image(
                         image: AssetImage('assets/logo.png'),
                         height: 80,
@@ -53,7 +53,7 @@ class _TrangChuState extends State<TrangChu> {
                 Column(
                   children: [
                     Padding(
-                      padding:const EdgeInsets.fromLTRB(50, 50, 0, 60),
+                      padding: const EdgeInsets.fromLTRB(50, 50, 0, 60),
                       child: Stack(
                         children: [
                           IconButton(
@@ -81,14 +81,14 @@ class _TrangChuState extends State<TrangChu> {
                       child: Row(
                         children: [
                           Container(
-                            margin:const EdgeInsets.only(left: 80, top: 12),
+                            margin: const EdgeInsets.only(left: 80, top: 12),
                             decoration: BoxDecoration(
                                 color: Colors.white.withOpacity(0.9),
                                 borderRadius: BorderRadius.circular(20)),
                             height: 35,
                             width: 160,
                             child: Padding(
-                              padding:const EdgeInsets.only(
+                              padding: const EdgeInsets.only(
                                 left: 25,
                               ),
                               child: Row(children: [
@@ -304,7 +304,7 @@ class _TrangChuState extends State<TrangChu> {
                             );
                           },
                         ),
-      
+
                         //xep hang
                         InkWell(
                           child: Container(
@@ -348,7 +348,7 @@ class _TrangChuState extends State<TrangChu> {
                             );
                           },
                         ),
-      
+
                         //thống kê
                         InkWell(
                           child: Container(
@@ -392,7 +392,7 @@ class _TrangChuState extends State<TrangChu> {
                             );
                           },
                         ),
-      
+
                         //tìm kiếm
                         InkWell(
                           child: Container(
@@ -432,7 +432,7 @@ class _TrangChuState extends State<TrangChu> {
                             Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) => const TimKiem()),
+                                  builder: (context) => TimKiem()),
                             );
                           },
                         ),
@@ -444,8 +444,7 @@ class _TrangChuState extends State<TrangChu> {
             )
           ]),
         ),
-        ]
-      ),
+      ]),
     );
   }
 }
