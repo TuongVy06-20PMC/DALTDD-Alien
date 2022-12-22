@@ -2,9 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'package:flutter_application_2/component/contact_object.dart';
 import 'package:flutter_application_2/component/contact_provider.dart';
-
 import 'dart:math';
 import 'dart:async';
+import 'KetThucLuotChoi.dart';
+import 'Level.dart';
+import 'package:flutter_application_2/Screen/XemlaiDapAn.dart';
+
+void main() => runApp(const AnimatedContainerApp());
 
 class AnimatedContainerApp extends StatefulWidget {
   const AnimatedContainerApp({super.key});
@@ -67,8 +71,8 @@ class BatDauChoi extends StatefulWidget {
 }
 
 class _BatDauChoiState extends State<BatDauChoi> {
-  int gold = 0;
-  int goldplus = 0;
+  int coin = 0;
+  int coinplus = 0;
   int index = 0;
   int score = 0;
   int exp = 0;
@@ -77,35 +81,30 @@ class _BatDauChoiState extends State<BatDauChoi> {
   late bool anwser2 = question[index].answers[0].score;
   late bool anwser3 = question[index].answers[0].score;
   late bool anwser4 = question[index].answers[0].score;
-  bool fuc1 = true;
-  bool fuc2 = true;
-  bool fuc3 = true;
-  bool fuc4 = true;
+  bool option1 = true;
+  bool option2 = true;
+  bool option3 = true;
+  bool option4 = true;
   bool function_5050 = true;
-  bool fuc_master = true;
-  bool fuc_x2 = true;
-  bool fuc_time = true;
   String youranwser = "";
   bool pick = false;
-  int time = 150000;
-  int timeonce = 10;
+  int time = 60;
   int x2score = 0;
   void start() {
     Timer.periodic(Duration(seconds: 1), (timer) {
       if (time >= 0) {
         setState(() {
           time--;
-          timeonce--;
-          updategold();
+          updatecoin();
         });
       }
     });
   }
 
-  void addgold() {
+  void addcoin() {
     Random random = new Random();
     int randomNumber = random.nextInt(150) + 10;
-    goldplus += randomNumber;
+    coinplus += randomNumber;
     setState(() {});
   }
 
@@ -120,49 +119,39 @@ class _BatDauChoiState extends State<BatDauChoi> {
         anwser2 = question[index].answers[0].score;
         anwser3 = question[index].answers[0].score;
         anwser4 = question[index].answers[0].score;
-        fuc1 = true;
-        fuc2 = true;
-        fuc3 = true;
-        fuc4 = true;
+        option1 = true;
+        option2 = true;
+        option3 = true;
+        option4 = true;
         pick = false;
         x2score = 0;
         youranwser = "";
-        timeonce = 10;
       }
-      updategold();
+      updatecoin();
       setState(() {});
     });
   }
 
   void function5050() {
-    gold -= 100;
+    coin -= 100;
     int a = 0;
     for (int i = 0; i < 4; i++) {
       if (question[index].answers[i].score == false) {
-        if (i == 0) fuc1 = false;
-        if (i == 1) fuc2 = false;
-        if (i == 2) fuc3 = false;
-        if (i == 3) fuc4 = false;
+        if (i == 0) option1 = false;
+        if (i == 1) option2 = false;
+        if (i == 2) option3 = false;
+        if (i == 3) option4 = false;
         a++;
       }
       if (a == 2) break;
     }
-    updategold();
+    updatecoin();
     setState(() {});
   }
 
-  void updategold() {
-    if (gold < 250) {
-      fuc_master = false;
-    }
-    if (gold < 200) {
-      fuc_x2 = false;
-    }
-    if (gold < 100) {
+  void updatecoin() {
+    if (coin < 100) {
       function_5050 = false;
-    }
-    if (gold < 50) {
-      fuc_x2 = false;
     }
   }
 
@@ -182,7 +171,7 @@ class _BatDauChoiState extends State<BatDauChoi> {
   Widget build(BuildContext context) {
     return Material(
         child: time == -1
-            ? Container()
+            ? KetThucLuotChoi()
             : Container(
                 decoration: const BoxDecoration(
                     //color: HexColor('0C205B')
@@ -290,7 +279,7 @@ class _BatDauChoiState extends State<BatDauChoi> {
                                       topLeft: Radius.circular(30),
                                       topRight: Radius.circular(30))),
                               child: Column(
-                                mainAxisAlignment: MainAxisAlignment.start,
+                                mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
                                   Padding(
                                     padding: EdgeInsets.only(
@@ -301,7 +290,7 @@ class _BatDauChoiState extends State<BatDauChoi> {
                                         children: [
                                           Padding(
                                               padding: const EdgeInsets.only(
-                                                right: 30,
+                                                right: 80,
                                               ),
                                               child: Row(
                                                 children: [
@@ -311,7 +300,9 @@ class _BatDauChoiState extends State<BatDauChoi> {
                                                     color: HexColor('FFC600'),
                                                   ),
                                                   Text(
-                                                    time.toString(),
+                                                    time > 0
+                                                        ? time.toString()
+                                                        : "0",
                                                     style: TextStyle(
                                                         fontFamily:
                                                             'LinotteBold',
@@ -320,7 +311,8 @@ class _BatDauChoiState extends State<BatDauChoi> {
                                                 ],
                                               )),
                                           Padding(
-                                              padding: EdgeInsets.all(0),
+                                              padding:
+                                                  EdgeInsets.only(right: 10),
                                               child: Row(
                                                 children: [
                                                   Icon(
@@ -339,19 +331,19 @@ class _BatDauChoiState extends State<BatDauChoi> {
                                               )),
                                         ]),
                                   ),
-                                  fuc1
+                                  option1
                                       ? InkWell(
                                           onTap: () {
                                             pick = true;
-                                            youranwser = "a";
+                                            youranwser = "opt1";
                                             if (this
                                                         .widget
                                                         .question[index]
                                                         .answers[0]
                                                         .score ==
                                                     true &&
-                                                youranwser == "a") {
-                                              addgold();
+                                                youranwser == "opt1") {
+                                              addcoin();
                                               score += x2score + 30;
                                             }
                                             onpress();
@@ -403,19 +395,19 @@ class _BatDauChoiState extends State<BatDauChoi> {
                                                 BorderRadius.circular(10),
                                           ),
                                         ),
-                                  fuc2
+                                  option2
                                       ? InkWell(
                                           onTap: () {
                                             pick = true;
-                                            youranwser = "b";
+                                            youranwser = "opt2";
                                             if (this
                                                         .widget
                                                         .question[index]
                                                         .answers[1]
                                                         .score ==
                                                     true &&
-                                                youranwser == "b") {
-                                              addgold();
+                                                youranwser == "opt2") {
+                                              addcoin();
                                               score += x2score + 30;
                                             }
                                             onpress();
@@ -467,19 +459,19 @@ class _BatDauChoiState extends State<BatDauChoi> {
                                                 BorderRadius.circular(10),
                                           ),
                                         ),
-                                  fuc3
+                                  option3
                                       ? InkWell(
                                           onTap: () {
                                             pick = true;
-                                            youranwser = "c";
+                                            youranwser = "opt3";
                                             if (this
                                                         .widget
                                                         .question[index]
                                                         .answers[2]
                                                         .score ==
                                                     true &&
-                                                youranwser == "c") {
-                                              addgold();
+                                                youranwser == "opt3") {
+                                              addcoin();
                                               score += x2score + 30;
                                             }
                                             onpress();
@@ -531,19 +523,19 @@ class _BatDauChoiState extends State<BatDauChoi> {
                                                 BorderRadius.circular(10),
                                           ),
                                         ),
-                                  fuc4
+                                  option4
                                       ? InkWell(
                                           onTap: () {
                                             pick = true;
-                                            youranwser = "d";
+                                            youranwser = "opt4";
                                             if (this
                                                         .widget
                                                         .question[index]
                                                         .answers[3]
                                                         .score ==
                                                     true &&
-                                                youranwser == "d") {
-                                              addgold();
+                                                youranwser == "opt4") {
+                                              addcoin();
                                               score += x2score + 30;
                                             }
                                             onpress();
@@ -601,64 +593,42 @@ class _BatDauChoiState extends State<BatDauChoi> {
                                         mainAxisAlignment:
                                             MainAxisAlignment.center,
                                         children: [
-                                          Column(
-                                            children: [
-                                              InkWell(
-                                                onTap: () {
-                                                  if (function_5050) {
-                                                    function5050();
-                                                    function_5050 = false;
-                                                    setState(() {});
-                                                  }
-                                                },
-                                                child: Container(
-                                                  alignment: Alignment.center,
-                                                  width: 60,
-                                                  height: 60,
-                                                  decoration: BoxDecoration(
-                                                    color: Colors.amber,
-                                                    image: DecorationImage(
-                                                        image: function_5050
-                                                            ? AssetImage(
-                                                                'assets/50.png')
-                                                            : AssetImage(
-                                                                'assets/x2.png'),
-                                                        fit: BoxFit.fill),
-                                                  ),
-                                                  child: Text(
-                                                    '50:50',
-                                                    style: TextStyle(
-                                                      fontFamily: "Mono",
-                                                      fontSize: 15,
-                                                      color: Color.fromARGB(
-                                                          255, 255, 255, 255),
-                                                      fontWeight:
-                                                          FontWeight.w600,
-                                                    ),
-                                                  ),
-                                                ),
+                                          Padding(
+                                            padding: EdgeInsets.only(right: 23),
+                                            child: ElevatedButton(
+                                              style: ElevatedButton.styleFrom(
+                                                backgroundColor:
+                                                    HexColor('FF0000'),
+                                                minimumSize: Size(80, 80),
+                                                /*side: const BorderSide(
+                                      width: 2, color: Colors.black),*/
                                               ),
-                                              Row(
-                                                children: [
-                                                  Text(
-                                                    '100',
-                                                    style: TextStyle(
-                                                      fontFamily: "Mono",
-                                                      fontSize: 15,
-                                                      color: Color.fromARGB(
-                                                          255, 255, 255, 255),
-                                                      fontWeight:
-                                                          FontWeight.w600,
-                                                    ),
-                                                  ),
-                                                  Image.asset(
-                                                    'assets/50.png',
-                                                    width: 30,
-                                                    height: 30,
-                                                  )
-                                                ],
-                                              )
-                                            ],
+                                              child: Padding(
+                                                  padding:
+                                                      const EdgeInsets.only(
+                                                          left: 2, right: 2),
+                                                  child: Column(
+                                                    children: [
+                                                      Image.asset(
+                                                        'assets/50.png',
+                                                        width: 50,
+                                                        height: 50,
+                                                      ),
+                                                      const Text(
+                                                        '-100 xu',
+                                                        textAlign:
+                                                            TextAlign.center,
+                                                        style: TextStyle(
+                                                          fontSize: 20,
+                                                          fontFamily:
+                                                              'LinotteBold',
+                                                          color: Colors.white,
+                                                        ),
+                                                      ),
+                                                    ],
+                                                  )),
+                                              onPressed: () {},
+                                            ),
                                           ),
                                           Padding(
                                             padding: EdgeInsets.only(right: 23),
@@ -734,40 +704,6 @@ class _BatDauChoiState extends State<BatDauChoi> {
                                           ),
                                         ],
                                       )),
-                                  Row(
-                                    mainAxisAlignment: MainAxisAlignment.end,
-                                    children: [
-                                      Padding(
-                                        padding:
-                                            EdgeInsets.only(top: 20, right: 20),
-                                        child: ElevatedButton(
-                                          style: ElevatedButton.styleFrom(
-                                              backgroundColor: Colors.white,
-                                              minimumSize: Size(50, 20),
-                                              side: BorderSide(
-                                                  width: 2,
-                                                  color: HexColor('222222')),
-                                              shape: RoundedRectangleBorder(
-                                                  borderRadius:
-                                                      BorderRadius.circular(
-                                                          15))),
-                                          child: Padding(
-                                            padding: EdgeInsets.all(10),
-                                            child: Text(
-                                              'Tiếp theo >>',
-                                              textAlign: TextAlign.center,
-                                              style: TextStyle(
-                                                fontSize: 20,
-                                                fontFamily: 'LinotteBold',
-                                                color: HexColor('222222'),
-                                              ),
-                                            ),
-                                          ),
-                                          onPressed: () {},
-                                        ),
-                                      ),
-                                    ],
-                                  ),
                                 ],
                               ),
                             ),
