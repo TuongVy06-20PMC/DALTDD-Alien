@@ -4,6 +4,7 @@ import 'package:flutter_application_2/component/contact_object.dart';
 import 'package:flutter_application_2/component/contact_provider.dart';
 import 'dart:math';
 import 'dart:async';
+import 'gameover.dart';
 
 void main() => runApp(const AnimatedContainerApp());
 
@@ -85,7 +86,7 @@ class _BatDauChoiState extends State<BatDauChoi> {
   bool function_5050 = true;
   String youranwser = "";
   bool pick = false;
-  int time = 150000;
+  int time = 10;
   int x2score = 0;
   void start() {
     Timer.periodic(Duration(seconds: 1), (timer) {
@@ -170,7 +171,7 @@ class _BatDauChoiState extends State<BatDauChoi> {
   Widget build(BuildContext context) {
     return Material(
         child: time == -1
-            ? Container()
+            ? gameover()
             : Container(
                 decoration: const BoxDecoration(
                     //color: HexColor('0C205B')
