@@ -2,6 +2,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_application_2/Screen/User.dart';
+import 'package:flutter_application_2/component/TrangChuTabBarGoogle.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'DangNhap.dart';
 import 'package:intl/intl.dart';
@@ -19,6 +20,10 @@ class _DangKyState extends State<DangKy> {
   final txtHoten = TextEditingController();
   final txtTendn = TextEditingController();
   final txtPass = TextEditingController();
+  late int Xu = 0;
+  late int Cap;
+  late int Thang;
+  late int HanhTinh;
 
   final _auth = FirebaseAuth.instance;
   bool _obscureText = true;
@@ -382,6 +387,12 @@ class _DangKyState extends State<DangKy> {
                                       email: txtEmail.text,
                                     );
                                     createUser(user);
+                                    Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                          builder: (context) =>
+                                              TrangChuTabBarGoogle()),
+                                    );
                                   },
                                 ),
                               ],
@@ -442,6 +453,10 @@ class _DangKyState extends State<DangKy> {
   Future createUser(Nguoidung user) async {
     final docUser = FirebaseFirestore.instance.collection('users').doc();
     user.uid = docUser.id;
+    user.xu = 0;
+    user.cap = 1;
+    user.thang = 0;
+    user.hanhtinh = 0;
     final json = user.toJson();
     await docUser.set(json);
   }

@@ -164,7 +164,9 @@ class HoSoState extends State<HoSo> {
                                                       MainAxisAlignment.center,
                                                   children: [
                                                     Text(
-                                                      'Cấp 1',
+                                                      'Cấp ' +
+                                                          data['cap']
+                                                              .toString(),
                                                       style: TextStyle(
                                                           fontSize: 13,
                                                           fontFamily:
@@ -225,21 +227,21 @@ class HoSoState extends State<HoSo> {
                                                       Image.asset(
                                                         'assets/btn.png',
                                                         fit: BoxFit.fill,
-                                                        height: 60,
-                                                        width: 250,
+                                                        height: 55,
+                                                        width: 200,
                                                       )
                                                     ],
                                                   ),
                                                   Positioned(
                                                     child: Padding(
                                                       padding: EdgeInsets.only(
-                                                          top: 13),
+                                                          top: 10),
                                                       child: Text(
                                                         data['hoten'],
                                                         textAlign:
                                                             TextAlign.center,
                                                         style: TextStyle(
-                                                          fontSize: 20,
+                                                          fontSize: 15,
                                                           fontFamily:
                                                               'LinotteBold',
                                                           color: Colors.black,
@@ -288,7 +290,7 @@ class HoSoState extends State<HoSo> {
                                             //       //           TextAlign.center,
                                             //       //       style: TextStyle(
                                             //       //         fontSize: 9,
-                                            //       //         fontFamily:
+//       //         fontFamily:
                                             //       //             'LinotteBold',
                                             //       //         color: Colors.black,
                                             //       //       ),
@@ -319,15 +321,15 @@ class HoSoState extends State<HoSo> {
                                                       Image.asset(
                                                         'assets/btn.png',
                                                         fit: BoxFit.fill,
-                                                        height: 60,
-                                                        width: 250,
+                                                        height: 55,
+                                                        width: 200,
                                                       )
                                                     ],
                                                   ),
                                                   Positioned(
                                                     child: Padding(
                                                       padding: EdgeInsets.only(
-                                                          top: 13),
+                                                          top: 10),
                                                       child: Text(
                                                         data['email'],
                                                         textAlign:
