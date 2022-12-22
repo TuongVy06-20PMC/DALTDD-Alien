@@ -78,10 +78,10 @@ class _BatDauChoiState extends State<BatDauChoi> {
   late bool anwser2 = question[index].answers[0].score;
   late bool anwser3 = question[index].answers[0].score;
   late bool anwser4 = question[index].answers[0].score;
-  bool function1 = true;
-  bool function2 = true;
-  bool function3 = true;
-  bool function4 = true;
+  bool option1 =  true;
+  bool option2 = true;
+  bool option3 = true;
+  bool option4 = true;
   bool function_5050 = true;
   String youranwser = "";
   bool pick = false;
@@ -116,10 +116,10 @@ class _BatDauChoiState extends State<BatDauChoi> {
         anwser2 = question[index].answers[0].score;
         anwser3 = question[index].answers[0].score;
         anwser4 = question[index].answers[0].score;
-        function1 = true;
-        function2 = true;
-        function3 = true;
-        function4 = true;
+        option1 = true;
+        option2 = true;
+        option3 = true;
+        option4 = true;
         pick = false;
         x2score = 0;
         youranwser = "";
@@ -134,10 +134,10 @@ class _BatDauChoiState extends State<BatDauChoi> {
     int a = 0;
     for (int i = 0; i < 4; i++) {
       if (question[index].answers[i].score == false) {
-        if (i == 0) function1 = false;
-        if (i == 1) function2 = false;
-        if (i == 2) function3 = false;
-        if (i == 3) function4 = false;
+        if (i == 0) option1 = false;
+        if (i == 1) option2 = false;
+        if (i == 2) option3 = false;
+        if (i == 3) option4 = false;
         a++;
       }
       if (a == 2) break;
@@ -327,7 +327,7 @@ class _BatDauChoiState extends State<BatDauChoi> {
                                               )),
                                         ]),
                                   ),
-                                  function1
+                                  option1
                                       ? InkWell(
                                           onTap: () {
                                             pick = true;
@@ -378,7 +378,7 @@ class _BatDauChoiState extends State<BatDauChoi> {
                                                 BorderRadius.circular(10),
                                           ),
                                         ),
-                                  function2
+                                  option2
                                       ? InkWell(
                                           onTap: () {
                                             pick = true;
@@ -432,7 +432,7 @@ class _BatDauChoiState extends State<BatDauChoi> {
                                                 BorderRadius.circular(10),
                                           ),
                                         ),
-                                  function3
+                                  option3
                                       ? InkWell(
                                           onTap: () {
                                             pick = true;
@@ -496,7 +496,7 @@ class _BatDauChoiState extends State<BatDauChoi> {
                                                 BorderRadius.circular(10),
                                           ),
                                         ),
-                                  function4
+                                  option4
                                       ? InkWell(
                                           onTap: () {
                                             pick = true;
