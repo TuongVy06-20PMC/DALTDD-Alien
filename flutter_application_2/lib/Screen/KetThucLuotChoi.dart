@@ -49,7 +49,7 @@ class _KetThucLuotChoiState extends State<KetThucLuotChoi> {
                             Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) => const BatDauChoi()),
+                                  builder: (context) => const AnimatedContainerApp()),
                             )
                           },
                           icon: Image.asset(
@@ -322,7 +322,7 @@ class _KetThucLuotChoiState extends State<KetThucLuotChoi> {
                                                     context,
                                                     MaterialPageRoute(
                                                         builder: (context) =>
-                                                            const BatDauChoi()),
+                                                            const AnimatedContainerApp()),
                                                   );
                                                 },
                                               ),

@@ -237,7 +237,7 @@ class _LevelScreenState extends State<LevelScreen> {
                                                     context,
                                                     MaterialPageRoute(
                                                         builder: (context) =>
-                                                            const BatDauChoi()),
+                                                            const AnimatedContainerApp()),
                                                   );
                                                 },
                                               ),

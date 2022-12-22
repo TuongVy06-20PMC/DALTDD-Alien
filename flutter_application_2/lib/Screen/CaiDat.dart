@@ -34,13 +34,22 @@ class _CaiDatState extends State<CaiDat> {
     });
   }
 
-  final player = AudioPlayer();
+  AudioPlayer player = AudioPlayer();
+  AudioCache cache = AudioCache();
   bool isPlaying = false;
   Duration duration = Duration.zero;
   Duration position = Duration.zero;
 
   String formatTime(int seconds) {
     return '${(Duration(seconds: seconds))}'.split('.')[0].padLeft(8, '0');
+  }
+
+  void playSound() async {
+    await player.play(AssetSource('1.mp3'));
+  }
+
+  void loop() {
+    player.setReleaseMode(ReleaseMode.loop);
   }
 
   @override
@@ -83,7 +92,7 @@ class _CaiDatState extends State<CaiDat> {
         key: _sKey,
         body: Center(
             child: Container(
-              padding: EdgeInsets.only(top: 40),
+                padding: EdgeInsets.only(top: 40),
                 decoration: const BoxDecoration(
                   image: DecorationImage(
                       image: AssetImage('assets/bgg.jpg'), fit: BoxFit.cover),
@@ -92,39 +101,40 @@ class _CaiDatState extends State<CaiDat> {
                     padding: const EdgeInsets.all(5.0),
                     child: Column(children: <Widget>[
                       Row(
-                mainAxisAlignment: MainAxisAlignment.end,
-                children: [
-                  Padding(
-                    padding: EdgeInsets.only(right: 50, top: 40),
-                    child: Image.asset(
-                      'assets/logo.png',
-                      width: 140,
-                    ),
-                  ),
-                  InkWell(
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
-                        IconButton(
-                          onPressed: () => {
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => const TrangChuTabBarGoogle()),
-                            )
-                          },
-                          icon: Image.asset(
-                            'assets/close-option.png',
-                            color: HexColor('FFDE00'),
+                        mainAxisAlignment: MainAxisAlignment.end,
+                        children: [
+                          Padding(
+                            padding: EdgeInsets.only(right: 50, top: 40),
+                            child: Image.asset(
+                              'assets/logo.png',
+                              width: 140,
+                            ),
                           ),
-                          iconSize: 40,
-                        )
-                      ],
-                    ),
-                  ),
-                ],
-              ),
+                          InkWell(
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              crossAxisAlignment: CrossAxisAlignment.center,
+                              children: [
+                                IconButton(
+                                  onPressed: () => {
+                                    Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                          builder: (context) =>
+                                              const TrangChuTabBarGoogle()),
+                                    )
+                                  },
+                                  icon: Image.asset(
+                                    'assets/close-option.png',
+                                    color: HexColor('FFDE00'),
+                                  ),
+                                  iconSize: 40,
+                                )
+                              ],
+                            ),
+                          ),
+                        ],
+                      ),
                       Container(
                           margin: EdgeInsets.only(top: 30),
                           child: Stack(
@@ -151,21 +161,20 @@ class _CaiDatState extends State<CaiDat> {
                                 ),
                               ),
                             ],
-                          )
-                        ),
+                          )),
                       SizedBox(
                         height: 65,
                       ),
                       Row(
                         children: <Widget>[
                           Container(
-                           // margin: EdgeInsets.only(top: 60),
+                            // margin: EdgeInsets.only(top: 60),
                             padding: EdgeInsets.all(10),
                             width: 305,
                             height: 100,
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(10),
-                              color: Colors.white ,
+                              color: Colors.white,
                             ),
                             child: Row(
                                 mainAxisAlignment: MainAxisAlignment.start,
@@ -174,32 +183,34 @@ class _CaiDatState extends State<CaiDat> {
                                     mainAxisAlignment: MainAxisAlignment.center,
                                     children: [
                                       InkWell(
-                                    radius: 25,
-                                    child: IconButton(
-                                      icon: Icon(
-                                        isPlaying
-                                            ? Icons.music_note
-                                            : Icons.music_off,
-                                        size: 30,
-                                        color: HexColor('0C205B'),
+                                        radius: 25,
+                                        child: IconButton(
+                                          icon: Icon(
+                                            isPlaying
+                                                ? Icons.music_note
+                                                : Icons.music_off,
+                                            size: 30,
+                                            color: HexColor('0C205B'),
+                                          ),
+                                          onPressed: () {
+                                            if (isPlaying) {
+                                              player.pause();
+                                            } else {
+                                              player.play(AssetSource('1.mp3'));
+                                              loop();
+                                            }
+                                          },
+                                        ),
                                       ),
-                                      onPressed: () {
-                                        if (isPlaying) {
-                                          player.pause();
-                                        } else {
-                                          player.play(AssetSource('1.mp3'));
-                                        }
-                                      },
-                                    ),
-                                  ),
-                                      Text('Âm thanh', style: TextStyle(
-                                        fontFamily: 'LinotteBold',
-                                        fontSize: 15,
-                                        color: HexColor('0C205B')
-                                      ),)
+                                      Text(
+                                        'Âm thanh',
+                                        style: TextStyle(
+                                            fontFamily: 'LinotteBold',
+                                            fontSize: 15,
+                                            color: HexColor('0C205B')),
+                                      )
                                     ],
                                   ),
-                                  
                                   Expanded(
                                     child: Slider(
                                       activeColor: HexColor('FFEE52'),
@@ -216,7 +227,6 @@ class _CaiDatState extends State<CaiDat> {
                                       divisions: 100,
                                     ),
                                   ),
-                                  
                                 ]),
                           )
                         ],
@@ -236,19 +246,23 @@ class _CaiDatState extends State<CaiDat> {
                         child: Row(
                           children: [
                             AnimatedCrossFade(
-                                firstChild:
-                                Column(
-                                    mainAxisAlignment: MainAxisAlignment.center,
-                                    children: [
-                                      Icon(Icons.brightness_7, size: 30,color: HexColor('0C205B'),),
-                                      Text('Độ sáng', style: TextStyle(
-                                        fontFamily: 'LinotteBold',
-                                        fontSize: 15,
-                                        color: HexColor('0C205B')
-                                      ),)
-                                    ],
-                                  ),
-                                
+                                firstChild: Column(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    Icon(
+                                      Icons.brightness_7,
+                                      size: 30,
+                                      color: HexColor('0C205B'),
+                                    ),
+                                    Text(
+                                      'Độ sáng',
+                                      style: TextStyle(
+                                          fontFamily: 'LinotteBold',
+                                          fontSize: 15,
+                                          color: HexColor('0C205B')),
+                                    )
+                                  ],
+                                ),
                                 secondChild: Icon(
                                   Icons.brightness_3,
                                   size: 40,
@@ -259,8 +273,8 @@ class _CaiDatState extends State<CaiDat> {
                                 duration: Duration(seconds: 1)),
                             Expanded(
                                 child: Slider(
-                                  activeColor: HexColor('FFEE52'),
-                                      inactiveColor: Colors.amber[700],
+                              activeColor: HexColor('FFEE52'),
+                              inactiveColor: Colors.amber[700],
                               value: brightness,
                               onChanged: (value) {
                                 setState(() {
