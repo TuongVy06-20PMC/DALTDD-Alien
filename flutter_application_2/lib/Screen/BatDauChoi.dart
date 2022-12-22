@@ -332,13 +332,7 @@ class _BatDauChoiState extends State<BatDauChoi> {
                                           onTap: () {
                                             pick = true;
                                             youranwser = "a";
-                                            if (this
-                                                        .widget
-                                                        .question[index]
-                                                        .answers[0]
-                                                        .score ==
-                                                    true &&
-                                                youranwser == "a") {
+                                            if (this.widget.question[index].answers[0].score == true && youranwser == "a") {
                                               addcoin();
                                               score += x2score + 30;
                                             }
@@ -353,11 +347,7 @@ class _BatDauChoiState extends State<BatDauChoi> {
                                                   minHeight: 30, minWidth: 350),
                                               decoration: BoxDecoration(
                                                 color: pick
-                                                    ? this
-                                                            .widget
-                                                            .question[index]
-                                                            .answers[0]
-                                                            .score
+                                                    ? this.widget.question[index].answers[0].score
                                                         ? Colors.green
                                                         : Colors.red
                                                     : Colors.white,
@@ -380,10 +370,7 @@ class _BatDauChoiState extends State<BatDauChoi> {
                                       : Container(
                                           alignment: Alignment.centerLeft,
                                           padding: EdgeInsets.only(left: 20),
-                                          width: MediaQuery.of(context)
-                                                  .size
-                                                  .width -
-                                              70,
+                                          width: MediaQuery.of(context).size.width -70,
                                           height: 50,
                                           decoration: BoxDecoration(
                                             color: Colors.white,
@@ -396,13 +383,7 @@ class _BatDauChoiState extends State<BatDauChoi> {
                                           onTap: () {
                                             pick = true;
                                             youranwser = "b";
-                                            if (this
-                                                        .widget
-                                                        .question[index]
-                                                        .answers[1]
-                                                        .score ==
-                                                    true &&
-                                                youranwser == "b") {
+                                            if (this.widget.question[index].answers[1].score ==true && youranwser == "b") {
                                               addcoin();
                                               score += x2score + 30;
                                             }
@@ -417,11 +398,7 @@ class _BatDauChoiState extends State<BatDauChoi> {
                                                   minHeight: 30, minWidth: 350),
                                               decoration: BoxDecoration(
                                                 color: pick
-                                                    ? this
-                                                            .widget
-                                                            .question[index]
-                                                            .answers[1]
-                                                            .score
+                                                    ? this.widget.question[index].answers[1].score
                                                         ? Colors.green
                                                         : Colors.red
                                                     : Colors.white,
