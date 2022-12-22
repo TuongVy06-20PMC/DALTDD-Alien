@@ -278,7 +278,7 @@ class _BatDauChoiState extends State<BatDauChoi> {
                                       topLeft: Radius.circular(30),
                                       topRight: Radius.circular(30))),
                               child: Column(
-                                mainAxisAlignment: MainAxisAlignment.start,
+                                mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
                                   Padding(
                                     padding: EdgeInsets.only(
@@ -308,7 +308,7 @@ class _BatDauChoiState extends State<BatDauChoi> {
                                                 ],
                                               )),
                                           Padding(
-                                              padding: EdgeInsets.all(0),
+                                              padding: EdgeInsets.only(right: 10),
                                               child: Row(
                                                 children: [
                                                   Icon(
@@ -317,7 +317,7 @@ class _BatDauChoiState extends State<BatDauChoi> {
                                                     color: HexColor('FFC600'),
                                                   ),
                                                   Text(
-                                                    '$score'.toString(),
+                                                    '$score'.toString() ,
                                                     style: TextStyle(
                                                         fontFamily:
                                                             'LinotteBold',
@@ -331,8 +331,8 @@ class _BatDauChoiState extends State<BatDauChoi> {
                                       ? InkWell(
                                           onTap: () {
                                             pick = true;
-                                            youranwser = "a";
-                                            if (this.widget.question[index].answers[0].score == true && youranwser == "a") {
+                                            youranwser = "opt1";
+                                            if (this.widget.question[index].answers[0].score == true && youranwser == "opt1") {
                                               addcoin();
                                               score += x2score + 30;
                                             }
@@ -382,8 +382,8 @@ class _BatDauChoiState extends State<BatDauChoi> {
                                       ? InkWell(
                                           onTap: () {
                                             pick = true;
-                                            youranwser = "b";
-                                            if (this.widget.question[index].answers[1].score ==true && youranwser == "b") {
+                                            youranwser = "opt2";
+                                            if (this.widget.question[index].answers[1].score ==true && youranwser == "opt2") {
                                               addcoin();
                                               score += x2score + 30;
                                             }
@@ -436,14 +436,14 @@ class _BatDauChoiState extends State<BatDauChoi> {
                                       ? InkWell(
                                           onTap: () {
                                             pick = true;
-                                            youranwser = "c";
+                                            youranwser = "opt3";
                                             if (this
                                                         .widget
                                                         .question[index]
                                                         .answers[2]
                                                         .score ==
                                                     true &&
-                                                youranwser == "c") {
+                                                youranwser == "opt3") {
                                               addcoin();
                                               score += x2score + 30;
                                             }
@@ -500,14 +500,14 @@ class _BatDauChoiState extends State<BatDauChoi> {
                                       ? InkWell(
                                           onTap: () {
                                             pick = true;
-                                            youranwser = "d";
+                                            youranwser = "opt4";
                                             if (this
                                                         .widget
                                                         .question[index]
                                                         .answers[3]
                                                         .score ==
                                                     true &&
-                                                youranwser == "d") {
+                                                youranwser == "opt4") {
                                               addcoin();
                                               score += x2score + 30;
                                             }
@@ -566,64 +566,43 @@ class _BatDauChoiState extends State<BatDauChoi> {
                                         mainAxisAlignment:
                                             MainAxisAlignment.center,
                                         children: [
-                                          Column(
-                                            children: [
-                                              InkWell(
-                                                onTap: () {
-                                                  if (function_5050) {
-                                                    function5050();
-                                                    function_5050 = false;
-                                                    setState(() {});
-                                                  }
-                                                },
-                                                child: Container(
-                                                  alignment: Alignment.center,
-                                                  width: 60,
-                                                  height: 60,
-                                                  decoration: BoxDecoration(
-                                                    color: Colors.amber,
-                                                    image: DecorationImage(
-                                                        image: function_5050
-                                                            ? AssetImage(
-                                                                'assets/50.png')
-                                                            : AssetImage(
-                                                                'assets/x2.png'),
-                                                        fit: BoxFit.fill),
-                                                  ),
-                                                  child: Text(
-                                                    '50:50',
-                                                    style: TextStyle(
-                                                      fontFamily: "Mono",
-                                                      fontSize: 15,
-                                                      color: Color.fromARGB(
-                                                          255, 255, 255, 255),
-                                                      fontWeight:
-                                                          FontWeight.w600,
-                                                    ),
-                                                  ),
-                                                ),
+                                          Padding(
+                                            padding: EdgeInsets.only(right: 23),
+                                            child: ElevatedButton(
+                                              style: ElevatedButton.styleFrom(
+                                                backgroundColor:
+                                                    HexColor('FF0000'),
+                                                minimumSize: Size(80, 80),
+                                                /*side: const BorderSide(
+                                      width: 2, color: Colors.black),*/
                                               ),
-                                              Row(
-                                                children: [
-                                                  Text(
-                                                    '100',
-                                                    style: TextStyle(
-                                                      fontFamily: "Mono",
-                                                      fontSize: 15,
-                                                      color: Color.fromARGB(
-                                                          255, 255, 255, 255),
-                                                      fontWeight:
-                                                          FontWeight.w600,
-                                                    ),
-                                                  ),
-                                                  Image.asset(
-                                                    'assets/50.png',
-                                                    width: 30,
-                                                    height: 30,
-                                                  )
-                                                ],
-                                              )
-                                            ],
+                                              child: Padding(
+                                                  padding:
+                                                      const EdgeInsets.only(
+                                                          left: 2, right: 2),
+                                                  child: Column(
+                                                    children: [
+                                                      
+                                                      Image.asset(
+                                                        'assets/50.png',
+                                                        width: 50,
+                                                        height: 50,
+                                                      ),
+                                                      const Text(
+                                                        '-100 xu',
+                                                        textAlign:
+                                                            TextAlign.center,
+                                                        style: TextStyle(
+                                                          fontSize: 20,
+                                                          fontFamily:
+                                                              'LinotteBold',
+                                                          color: Colors.white,
+                                                        ),
+                                                      ),
+                                                    ],
+                                                  )),
+                                              onPressed: () {},
+                                            ),
                                           ),
                                           Padding(
                                             padding: EdgeInsets.only(right: 23),
@@ -700,40 +679,7 @@ class _BatDauChoiState extends State<BatDauChoi> {
                                           ),
                                         ],
                                       )),
-                                  Row(
-                                    mainAxisAlignment: MainAxisAlignment.end,
-                                    children: [
-                                      Padding(
-                                        padding:
-                                            EdgeInsets.only(top: 20, right: 20),
-                                        child: ElevatedButton(
-                                          style: ElevatedButton.styleFrom(
-                                              backgroundColor: Colors.white,
-                                              minimumSize: Size(50, 20),
-                                              side: BorderSide(
-                                                  width: 2,
-                                                  color: HexColor('222222')),
-                                              shape: RoundedRectangleBorder(
-                                                  borderRadius:
-                                                      BorderRadius.circular(
-                                                          15))),
-                                          child: Padding(
-                                            padding: EdgeInsets.all(10),
-                                            child: Text(
-                                              'Tiếp theo >>',
-                                              textAlign: TextAlign.center,
-                                              style: TextStyle(
-                                                fontSize: 20,
-                                                fontFamily: 'LinotteBold',
-                                                color: HexColor('222222'),
-                                              ),
-                                            ),
-                                          ),
-                                          onPressed: () {},
-                                        ),
-                                      ),
-                                    ],
-                                  ),
+                                  
                                 ],
                               ),
                             ),
