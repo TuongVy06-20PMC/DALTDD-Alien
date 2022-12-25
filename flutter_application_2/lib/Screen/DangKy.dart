@@ -387,12 +387,6 @@ class _DangKyState extends State<DangKy> {
                                       email: txtEmail.text,
                                     );
                                     createUser(user);
-                                    Navigator.push(
-                                      context,
-                                      MaterialPageRoute(
-                                          builder: (context) =>
-                                              TrangChuTabBarGoogle()),
-                                    );
                                   },
                                 ),
                               ],
