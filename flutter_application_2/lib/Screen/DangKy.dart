@@ -451,6 +451,8 @@ class _DangKyState extends State<DangKy> {
     user.cap = 1;
     user.thang = 0;
     user.hanhtinh = 0;
+    user.kinhnghiem = 0;
+    user.diem = 0;
     final json = user.toJson();
     await docUser.set(json);
   }

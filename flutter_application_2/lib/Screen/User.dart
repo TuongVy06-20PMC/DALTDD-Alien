@@ -8,19 +8,23 @@ class Nguoidung {
   int? cap;
   int? thang;
   int? hanhtinh;
+  int? diem;
+  int? kinhnghiem;
 
-  Nguoidung({
-    this.uid = "",
-    required this.hoten,
-    required this.tendangnhap,
-    required this.email,
-    this.xu,
-    this.cap,
-    this.thang,
-    this.hanhtinh,
+  Nguoidung(
+      {this.uid = "",
+      required this.hoten,
+      required this.tendangnhap,
+      required this.email,
+      this.xu,
+      this.cap,
+      this.thang,
+      this.hanhtinh,
+      this.diem,
+      this.kinhnghiem
 
-    //required this.ngaysinh
-  });
+      //required this.ngaysinh
+      });
 
   Nguoidung.fromJson(Map<String, dynamic> res)
       : uid = res['uid'],
@@ -30,7 +34,9 @@ class Nguoidung {
         xu = res['xu'],
         cap = res['cap'],
         thang = res['thang'],
-        hanhtinh = res['hanhtinh'];
+        hanhtinh = res['hanhtinh'],
+        diem = res['diem'],
+        kinhnghiem = res['kinhnghiem'];
 
   Map<String, dynamic> toJson() => {
         'uid': uid,
@@ -41,6 +47,8 @@ class Nguoidung {
         'cap': cap,
         'thang': thang,
         'hanhtinh': hanhtinh,
+        'diem': diem,
+        'kinhnghiem': kinhnghiem,
         //'ngaysinh': ngaysinh,
       };
 }
