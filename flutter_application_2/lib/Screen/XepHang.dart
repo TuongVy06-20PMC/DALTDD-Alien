@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
@@ -10,24 +12,15 @@ import 'package:intl/intl.dart';
 import '../component/menu.dart';
 
 class XepHang extends StatefulWidget {
-  const XepHang({super.key});
-
   @override
-  State<XepHang> createState() => _XepHangState();
+  State<XepHang> createState() {
+    return XepHangState();
+  }
 }
 
-class _XepHangState extends State<XepHang> {
+class XepHangState extends State<XepHang> {
   final _auth = FirebaseAuth.instance;
-
-  final result = FirebaseFirestore.instance.collection('users').get();
-  Future<List> searchFromFirebase() async {
-    final result = await FirebaseFirestore.instance.collection('users').get();
-
-    List Result = result.docs.map((e) => e.data()).toList();
-
-    return Result;
-  }
-
+  var countuser;
   GlobalKey<ScaffoldState> _sKey = GlobalKey<ScaffoldState>();
   @override
   Widget build(BuildContext context) {
@@ -48,19 +41,16 @@ class _XepHangState extends State<XepHang> {
             StreamBuilder(
               stream: FirebaseFirestore.instance
                   .collection("users")
-                  .where("email", isEqualTo: loginUser!.email)
+                  .where('email', isEqualTo: loginUser!.email)
                   .snapshots(),
               builder: (context, AsyncSnapshot<QuerySnapshot> snapshot) {
                 if (snapshot.hasData) {
                   return ListView.builder(
-                      itemCount: snapshot.data!.docs.length,
+                      itemCount: 1,
                       shrinkWrap: true,
                       itemBuilder: (context, i) {
-                        // Map<String, dynamic> data1 =
-                        //     i.data1() as Map<String, dynamic>;
-                        var data_rank = snapshot.data!.docs[i].data()
-                            as Map<String, dynamic>;
                         var data = snapshot.data!.docs[i];
+
                         return Container(
                           height: MediaQuery.of(context).size.height,
                           width: MediaQuery.of(context).size.width,
@@ -148,17 +138,17 @@ class _XepHangState extends State<XepHang> {
                                   children: [
                                     Stack(
                                       children: [
-                                        // Padding(
-                                        //   padding:
-                                        //       EdgeInsets.only(left: 0, top: 30),
-                                        //   child: Text(
-                                        //     '10.',
-                                        //     style: TextStyle(
-                                        //         fontSize: 30,
-                                        //         fontFamily: 'FSAriston',
-                                        //         color: Colors.white),
-                                        //   ),
-                                        // ),
+                                        Padding(
+                                          padding:
+                                              EdgeInsets.only(left: 0, top: 30),
+                                          child: Text(
+                                            '',
+                                            style: TextStyle(
+                                                fontSize: 30,
+                                                fontFamily: 'FSAriston',
+                                                color: Colors.white),
+                                          ),
+                                        ),
                                         Padding(
                                           padding: EdgeInsets.only(
                                               left: 35, top: 10),
@@ -291,27 +281,29 @@ class _XepHangState extends State<XepHang> {
                             child: ListView.builder(
                                 padding: EdgeInsets.only(bottom: 0),
                                 itemCount: snapshot.data!.docs.length,
-                                itemBuilder: (context, index) {
+                                itemBuilder: (context, int index) {
                                   var data = snapshot.data!.docs[index].data()
                                       as Map<String, dynamic>;
+                                  int count = index + 1;
+
                                   return Container(
                                     child: Padding(
                                       padding:
                                           EdgeInsets.only(left: 70, top: 0),
                                       child: Stack(
                                         children: [
-                                          // Padding(
-                                          //   padding: EdgeInsets.only(
-                                          //       left: 0, top: 30),
-                                          //   child: Text(
-                                          //     '1.',
-                                          //     style: TextStyle(
-                                          //         fontSize: 50,
-                                          //         fontFamily: 'FSAriston',
-                                          //         color: Color.fromARGB(
-                                          //             255, 252, 3, 3)),
-                                          //   ),
-                                          // ),
+                                          Padding(
+                                            padding: EdgeInsets.only(
+                                                left: 0, top: 30),
+                                            child: Text(
+                                              count.toString() + '.',
+                                              style: TextStyle(
+                                                  fontSize: 50,
+                                                  fontFamily: 'FSAriston',
+                                                  color: Color.fromARGB(
+                                                      255, 252, 3, 3)),
+                                            ),
+                                          ),
                                           Padding(
                                             padding: EdgeInsets.only(
                                                 left: 35, top: 20),
@@ -380,7 +372,7 @@ class _XepHangState extends State<XepHang> {
                                             child: Text(
                                               data['tendangnhap'].toString(),
                                               style: TextStyle(
-                                                  fontSize: 13,
+                                                  fontSize: 19,
                                                   fontFamily: 'LinotteBold',
                                                   color: Colors.black),
                                             ),
@@ -389,7 +381,7 @@ class _XepHangState extends State<XepHang> {
                                             padding: EdgeInsets.only(
                                                 left: 130, top: 48),
                                             child: Text(
-                                              data['diem'].toString(),
+                                              data['diem'].toString() + ' điểm',
                                               style: TextStyle(
                                                   fontSize: 20,
                                                   fontFamily: 'LinotteBold',

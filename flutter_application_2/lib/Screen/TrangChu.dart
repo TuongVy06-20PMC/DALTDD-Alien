@@ -394,7 +394,7 @@ class _TrangChuState extends State<TrangChu> {
                                               context,
                                               MaterialPageRoute(
                                                   builder: (context) =>
-                                                      const XepHang()),
+                                                      XepHang()),
                                             );
                                           },
                                         ),
