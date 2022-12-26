@@ -32,14 +32,7 @@ class _LevelScreenState extends State<LevelScreen> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.end,
                   children: [
-                    Padding(
-                      padding: EdgeInsets.only(right: 50, top: 10),
-                      child: Image.asset(
-                        'assets/logo.png',
-                        height: 80,
-                        width: 150,
-                      ),
-                    ),
+                    
                     InkWell(
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
@@ -93,7 +86,7 @@ class _LevelScreenState extends State<LevelScreen> {
                     )),
                 Container(
                   margin: EdgeInsets.only(
-                    top: 15,
+                    top: 45,
                   ),
                   child: Column(
                     children: [
@@ -103,8 +96,8 @@ class _LevelScreenState extends State<LevelScreen> {
                           InkWell(
                             child: Container(
                               margin: EdgeInsets.only(right: 10),
-                              height: MediaQuery.of(context).size.height / 7,
-                              width: MediaQuery.of(context).size.height / 7,
+                              height: MediaQuery.of(context).size.height / 7.4,
+                              width: MediaQuery.of(context).size.height / 7.4,
 
                               decoration: BoxDecoration(
                                   color: Colors.white,
@@ -117,7 +110,7 @@ class _LevelScreenState extends State<LevelScreen> {
                                     children: [
                                       Image.asset(
                                         'assets/saohaivuong.png',
-                                        width: 58,
+                                        width: 50,
                                       ),
                                       SizedBox(
                                         height: 5,
@@ -233,12 +226,7 @@ class _LevelScreenState extends State<LevelScreen> {
                                                   ]),
                                                 ),
                                                 onTap: () {
-                                                  Navigator.push(
-                                                    context,
-                                                    MaterialPageRoute(
-                                                        builder: (context) =>
-                                                            const AnimatedContainerApp()),
-                                                  );
+                                                  
                                                 },
                                               ),
                                             ],
@@ -263,8 +251,8 @@ class _LevelScreenState extends State<LevelScreen> {
                           InkWell(
                             child: Container(
                               margin: EdgeInsets.only(right: 10),
-                              height: MediaQuery.of(context).size.height / 7,
-                              width: MediaQuery.of(context).size.height / 7,
+                              height: MediaQuery.of(context).size.height / 7.4,
+                              width: MediaQuery.of(context).size.height / 7.4,
 
                               decoration: BoxDecoration(
                                   color: Colors.white.withOpacity(0.7),
@@ -277,7 +265,7 @@ class _LevelScreenState extends State<LevelScreen> {
                                     children: [
                                       Image.asset(
                                         'assets/saothienvuong.png',
-                                        width: 68,
+                                        width: 60,
                                       ),
                                       // SizedBox(height: 5,),
                                       Text(
@@ -308,8 +296,8 @@ class _LevelScreenState extends State<LevelScreen> {
                           ),
                           InkWell(
                             child: Container(
-                              height: MediaQuery.of(context).size.height / 7,
-                              width: MediaQuery.of(context).size.height / 7,
+                              height: MediaQuery.of(context).size.height / 7.4,
+                              width: MediaQuery.of(context).size.height / 7.4,
                               decoration: BoxDecoration(
                                   color: Colors.white.withOpacity(0.7),
                                   borderRadius: BorderRadius.circular(20)),
@@ -320,7 +308,7 @@ class _LevelScreenState extends State<LevelScreen> {
                                     children: [
                                       Image.asset(
                                         'assets/saotho.png',
-                                        width: 68,
+                                        width: 60,
                                       ),
                                       SizedBox(
                                         height: 5,
@@ -362,8 +350,8 @@ class _LevelScreenState extends State<LevelScreen> {
                           InkWell(
                             child: Container(
                               margin: EdgeInsets.only(right: 10),
-                              height: MediaQuery.of(context).size.height / 7,
-                              width: MediaQuery.of(context).size.height / 7,
+                              height: MediaQuery.of(context).size.height / 7.4,
+                              width: MediaQuery.of(context).size.height / 7.4,
 
                               decoration: BoxDecoration(
                                   color: Colors.white.withOpacity(0.7),
@@ -410,8 +398,8 @@ class _LevelScreenState extends State<LevelScreen> {
                           InkWell(
                             child: Container(
                               margin: EdgeInsets.only(right: 10),
-                              height: MediaQuery.of(context).size.height / 7,
-                              width: MediaQuery.of(context).size.height / 7,
+                              height: MediaQuery.of(context).size.height / 7.4,
+                              width: MediaQuery.of(context).size.height / 7.4,
 
                               decoration: BoxDecoration(
                                   color: Colors.white.withOpacity(0.7),
@@ -455,8 +443,8 @@ class _LevelScreenState extends State<LevelScreen> {
                           ),
                           InkWell(
                             child: Container(
-                              height: MediaQuery.of(context).size.height / 7,
-                              width: MediaQuery.of(context).size.height / 7,
+                              height: MediaQuery.of(context).size.height / 7.4,
+                              width: MediaQuery.of(context).size.height / 7.4,
                               decoration: BoxDecoration(
                                   color: Colors.white.withOpacity(0.7),
                                   borderRadius: BorderRadius.circular(20)),
@@ -509,8 +497,8 @@ class _LevelScreenState extends State<LevelScreen> {
                           InkWell(
                             child: Container(
                               margin: EdgeInsets.only(right: 10),
-                              height: MediaQuery.of(context).size.height / 7,
-                              width: MediaQuery.of(context).size.height / 7,
+                              height: MediaQuery.of(context).size.height / 7.4,
+                              width: MediaQuery.of(context).size.height / 7.4,
 
                               decoration: BoxDecoration(
                                   color: Colors.white.withOpacity(0.7),
@@ -557,8 +545,8 @@ class _LevelScreenState extends State<LevelScreen> {
                           InkWell(
                             child: Container(
                               margin: EdgeInsets.only(right: 10),
-                              height: MediaQuery.of(context).size.height / 7,
-                              width: MediaQuery.of(context).size.height / 7,
+                              height: MediaQuery.of(context).size.height / 7.4,
+                              width: MediaQuery.of(context).size.height / 7.4,
 
                               decoration: BoxDecoration(
                                   color: Colors.white.withOpacity(0.7),
@@ -604,8 +592,8 @@ class _LevelScreenState extends State<LevelScreen> {
                           ),
                           InkWell(
                             child: Container(
-                              height: MediaQuery.of(context).size.height / 7,
-                              width: MediaQuery.of(context).size.height / 7,
+                              height: MediaQuery.of(context).size.height / 7.4,
+                              width: MediaQuery.of(context).size.height / 7.4,
                               decoration: BoxDecoration(
                                   color: Colors.white.withOpacity(0.7),
                                   borderRadius: BorderRadius.circular(20)),
@@ -658,8 +646,8 @@ class _LevelScreenState extends State<LevelScreen> {
                           InkWell(
                             child: Container(
                               margin: EdgeInsets.only(right: 10),
-                              height: MediaQuery.of(context).size.height / 7,
-                              width: MediaQuery.of(context).size.height / 7,
+                              height: MediaQuery.of(context).size.height / 7.4,
+                              width: MediaQuery.of(context).size.height / 7.4,
 
                               decoration: BoxDecoration(
                                   color: Colors.white.withOpacity(0.7),

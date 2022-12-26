@@ -1506,6 +1506,551 @@
                             "score": true
                         }
                     ]
+                },
+                {
+                    "id": 8,
+                    "title": "Chọn đáp án đúng",
+                    "answers": [
+                        {
+                            "answerText": "Mặt Trăng là một vệ tinh của Mặt Trời",
+                            "score": false
+                        },
+                        {
+                            "answerText": "Mặt Trăng là một hành tinh của Trái Đất",
+                            "score": false
+                        },
+                        {
+                            "answerText": "Mặt Trăng là một vệ tinh của Trái Đất",
+                            "score": false
+                        },
+                        {
+                            "answerText": "Mặt Trăng là một ngôi sao",
+                            "score": true
+                        }
+                    ]
+                },
+                {
+                    "id": 9,
+                    "title": "Chọn đáp án đúng",
+                    "answers": [
+                        {
+                            "answerText": "Mặt Trăng là một vệ tinh của Mặt Trời",
+                            "score": false
+                        },
+                        {
+                            "answerText": "Mặt Trăng là một hành tinh của Trái Đất",
+                            "score": false
+                        },
+                        {
+                            "answerText": "Mặt Trăng là một vệ tinh của Trái Đất",
+                            "score": false
+                        },
+                        {
+                            "answerText": "Mặt Trăng là một ngôi sao",
+                            "score": true
+                        }
+                    ]
+                },
+                {
+                    "id": 10,
+                    "title": "Ánh sáng từ Mặt Trăng mà ta nhìn thấy được có từ đâu?",
+                    "answers": [
+                        {
+                            "answerText": "Mặt Trăng tự phát ra ánh sáng.",
+                            "score": false
+                        },
+                        {
+                            "answerText": "Mặt Trăng phản xạ ánh sáng Thiên Hà",
+                            "score": false
+                        },
+                        {
+                            "answerText": "Mặt Trăng phản xạ ánh sáng Ngân Hà.",
+                            "score": false
+                        },
+                        {
+                            "answerText": "Mặt Trăng phản xạ ánh sáng Mặt Trời.",
+                            "score": true
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id":8,
+            "question":[
+                {
+                    "id": 1,
+                    "title": "Sao Kim là một trong ... hành tinh đất đá trong hệ Mặt Trời",
+                    "answers": [
+                        {
+                            "answerText": "5",
+                            "score": false
+                        },
+                        {
+                            "answerText": "4",
+                            "score": true
+                        },
+                        {
+                            "answerText": "3",
+                            "score": false
+                        },
+                        {
+                            "answerText": "2",
+                            "score": false
+                        }
+                    ]
+                },
+                {
+                    "id": 2,
+                    "title": "Sao Kim còn có tên là",
+                    "answers": [
+                        {
+                            "answerText": "Venus",
+                            "score": true
+                        },
+                        {
+                            "answerText": "occus",
+                            "score": false
+                        },
+                        {
+                            "answerText": "la",
+                            "score": false
+                        },
+                        {
+                            "answerText": "true",
+                            "score": false
+                        }
+                    ]
+                },
+                {
+                    "id": 3,
+                    "title": "một ngày của sao Kim rất dài, bằng ...... ngày Trái Đất.",
+                    "answers": [
+                        {
+                            "answerText": "14",
+                            "score": false
+                        },
+                        {
+                            "answerText": "117",
+                            "score": false
+                        },
+                        {
+                            "answerText": "116,75",
+                            "score": true
+                        },
+                        {
+                            "answerText": "192",
+                            "score": false
+                        }
+                    ]
+                },
+                {
+                    "id": 4,
+                    "title": "Mỗi năm sao Kim dài bằng ...... ngày Trái Đất.",
+                    "answers": [
+                        {
+                            "answerText": "224,7",
+                            "score": true
+                        },
+                        {
+                            "answerText": "117",
+                            "score": false
+                        },
+                        {
+                            "answerText": "116,75",
+                            "score": false
+                        },
+                        {
+                            "answerText": "192",
+                            "score": false
+                        }
+                    ]
+                },
+                {
+                    "id": 5,
+                    "title": "Nhiệt độ trung bình trên bề mặt sao Kim là ",
+                    "answers": [
+                        {
+                            "answerText": "46 độ C",
+                            "score": false
+                        },
+                        {
+                            "answerText": "123 độ C",
+                            "score": false
+                        },
+                        {
+                            "answerText": "4 độ C",
+                            "score": false
+                        },
+                        {
+                            "answerText": "464 độ C",
+                            "score": true
+                        }
+                    ]
+                },
+                {
+                    "id": 6,
+                    "title": "Nhiệt độ trung bình trên bề mặt sao Kim là Sao Kim còn là hành tinh có nhiệt độ bề mặt ... trong hệ mặt trời",
+                    "answers": [
+                        {
+                            "answerText": "cao nhất",
+                            "score": true
+                        },
+                        {
+                            "answerText": "thấp nhất",
+                            "score": false
+                        },
+                        {
+                            "answerText": "trung bình",
+                            "score": false
+                        },
+                        {
+                            "answerText": "lạnh nhất",
+                            "score": false
+                        }
+                    ]
+                },
+                {
+                    "id": 7,
+                    "title": "Chuyến đi của tàu thám hiểm ... lên quỹ đạo sao Kim vào năm 1991 đã giúp chúng ta lập được bản đồ bề mặt hành tinh này",
+                    "answers": [
+                        {
+                            "answerText": "Magellan",
+                            "score": true
+                        },
+                        {
+                            "answerText": "Galile",
+                            "score": false
+                        },
+                        {
+                            "answerText": "Paris",
+                            "score": false
+                        },
+                        {
+                            "answerText": "API",
+                            "score": false
+                        }
+                    ]
+                },
+                {
+                    "id": 8,
+                    "title": "Sao Kim là hành tinh ..., với nhiệt độ bề mặt cực kỳ cao và bầu khí quyển rất độc hại",
+                    "answers": [
+                        {
+                            "answerText": "có sự sống",
+                            "score": false
+                        },
+                        {
+                            "answerText": "chết người",
+                            "score": true
+                        },
+                        {
+                            "answerText": "lạnh giá",
+                            "score": false
+                        },
+                        {
+                            "answerText": "đen tối",
+                            "score": false
+                        }
+                    ]
+                },
+                {
+                    "id": 9,
+                    "title": "Sao Kim được đặt theo tên vị thần ... và sắc đẹp của La Mã",
+                    "answers": [
+                        {
+                            "answerText": "biển cả",
+                            "score": false
+                        },
+                        {
+                            "answerText": "tình yêu",
+                            "score": true
+                        },
+                        {
+                            "answerText": "gió",
+                            "score": false
+                        },
+                        {
+                            "answerText": "thần thoại",
+                            "score": false
+                        }
+                    ]
+                },
+                {
+                    "id": 10,
+                    "title": "Đường kính của sao Kim bằng ",
+                    "answers": [
+                        {
+                            "answerText": "12.092km",
+                            "score": true
+                        },
+                        {
+                            "answerText": "19 km",
+                            "score": false
+                        },
+                        {
+                            "answerText": "23 km",
+                            "score": false
+                        },
+                        {
+                            "answerText": "11km",
+                            "score": false
+                        }
+                    ]
+                }
+
+
+            ]
+        },
+        {
+            "id":9,
+            "question":[
+                {
+                    "id": 1,
+                    "title": "Sao Thủy hiện lên với chu kỳ giao hội trên quỹ đạo bằng xấp xỉ  ",
+                    "answers": [
+                        {
+                            "answerText": "116 ngày",
+                            "score": true
+                        },
+                        {
+                            "answerText": "11 ngày",
+                            "score": false
+                        },
+                        {
+                            "answerText": "6 ngày",
+                            "score": false
+                        },
+                        {
+                            "answerText": "26 ngày",
+                            "score": false
+                        }
+                    ]
+                },
+                {
+                    "id": 2,
+                    "title": "chu kỳ quỹ đạo bằng ... ngày Trái Đất.",
+                    "answers": [
+                        {
+                            "answerText": "88",
+                            "score": true
+                        },
+                        {
+                            "answerText": "11 ",
+                            "score": false
+                        },
+                        {
+                            "answerText": "6",
+                            "score": false
+                        },
+                        {
+                            "answerText": "26",
+                            "score": false
+                        }
+                    ]
+                },
+                {
+                    "id": 3,
+                    "title": "chu kỳ quỹ đạo bằng ... ngày Trái Đất.",
+                    "answers": [
+                        {
+                            "answerText": "88",
+                            "score": true
+                        },
+                        {
+                            "answerText": "11 ",
+                            "score": false
+                        },
+                        {
+                            "answerText": "6",
+                            "score": false
+                        },
+                        {
+                            "answerText": "26",
+                            "score": false
+                        }
+                    ]
+                },
+                {
+                    "id": 4,
+                    "title": "Sao Thủy cũng là hành tinh ... Mặt trời nhất trong 8 hành tinh thuộc Hệ Mặt trời",
+                    "answers": [
+                        {
+                            "answerText": "gần",
+                            "score": true
+                        },
+                        {
+                            "answerText": "xa",
+                            "score": false
+                        },
+                        {
+                            "answerText": "ngang bằng",
+                            "score": false
+                        },
+                        {
+                            "answerText": "rất nha",
+                            "score": false
+                        }
+                    ]
+                },
+                {
+                    "id": 5,
+                    "title": "Nhiệt độ ban ngày ở đây có thể lên tới ..",
+                    "answers": [
+                        {
+                            "answerText": "450 độ C",
+                            "score": true
+                        },
+                        {
+                            "answerText": "50 độ C",
+                            "score": false
+                        },
+                        {
+                            "answerText": "4500 độ C",
+                            "score": false
+                        },
+                        {
+                            "answerText": "40 độ C",
+                            "score": false
+                        }
+                    ]
+                },
+                {
+                    "id": 6,
+                    "title": "Ban đêm nhiệt độ xuống mức ...",
+                    "answers": [
+                        {
+                            "answerText": "450 độ C",
+                            "score": false
+                        },
+                        {
+                            "answerText": "-170 độ C",
+                            "score": true
+                        },
+                        {
+                            "answerText": "4500 độ C",
+                            "score": false
+                        },
+                        {
+                            "answerText": "40 độ C",
+                            "score": false
+                        }
+                    ]
+                },
+                {
+                    "id": 7,
+                    "title": "Biên độ nhiệt trong một ngày lên tới hơn ",
+                    "answers": [
+                        {
+                            "answerText": "450 độ C",
+                            "score": false
+                        },
+                        {
+                            "answerText": "-170 độ C",
+                            "score": false
+                        },
+                        {
+                            "answerText": "600 độ C",
+                            "score": true
+                        },
+                        {
+                            "answerText": "40 độ C",
+                            "score": false
+                        }
+                    ]
+                },
+                {
+                    "id": 8,
+                    "title": "Sao Thủy là hành tinh ... trong Hệ Mặt trời",
+                    "answers": [
+                        {
+                            "answerText": "xa nhất",
+                            "score": false
+                        },
+                        {
+                            "answerText": "tương đối",
+                            "score": false
+                        },
+                        {
+                            "answerText": "lớn nhất",
+                            "score": false
+                        },
+                        {
+                            "answerText": "bé nhất",
+                            "score": true
+                        }
+                    ]
+                },
+                {
+                    "id": 9,
+                    "title": "Sao Thủy được phát hiện vào năm nào ",
+                    "answers": [
+                        {
+                            "answerText": "1631",
+                            "score": true
+                        },
+                        {
+                            "answerText": "2002",
+                            "score": false
+                        },
+                        {
+                            "answerText": "1999",
+                            "score": false
+                        },
+                        {
+                            "answerText": "1780",
+                            "score": false
+                        }
+                    ]
+                },
+                {
+                    "id": 10,
+                    "title": "Sao Thủy được phát hiện vào năm nào ",
+                    "answers": [
+                        {
+                            "answerText": "1631",
+                            "score": true
+                        },
+                        {
+                            "answerText": "2002",
+                            "score": false
+                        },
+                        {
+                            "answerText": "1999",
+                            "score": false
+                        },
+                        {
+                            "answerText": "1780",
+                            "score": false
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id":10,
+            "question":[
+                {
+                    "id": 1,
+                    "title": "Sao Thủy được phát hiện vào năm nào ",
+                    "answers": [
+                        {
+                            "answerText": "1631",
+                            "score": true
+                        },
+                        {
+                            "answerText": "2002",
+                            "score": false
+                        },
+                        {
+                            "answerText": "1999",
+                            "score": false
+                        },
+                        {
+                            "answerText": "1780",
+                            "score": false
+                        }
+                    ]
                 }
             ]
         }

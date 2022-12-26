@@ -164,7 +164,7 @@ class HoSoState extends State<HoSo> {
                                                       MainAxisAlignment.center,
                                                   children: [
                                                     Text(
-                                                      'Cấp 1',
+                                                      'Cấp '+ data['cap'].toString(),
                                                       style: TextStyle(
                                                           fontSize: 13,
                                                           fontFamily:
@@ -199,7 +199,7 @@ class HoSoState extends State<HoSo> {
                                                 1.15,
                                         height:
                                             MediaQuery.of(context).size.height /
-                                                2.2,
+                                                2.8,
                                         decoration: BoxDecoration(
                                             image: DecorationImage(
                                                 image: AssetImage(
@@ -212,21 +212,20 @@ class HoSoState extends State<HoSo> {
                                             InkWell(
                                               child: Container(
                                                 margin: EdgeInsets.only(
-                                                    bottom: 15, top: 40),
+                                                    bottom: 5, top: 55),
                                                 child: Stack(children: [
                                                   Row(
                                                     mainAxisAlignment:
-                                                        MainAxisAlignment
-                                                            .center,
+                                                        MainAxisAlignment.center,
                                                     crossAxisAlignment:
-                                                        CrossAxisAlignment
-                                                            .center,
+                                                        CrossAxisAlignment.start,
                                                     children: [
+                                                      
                                                       Image.asset(
                                                         'assets/btn.png',
                                                         fit: BoxFit.fill,
                                                         height: 60,
-                                                        width: 250,
+                                                        width: 240,
                                                       )
                                                     ],
                                                   ),
@@ -235,18 +234,18 @@ class HoSoState extends State<HoSo> {
                                                       padding: EdgeInsets.only(
                                                           top: 13),
                                                       child: Text(
-                                                        data['hoten'],
+                                                       'Họ tên:  '+ data['hoten'],
                                                         textAlign:
                                                             TextAlign.center,
                                                         style: TextStyle(
-                                                          fontSize: 20,
+                                                          fontSize: 15,
                                                           fontFamily:
                                                               'LinotteBold',
                                                           color: Colors.black,
                                                         ),
                                                       ),
                                                     ),
-                                                    left: 96,
+                                                    left: 76,
                                                     top: 7,
                                                   ),
                                                 ]),
@@ -306,7 +305,7 @@ class HoSoState extends State<HoSo> {
                                             InkWell(
                                               child: Container(
                                                 margin:
-                                                    EdgeInsets.only(bottom: 15),
+                                                    EdgeInsets.only(bottom: 35),
                                                 child: Stack(children: [
                                                   Row(
                                                     mainAxisAlignment:
@@ -320,7 +319,7 @@ class HoSoState extends State<HoSo> {
                                                         'assets/btn.png',
                                                         fit: BoxFit.fill,
                                                         height: 60,
-                                                        width: 250,
+                                                        width: 240,
                                                       )
                                                     ],
                                                   ),
@@ -329,7 +328,7 @@ class HoSoState extends State<HoSo> {
                                                       padding: EdgeInsets.only(
                                                           top: 13),
                                                       child: Text(
-                                                        data['email'],
+                                                       'Email: '+ data['email'],
                                                         textAlign:
                                                             TextAlign.center,
                                                         style: TextStyle(
@@ -340,19 +339,21 @@ class HoSoState extends State<HoSo> {
                                                         ),
                                                       ),
                                                     ),
-                                                    left: 96,
+                                                    left: 76,
                                                     top: 7,
                                                   ),
                                                 ]),
                                               ),
                                               onTap: () {},
                                             ),
+                                            
                                           ],
                                         ),
                                       ),
                                     ),
                                     InkWell(
                                       child: Container(
+                                        margin: EdgeInsets.only(top: 70),
                                         child: Stack(children: [
                                           Row(
                                             mainAxisAlignment:
@@ -364,7 +365,7 @@ class HoSoState extends State<HoSo> {
                                                 'assets/btn.png',
                                                 fit: BoxFit.fill,
                                                 height: 60,
-                                                width: 230,
+                                                width: 240,
                                               )
                                             ],
                                           ),
@@ -380,8 +381,8 @@ class HoSoState extends State<HoSo> {
                                                     color: Colors.black),
                                               ),
                                             ),
-                                            left: 117,
-                                            top: 1,
+                                            left: 115,
+                                            top: 0,
                                           ),
                                         ]),
                                       ),

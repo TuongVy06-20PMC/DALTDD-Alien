@@ -46,12 +46,7 @@ class _KetThucLuotChoiState extends State<KetThucLuotChoi> {
                       children: [
                         IconButton(
                           onPressed: () => {
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) =>
-                                      const AnimatedContainerApp()),
-                            )
+                            
                           },
                           icon: Image.asset(
                             'assets/close-option.png',
@@ -137,12 +132,12 @@ class _KetThucLuotChoiState extends State<KetThucLuotChoi> {
                                 Column(
                                   mainAxisAlignment: MainAxisAlignment.start,
                                   crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: const [
+                                  children:  [
                                     Padding(
                                       padding:
                                           EdgeInsets.only(bottom: 10, top: 25),
                                       child: Text(
-                                        'Tổng số điểm: 700',
+                                        'Tổng số điểm: 300' ,
                                         style: TextStyle(
                                           fontFamily: 'LinotteBold',
                                           fontSize: 20,
@@ -152,7 +147,7 @@ class _KetThucLuotChoiState extends State<KetThucLuotChoi> {
                                     Padding(
                                       padding: EdgeInsets.only(bottom: 10),
                                       child: Text(
-                                        'Số câu đúng: 7/10',
+                                        'Số câu đúng: 10/10',
                                         style: TextStyle(
                                           fontFamily: 'LinotteBold',
                                           fontSize: 20,
@@ -162,7 +157,7 @@ class _KetThucLuotChoiState extends State<KetThucLuotChoi> {
                                     Padding(
                                       padding: EdgeInsets.only(bottom: 10),
                                       child: Text(
-                                        'Số câu sai: 3/10',
+                                        'Số câu sai: 0/10',
                                         style: TextStyle(
                                           fontFamily: 'LinotteBold',
                                           fontSize: 20,
@@ -172,7 +167,7 @@ class _KetThucLuotChoiState extends State<KetThucLuotChoi> {
                                     Padding(
                                       padding: EdgeInsets.only(bottom: 10),
                                       child: Text(
-                                        'Số điểm hiện có: 1700',
+                                        'Số điểm hiện có: 300',
                                         style: TextStyle(
                                           fontFamily: 'LinotteBold',
                                           fontSize: 20,
@@ -182,7 +177,7 @@ class _KetThucLuotChoiState extends State<KetThucLuotChoi> {
                                     Padding(
                                       padding: EdgeInsets.only(bottom: 10),
                                       child: Text(
-                                        'Kinh nghiệm tích lũy: 200',
+                                        'Kinh nghiệm tích lũy: 000',
                                         style: TextStyle(
                                           fontFamily: 'LinotteBold',
                                           fontSize: 20,
@@ -246,12 +241,7 @@ class _KetThucLuotChoiState extends State<KetThucLuotChoi> {
                                         Positioned(
                                           child: IconButton(
                                               onPressed: (() {
-                                                Navigator.push(
-                                                  context,
-                                                  MaterialPageRoute(
-                                                      builder: (context) =>
-                                                          const KetThucLuotChoi()),
-                                                );
+                                                
                                               }),
                                               icon: Image.asset(
                                                 'assets/close-option.png',
@@ -319,12 +309,7 @@ class _KetThucLuotChoiState extends State<KetThucLuotChoi> {
                                                   ]),
                                                 ),
                                                 onTap: () {
-                                                  Navigator.push(
-                                                    context,
-                                                    MaterialPageRoute(
-                                                        builder: (context) =>
-                                                            const AnimatedContainerApp()),
-                                                  );
+                                                  
                                                 },
                                               ),
                                             ],

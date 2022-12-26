@@ -321,12 +321,7 @@ class _XemlaiDapAnState extends State<XemlaiDapAn> {
                                   ),
                                 ),
                                 onPressed: () {
-                                  Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                        builder: (context) =>
-                                            const KetThucLuotChoi()),
-                                  );
+                                  
                                 },
                               ),
                             ),

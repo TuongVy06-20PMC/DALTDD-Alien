@@ -47,12 +47,7 @@ class _gameoverState extends State<gameover> {
                       children: [
                         IconButton(
                           onPressed: () => {
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) =>
-                                      const AnimatedContainerApp()),
-                            )
+                           
                           },
                           icon: Image.asset(
                             'assets/close-option.png',
@@ -242,12 +237,7 @@ class _gameoverState extends State<gameover> {
                                                   ]),
                                                 ),
                                                 onTap: () {
-                                                  Navigator.push(
-                                                    context,
-                                                    MaterialPageRoute(
-                                                        builder: (context) =>
-                                                            const AnimatedContainerApp()),
-                                                  );
+                                                  
                                                 },
                                               ),
                                             ],
